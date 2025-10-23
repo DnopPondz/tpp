@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useLanguage } from "@/components/LanguageProvider";
 
@@ -26,6 +27,55 @@ const contactNumbers = [
 
 export default function Navbar() {
   const { language, setLanguage, translations, toggleLanguage } = useLanguage();
+  const [activeKey, setActiveKey] = useState(menuItems[0].key);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return undefined;
+    }
+
+    const sections = menuItems
+      .map((item) => document.querySelector(item.href))
+      .filter((section) => section instanceof HTMLElement);
+
+    const handleHashChange = () => {
+      const { hash } = window.location;
+      if (!hash) return;
+      const matched = menuItems.find((item) => item.href === hash);
+      if (matched) {
+        setActiveKey(matched.key);
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible) {
+          return;
+        }
+        const matched = menuItems.find((item) => item.href === `#${visible.target.id}`);
+        if (matched) {
+          setActiveKey(matched.key);
+        }
+      },
+      {
+        rootMargin: "-40% 0px -40% 0px",
+        threshold: [0, 0.25, 0.5, 0.75, 1],
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    handleHashChange();
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+      sections.forEach((section) => observer.unobserve(section));
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/95 backdrop-blur">
@@ -79,19 +129,24 @@ export default function Navbar() {
           </div>
         </div>
         <nav className="flex flex-wrap items-center justify-between gap-2 rounded-full bg-slate-100/80 px-4 py-2 text-sm font-medium text-slate-700 shadow-inner">
-          {menuItems.map((item, index) => (
-            <Link
-              key={item.key}
-              href={item.href}
-              className={`rounded-full px-4 py-2 transition-colors ${
-                index === 0
-                  ? "bg-white text-amber-600 shadow"
-                  : "hover:bg-white hover:text-amber-600"
-              }`}
-            >
-              {translations.nav[item.key]}
-            </Link>
-          ))}
+          {menuItems.map((item) => {
+            const isActive = activeKey === item.key;
+            return (
+              <Link
+                key={item.key}
+                href={item.href}
+                onClick={() => setActiveKey(item.key)}
+                aria-current={isActive ? "page" : undefined}
+                className={`rounded-full px-4 py-2 transition-all ${
+                  isActive
+                    ? "bg-white text-amber-600 shadow"
+                    : "hover:bg-white hover:text-amber-600"
+                }`}
+              >
+                {translations.nav[item.key]}
+              </Link>
+            );
+          })}
         </nav>
       </div>
     </header>

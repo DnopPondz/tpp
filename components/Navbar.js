@@ -21,38 +21,18 @@ const defaultContactNumbers = [
   "Fax +66(0)2735-8941",
 ];
 
-function LanguageToggleButton({ language, onToggle, label }) {
+function LanguageToggleButton({ language, onToggle }) {
   const isThai = language === "th";
+  const nextLanguageLabel = isThai ? "English" : "Thai";
 
   return (
     <button
       type="button"
       onClick={onToggle}
-      className="flex items-center gap-2 rounded-full border border-slate-200 bg-white px-3 py-1 text-sm font-medium text-slate-600 shadow-sm transition-colors hover:border-amber-300 hover:text-amber-600"
-      aria-label={`Switch language to ${label}`}
+      className="rounded-full border border-slate-200 bg-white px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-slate-600 shadow-sm transition-colors hover:border-amber-300 hover:text-amber-600"
+      aria-label={`Switch language to ${nextLanguageLabel}`}
     >
-      <span
-        className={`rounded-full px-2 py-0.5 text-xs font-semibold transition-colors ${
-          isThai
-            ? "bg-amber-500 text-white shadow"
-            : "bg-slate-100 text-slate-500"
-        }`}
-      >
-        TH
-      </span>
-      <span
-        className={`rounded-full px-2 py-0.5 text-xs font-semibold transition-colors ${
-          isThai
-            ? "bg-slate-100 text-slate-500"
-            : "bg-amber-500 text-white shadow"
-        }`}
-      >
-        EN
-      </span>
-      <span className="text-xs font-semibold uppercase tracking-wide text-slate-400">
-        |
-      </span>
-      <span className="text-sm font-medium text-slate-600">{label}</span>
+      {isThai ? "TH" : "EN"}
     </button>
   );
 }
@@ -140,7 +120,6 @@ export default function Navbar() {
               <LanguageToggleButton
                 language={language}
                 onToggle={toggleLanguage}
-                label={translations.languageSwitchLabel}
               />
             </div>
             <button
@@ -199,7 +178,6 @@ export default function Navbar() {
               <LanguageToggleButton
                 language={language}
                 onToggle={toggleLanguage}
-                label={translations.languageSwitchLabel}
               />
             </div>
             <div className="flex flex-col gap-1 rounded-xl bg-slate-50 px-3 py-2 text-xs text-slate-500">

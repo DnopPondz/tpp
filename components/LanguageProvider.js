@@ -19,7 +19,6 @@ const translations = {
       news: "บทความ",
       contact: "ติดต่อ",
     },
-    languageSwitchLabel: "English",
     hero: {
       headline: "บริการพิมพ์ผ้าแบบครบวงจร",
       subtitle:
@@ -158,7 +157,6 @@ const translations = {
       news: "News",
       contact: "Contact",
     },
-    languageSwitchLabel: "ภาษาไทย",
     hero: {
       headline: "Complete Textile Printing Solutions",
       subtitle:

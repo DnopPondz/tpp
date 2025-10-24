@@ -1,289 +1,455 @@
 export const blogPosts = [
   {
     slug: "digital-printing-trends-2024",
-    title: "เทรนด์การพิมพ์ดิจิทัลปี 2024 ที่โรงงานต้องรู้",
-    excerpt:
-      "สำรวจนวัตกรรมล่าสุดของการพิมพ์ผ้าดิจิทัล ตั้งแต่หมึกสูตรใหม่ ไปจนถึงระบบอัตโนมัติที่ช่วยลดการสูญเสียและเพิ่มความสม่ำเสมอของสี.",
-    category: "นวัตกรรม",
-    tags: ["Digital", "Sustainability"],
-    date: "2024-05-12",
-    readingTime: "4 นาที",
     cover: "/hero-textile.svg",
+    date: "2024-05-12",
     featured: true,
-    author: "ทีมกลยุทธ์ดิจิทัล",
-    authorRole: "ฝ่ายพัฒนานวัตกรรม",
-    content: [
-      {
-        heading: "เทคโนโลยีที่น่าจับตา",
-        paragraphs: [
-          "ปี 2024 เป็นปีที่เครื่องพิมพ์ดิจิทัลรุ่นใหม่เริ่มนำ AI มาช่วยปรับค่าการพิมพ์แบบเรียลไทม์ ลดปัญหาสีเพี้ยนและของเสียได้อย่างเห็นผล.",
-          "แบรนด์ระดับโลกให้ความสำคัญกับหมึกสูตรน้ำและกระบวนการที่ลดการใช้น้ำ ดังนั้นโรงงานจำเป็นต้องเตรียมโครงสร้างพื้นฐานรองรับมาตรฐานด้านสิ่งแวดล้อมที่เข้มงวดขึ้น.",
+    topics: ["digital", "innovation", "sustainability"],
+    translations: {
+      th: {
+        title: "เทรนด์การพิมพ์ดิจิทัลปี 2024 ที่โรงงานต้องรู้",
+        excerpt:
+          "สำรวจนวัตกรรมล่าสุดของการพิมพ์ผ้าดิจิทัล ตั้งแต่หมึกสูตรใหม่ ไปจนถึงระบบอัตโนมัติที่ช่วยลดการสูญเสียและเพิ่มความสม่ำเสมอของสี.",
+        category: "นวัตกรรม",
+        tags: ["ดิจิทัล", "ความยั่งยืน"],
+        readingTime: "4 นาที",
+        author: "ทีมกลยุทธ์ดิจิทัล",
+        authorRole: "ฝ่ายพัฒนานวัตกรรม",
+        content: [
+          {
+            heading: "เทคโนโลยีที่น่าจับตา",
+            paragraphs: [
+              "ปี 2024 เป็นปีที่เครื่องพิมพ์ดิจิทัลรุ่นใหม่เริ่มนำ AI มาช่วยปรับค่าการพิมพ์แบบเรียลไทม์ ลดปัญหาสีเพี้ยนและของเสียได้อย่างเห็นผล.",
+              "แบรนด์ระดับโลกให้ความสำคัญกับหมึกสูตรน้ำและกระบวนการที่ลดการใช้น้ำ ดังนั้นโรงงานจำเป็นต้องเตรียมโครงสร้างพื้นฐานรองรับมาตรฐานด้านสิ่งแวดล้อมที่เข้มงวดขึ้น.",
+            ],
+          },
+          {
+            heading: "สิ่งที่ต้องลงทุน",
+            paragraphs: [
+              "นอกจากเครื่องจักรแล้ว ระบบจัดการข้อมูลการพิมพ์ (Print MIS) และการเชื่อมต่อ IoT ช่วยให้วิเคราะห์ประสิทธิภาพได้ละเอียดขึ้น.",
+            ],
+            bullets: [
+              "ติดตั้งเซ็นเซอร์วัดความชื้นและอุณหภูมิภายในไลน์ผลิต",
+              "ใช้ซอฟต์แวร์จัดคิวงานอัตโนมัติลดเวลารอเครื่อง",
+              "วางแผนฝึกอบรมทีมงานเรื่องสีและหมึกสูตรใหม่",
+            ],
+          },
+          {
+            heading: "สรุปแผนดำเนินการ",
+            paragraphs: [
+              "เริ่มจากการประเมินเครื่องจักรที่มีอยู่และกำหนด KPI ด้านคุณภาพและของเสีย จากนั้นกำหนด Roadmap การอัปเกรดในช่วง 12 เดือนโดยจัดลำดับความสำคัญของโครงการที่มีผลตอบแทนเร็วที่สุด.",
+            ],
+          },
+        ],
+        keyTakeaways: [
+          "ติดตามเทคโนโลยีที่ผสาน AI และระบบอัตโนมัติ",
+          "ลงทุนในโครงสร้างพื้นฐานข้อมูลเพื่อบริหารต้นทุน",
+          "ยกระดับมาตรฐานสิ่งแวดล้อมเพื่อรองรับลูกค้าระดับสากล",
         ],
       },
-      {
-        heading: "สิ่งที่ต้องลงทุน",
-        paragraphs: [
-          "นอกจากเครื่องจักรแล้ว ระบบจัดการข้อมูลการพิมพ์ (Print MIS) และการเชื่อมต่อ IoT ช่วยให้วิเคราะห์ประสิทธิภาพได้ละเอียดขึ้น.",
+      en: {
+        title: "Digital textile printing trends to watch in 2024",
+        excerpt:
+          "Explore the latest innovations in digital textile printing, from next-gen inks to automation that reduces waste and keeps colours consistent.",
+        category: "Innovation",
+        tags: ["Digital", "Sustainability"],
+        readingTime: "4 min read",
+        author: "Digital strategy team",
+        authorRole: "Innovation office",
+        content: [
+          {
+            heading: "Technologies on the horizon",
+            paragraphs: [
+              "In 2024, new generations of digital printers are embedding AI to tune print settings in real time, cutting colour drift and waste in measurable ways.",
+              "Global brands are prioritising water-based inks and processes that lower water usage, so mills need infrastructure ready for tighter environmental standards.",
+            ],
+          },
+          {
+            heading: "Where to invest",
+            paragraphs: [
+              "Beyond hardware, a connected Print MIS and IoT sensors unlock granular performance analysis across every press run.",
+            ],
+            bullets: [
+              "Install sensors to monitor humidity and temperature along the production line.",
+              "Adopt automated scheduling tools to keep presses running with minimal idle time.",
+              "Plan training programmes so teams can master new ink chemistries and colour workflows.",
+            ],
+          },
+          {
+            heading: "Action plan",
+            paragraphs: [
+              "Start by auditing current equipment and defining KPIs for quality and waste. Then build a 12-month upgrade roadmap, prioritising projects that return value the fastest.",
+            ],
+          },
         ],
-        bullets: [
-          "ติดตั้งเซ็นเซอร์วัดความชื้นและอุณหภูมิภายในไลน์ผลิต",
-          "ใช้ซอฟต์แวร์จัดคิวงานอัตโนมัติลดเวลารอเครื่อง",
-          "วางแผนฝึกอบรมทีมงานเรื่องสีและหมึกสูตรใหม่",
+        keyTakeaways: [
+          "Track AI-enabled and automated technologies closely.",
+          "Invest in data infrastructure to control costs.",
+          "Raise environmental standards to serve international clients.",
         ],
       },
-      {
-        heading: "สรุปแผนดำเนินการ",
-        paragraphs: [
-          "เริ่มจากการประเมินเครื่องจักรที่มีอยู่และกำหนด KPI ด้านคุณภาพและของเสีย จากนั้นกำหนด Roadmap การอัปเกรดในช่วง 12 เดือนโดยจัดลำดับความสำคัญของโครงการที่มีผลตอบแทนเร็วที่สุด.",
-        ],
-      },
-    ],
-    keyTakeaways: [
-      "ติดตามเทคโนโลยีที่ผสาน AI และระบบอัตโนมัติ",
-      "ลงทุนในโครงสร้างพื้นฐานข้อมูลเพื่อบริหารต้นทุน",
-      "ยกระดับมาตรฐานสิ่งแวดล้อมเพื่อรองรับลูกค้าระดับสากล",
-    ],
+    },
   },
   {
     slug: "color-management-workflow",
-    title: "จัดการสีอย่างมืออาชีพสำหรับงานพิมพ์แฟชั่น",
-    excerpt:
-      "ขั้นตอนการควบคุมสีแบบครบวงจร ตั้งแต่การเตรียมไฟล์ การเลือกผ้า ไปจนถึงการตรวจสอบคุณภาพให้ได้สีตามแบรนด์.",
-    category: "เทคนิค",
-    tags: ["Color Lab", "Fashion"],
-    date: "2024-04-26",
-    readingTime: "6 นาที",
     cover: "/window.svg",
-    author: "ห้องปฏิบัติการสี",
-    authorRole: "ฝ่ายควบคุมคุณภาพ",
-    content: [
-      {
-        heading: "ตั้งต้นด้วยโปรไฟล์สีที่ถูกต้อง",
-        paragraphs: [
-          "การใช้โปรไฟล์ ICC ที่อัปเดตและตรงกับชนิดผ้าจะช่วยให้สีออกมาสม่ำเสมอในทุกล็อตการผลิต.",
-          "ควรมีขั้นตอนตรวจสอบไฟล์จากนักออกแบบก่อนส่งเข้าระบบ RIP เพื่อตรวจจับสีที่อยู่นอกขอบเขตการพิมพ์.",
+    date: "2024-04-26",
+    topics: ["color", "fashion", "quality"],
+    translations: {
+      th: {
+        title: "จัดการสีอย่างมืออาชีพสำหรับงานพิมพ์แฟชั่น",
+        excerpt:
+          "ขั้นตอนการควบคุมสีแบบครบวงจร ตั้งแต่การเตรียมไฟล์ การเลือกผ้า ไปจนถึงการตรวจสอบคุณภาพให้ได้สีตามแบรนด์.",
+        category: "เทคนิค",
+        tags: ["จัดการสี", "แฟชั่น"],
+        readingTime: "6 นาที",
+        author: "ห้องปฏิบัติการสี",
+        authorRole: "ฝ่ายควบคุมคุณภาพ",
+        content: [
+          {
+            heading: "ตั้งต้นด้วยโปรไฟล์สีที่ถูกต้อง",
+            paragraphs: [
+              "การใช้โปรไฟล์ ICC ที่อัปเดตและตรงกับชนิดผ้าจะช่วยให้สีออกมาสม่ำเสมอในทุกล็อตการผลิต.",
+              "ควรมีขั้นตอนตรวจสอบไฟล์จากนักออกแบบก่อนส่งเข้าระบบ RIP เพื่อตรวจจับสีที่อยู่นอกขอบเขตการพิมพ์.",
+            ],
+          },
+          {
+            heading: "เวิร์กโฟลว์การทดสอบ",
+            paragraphs: [
+              "เก็บตัวอย่างผ้าทดสอบและค่าการตั้งเครื่องทุกครั้งที่เปลี่ยนงาน เพื่อสร้างฐานข้อมูลเปรียบเทียบ.",
+            ],
+            bullets: [
+              "ใช้แถบควบคุมสี (Color Control Strip) ในทุกงาน",
+              "ตรวจวัดค่า Delta E ไม่เกิน 2 สำหรับงานแฟชั่น",
+              "บันทึกอุณหภูมิและความชื้นของห้องพิมพ์",
+            ],
+          },
+          {
+            heading: "ทำงานร่วมกับฝ่ายออกแบบ",
+            paragraphs: [
+              "สื่อสารขอบเขตสีและข้อจำกัดของวัสดุกับนักออกแบบ พร้อมแนะนำการเลือกแพนโทนทดแทนที่ใกล้เคียงที่สุด.",
+            ],
+          },
+        ],
+        keyTakeaways: [
+          "ใช้โปรไฟล์ ICC เฉพาะสำหรับแต่ละวัสดุ",
+          "วัดผลความคลาดเคลื่อนของสีทุกล็อต",
+          "ตั้งระบบสื่อสารระหว่างฝ่ายผลิตและออกแบบ",
         ],
       },
-      {
-        heading: "เวิร์กโฟลว์การทดสอบ",
-        paragraphs: [
-          "เก็บตัวอย่างผ้าทดสอบและค่าการตั้งเครื่องทุกครั้งที่เปลี่ยนงาน เพื่อสร้างฐานข้อมูลเปรียบเทียบ.",
+      en: {
+        title: "Professional colour management for fashion printing",
+        excerpt:
+          "A full workflow for colour control—from file preparation and fabric selection to quality checks that keep every drop on brand.",
+        category: "Technique",
+        tags: ["Colour lab", "Fashion"],
+        readingTime: "6 min read",
+        author: "Colour laboratory",
+        authorRole: "Quality assurance team",
+        content: [
+          {
+            heading: "Start with the right profiles",
+            paragraphs: [
+              "Updated ICC profiles tailored to each fabric type keep colours consistent across every production batch.",
+              "Add a designer preflight step before files enter the RIP to flag out-of-gamut colours early.",
+            ],
+          },
+          {
+            heading: "Testing workflow",
+            paragraphs: [
+              "Log strike-off samples and machine settings whenever jobs change so you can build a reliable reference library.",
+            ],
+            bullets: [
+              "Place a colour control strip on every job.",
+              "Target a Delta E below 2 for fashion collections.",
+              "Record the press room's temperature and humidity.",
+            ],
+          },
+          {
+            heading: "Partner with design",
+            paragraphs: [
+              "Communicate material limits and colour ranges with designers, and suggest the closest Pantone alternatives when needed.",
+            ],
+          },
         ],
-        bullets: [
-          "ใช้แถบควบคุมสี (Color Control Strip) ในทุกงาน",
-          "ตรวจวัดค่า Delta E ไม่เกิน 2 สำหรับงานแฟชั่น",
-          "บันทึกอุณหภูมิและความชื้นของห้องพิมพ์",
+        keyTakeaways: [
+          "Use ICC profiles specific to each substrate.",
+          "Measure colour deviation on every batch.",
+          "Create a tight feedback loop between production and design.",
         ],
       },
-      {
-        heading: "ทำงานร่วมกับฝ่ายออกแบบ",
-        paragraphs: [
-          "สื่อสารขอบเขตสีและข้อจำกัดของวัสดุกับนักออกแบบ พร้อมแนะนำการเลือกแพนโทนทดแทนที่ใกล้เคียงที่สุด.",
-        ],
-      },
-    ],
-    keyTakeaways: [
-      "ใช้โปรไฟล์ ICC เฉพาะสำหรับแต่ละวัสดุ",
-      "วัดผลความคลาดเคลื่อนของสีทุกล็อต",
-      "ตั้งระบบสื่อสารระหว่างฝ่ายผลิตและออกแบบ",
-    ],
+    },
   },
   {
     slug: "eco-friendly-inks",
-    title: "เลือกหมึกพิมพ์ที่เป็นมิตรต่อสิ่งแวดล้อม",
-    excerpt:
-      "ทำความรู้จักหมึกพิมพ์สูตรน้ำและสารตั้งต้นที่ลดของเสีย ช่วยให้โรงงานผ่านมาตรฐานการผลิตที่เข้มงวด.",
-    category: "ความยั่งยืน",
-    tags: ["Eco", "Certification"],
-    date: "2024-03-30",
-    readingTime: "5 นาที",
     cover: "/globe.svg",
-    author: "ทีมความยั่งยืน",
-    authorRole: "ฝ่ายพัฒนาผลิตภัณฑ์",
-    content: [
-      {
-        heading: "เข้าใจประเภทของหมึก",
-        paragraphs: [
-          "หมึกสูตรน้ำ (Water-based) และหมึกที่ปลอดจากสารฟอร์มัลดีไฮด์กำลังเป็นมาตรฐานใหม่สำหรับการส่งออก.",
-          "ควรขอใบรับรองมาตรฐานเช่น OEKO-TEX® หรือ Bluesign® เพื่อสร้างความมั่นใจให้ลูกค้า.",
+    date: "2024-03-30",
+    topics: ["eco", "certification", "operations"],
+    translations: {
+      th: {
+        title: "เลือกหมึกพิมพ์ที่เป็นมิตรต่อสิ่งแวดล้อม",
+        excerpt:
+          "ทำความรู้จักหมึกพิมพ์สูตรน้ำและสารตั้งต้นที่ลดของเสีย ช่วยให้โรงงานผ่านมาตรฐานการผลิตที่เข้มงวด.",
+        category: "ความยั่งยืน",
+        tags: ["อีโค", "การรับรอง"],
+        readingTime: "5 นาที",
+        author: "ทีมความยั่งยืน",
+        authorRole: "ฝ่ายพัฒนาผลิตภัณฑ์",
+        content: [
+          {
+            heading: "เข้าใจประเภทของหมึก",
+            paragraphs: [
+              "หมึกสูตรน้ำ (Water-based) และหมึกที่ปลอดจากสารฟอร์มัลดีไฮด์กำลังเป็นมาตรฐานใหม่สำหรับการส่งออก.",
+              "ควรขอใบรับรองมาตรฐานเช่น OEKO-TEX® หรือ Bluesign® เพื่อสร้างความมั่นใจให้ลูกค้า.",
+            ],
+          },
+          {
+            heading: "จัดการของเสียให้เป็นศูนย์",
+            paragraphs: [
+              "ระบบบำบัดน้ำเสียควรปรับปรุงให้รองรับสารประกอบจากหมึกสูตรใหม่ และจัดทำคู่มือให้พนักงานใช้หมึกอย่างมีประสิทธิภาพ.",
+            ],
+            bullets: [
+              "ตั้งเกณฑ์การเบิกหมึกตามปริมาณงานจริง",
+              "ติดตามอัตราการสูญเสียหมึกต่อเมตรพิมพ์",
+              "รีไซเคิลภาชนะบรรจุหมึกตามคู่มือผู้ผลิต",
+            ],
+          },
+          {
+            heading: "สื่อสารความยั่งยืน",
+            paragraphs: [
+              "จัดทำ Fact Sheet อธิบายข้อดีของหมึกที่ใช้ พร้อมตัวชี้วัดสิ่งแวดล้อมเพื่อให้ทีมขายนำเสนอแก่ลูกค้าได้ง่าย.",
+            ],
+          },
+        ],
+        keyTakeaways: [
+          "เลือกหมึกที่ได้รับรองมาตรฐานสากล",
+          "ปรับปรุงระบบบำบัดและการจัดการหมึก",
+          "สื่อสารจุดแข็งด้านสิ่งแวดล้อมกับลูกค้า",
         ],
       },
-      {
-        heading: "จัดการของเสียให้เป็นศูนย์",
-        paragraphs: [
-          "ระบบบำบัดน้ำเสียควรปรับปรุงให้รองรับสารประกอบจากหมึกสูตรใหม่ และจัดทำคู่มือให้พนักงานใช้หมึกอย่างมีประสิทธิภาพ.",
+      en: {
+        title: "Choosing eco-friendly printing inks",
+        excerpt:
+          "Get to know water-based inks and low-impact chemistries that cut waste and help your mill meet stricter production standards.",
+        category: "Sustainability",
+        tags: ["Eco", "Certification"],
+        readingTime: "5 min read",
+        author: "Sustainability team",
+        authorRole: "Product development",
+        content: [
+          {
+            heading: "Understand your ink options",
+            paragraphs: [
+              "Water-based and formaldehyde-free inks are becoming the new baseline for export programmes.",
+              "Ask for certifications such as OEKO-TEX® or Bluesign® to reassure brand partners.",
+            ],
+          },
+          {
+            heading: "Drive waste to zero",
+            paragraphs: [
+              "Upgrade wastewater treatment so it can handle new ink chemistries, and create shop-floor guides that promote efficient ink usage.",
+            ],
+            bullets: [
+              "Set draw-down limits based on actual job volume.",
+              "Track ink waste per printed metre.",
+              "Recycle ink containers according to supplier guidance.",
+            ],
+          },
+          {
+            heading: "Communicate sustainability",
+            paragraphs: [
+              "Prepare a fact sheet outlining your ink benefits alongside environmental metrics so sales teams can brief customers quickly.",
+            ],
+          },
         ],
-        bullets: [
-          "ตั้งเกณฑ์การเบิกหมึกตามปริมาณงานจริง",
-          "ติดตามอัตราการสูญเสียหมึกต่อเมตรพิมพ์",
-          "รีไซเคิลภาชนะบรรจุหมึกตามคู่มือผู้ผลิต",
+        keyTakeaways: [
+          "Source inks backed by international certifications.",
+          "Modernise treatment systems and ink handling.",
+          "Promote your environmental strengths to clients.",
         ],
       },
-      {
-        heading: "สื่อสารความยั่งยืน",
-        paragraphs: [
-          "จัดทำ Fact Sheet อธิบายข้อดีของหมึกที่ใช้ พร้อมตัวชี้วัดสิ่งแวดล้อมเพื่อให้ทีมขายนำเสนอแก่ลูกค้าได้ง่าย.",
-        ],
-      },
-    ],
-    keyTakeaways: [
-      "เลือกหมึกที่ได้รับรองมาตรฐานสากล",
-      "ปรับปรุงระบบบำบัดและการจัดการหมึก",
-      "สื่อสารจุดแข็งด้านสิ่งแวดล้อมกับลูกค้า",
-    ],
+    },
   },
   {
     slug: "rotary-vs-digital",
-    title: "เปรียบเทียบงานพิมพ์โรตารี่และดิจิทัล เลือกอย่างไรให้เหมาะ",
-    excerpt:
-      "สรุปข้อดี ข้อจำกัด และการประยุกต์ใช้ของแต่ละเทคโนโลยี เพื่อช่วยให้คุณตัดสินใจลงทุนได้อย่างมั่นใจ.",
-    category: "การลงทุน",
-    tags: ["ROI", "Production"],
-    date: "2024-02-18",
-    readingTime: "7 นาที",
     cover: "/file.svg",
-    author: "ฝ่ายวางแผนการผลิต",
-    authorRole: "ทีมกลยุทธ์โรงงาน",
-    content: [
-      {
-        heading: "ข้อได้เปรียบของโรตารี่",
-        paragraphs: [
-          "เหมาะสำหรับงานปริมาณมากและลวดลายที่ซ้ำต่อเนื่อง ด้วยต้นทุนต่อเมตรที่ต่ำเมื่อผลิตในปริมาณสูง.",
+    date: "2024-02-18",
+    topics: ["production", "roi", "strategy"],
+    translations: {
+      th: {
+        title: "เปรียบเทียบงานพิมพ์โรตารี่และดิจิทัล เลือกอย่างไรให้เหมาะ",
+        excerpt:
+          "สรุปข้อดี ข้อจำกัด และการประยุกต์ใช้ของแต่ละเทคโนโลยี เพื่อช่วยให้คุณตัดสินใจลงทุนได้อย่างมั่นใจ.",
+        category: "การลงทุน",
+        tags: ["การลงทุน", "การผลิต"],
+        readingTime: "7 นาที",
+        author: "ฝ่ายวางแผนการผลิต",
+        authorRole: "ทีมกลยุทธ์โรงงาน",
+        content: [
+          {
+            heading: "ข้อได้เปรียบของโรตารี่",
+            paragraphs: [
+              "เหมาะสำหรับงานปริมาณมากและลวดลายที่ซ้ำต่อเนื่อง ด้วยต้นทุนต่อเมตรที่ต่ำเมื่อผลิตในปริมาณสูง.",
+            ],
+            bullets: [
+              "ความเร็วสูงถึง 80 เมตรต่อนาที",
+              "เหมาะกับสีพื้นและลายแถว",
+              "ต้องใช้แม่พิมพ์และเวลาเตรียมงานมากกว่า",
+            ],
+          },
+          {
+            heading: "ความยืดหยุ่นของดิจิทัล",
+            paragraphs: [
+              "รองรับงานที่ต้องการรายละเอียดสูงและล็อตขนาดเล็ก ปรับเปลี่ยนดีไซน์ได้รวดเร็วโดยไม่ต้องทำแม่พิมพ์.",
+            ],
+            bullets: [
+              "เปลี่ยนแบบได้รวดเร็ว ลดเวลาขึ้นงาน",
+              "ทดลองสีและลายใหม่ได้ทันที",
+              "ต้นทุนต่อเมตรคงที่แม้ปริมาณน้อย",
+            ],
+          },
+          {
+            heading: "กลยุทธ์การลงทุน",
+            paragraphs: [
+              "ผสมผสานสองเทคโนโลยีให้เหมาะกับพอร์ตสินค้า โดยใช้โรตารี่สำหรับล็อตหลัก และดิจิทัลสำหรับคอลเลกชันพิเศษหรือการปรับแต่งเฉพาะราย.",
+            ],
+            bullets: [
+              "วิเคราะห์ประเภทงานและปริมาณเฉลี่ยรายเดือน",
+              "ประเมินความพร้อมของทีมสำหรับการดูแลเครื่องแต่ละชนิด",
+              "ตั้ง KPI ด้านของเสียและเวลาตอบสนองลูกค้า",
+            ],
+          },
         ],
-        bullets: [
-          "ความเร็วสูงถึง 80 เมตรต่อนาที",
-          "เหมาะกับสีพื้นและลายแถว",
-          "ต้องใช้แม่พิมพ์และเวลาเตรียมงานมากกว่า",
-        ],
-      },
-      {
-        heading: "ความยืดหยุ่นของดิจิทัล",
-        paragraphs: [
-          "รองรับจำนวนสีไม่จำกัดและรายละเอียดสูง เหมาะสำหรับงานคัสตอมและล็อตเล็ก.",
-        ],
-        bullets: [
-          "ไม่ต้องทำแม่พิมพ์ ลดเวลาขึ้นงาน",
-          "เปลี่ยนดีไซน์ได้รวดเร็ว",
-          "ต้นทุนต่อเมตรสูงกว่าเมื่องานจำนวนมาก",
-        ],
-      },
-      {
-        heading: "วิธีตัดสินใจลงทุน",
-        paragraphs: [
-          "วิเคราะห์โครงสร้างคำสั่งซื้อและคาดการณ์ยอดขาย 18 เดือน เพื่อกำหนดสัดส่วนงานโรตารี่และดิจิทัลที่เหมาะสม.",
-        ],
-      },
-    ],
-    keyTakeaways: [
-      "โรตารี่คุ้มค่ากับงานปริมาณสูง",
-      "ดิจิทัลตอบโจทย์งานหลากหลายและรวดเร็ว",
-      "ใช้ข้อมูลยอดขายเพื่อจัดพอร์ตการลงทุน",
-    ],
-  },
-  {
-    slug: "design-hand-off",
-    title: "เตรียมไฟล์งานออกแบบให้ฝ่ายผลิตรับช่วงต่อได้ทันที",
-    excerpt:
-      "เช็กลิสต์การเตรียมไฟล์ การตั้งค่าโปรไฟล์สี และการส่งข้อมูลประกอบ เพื่อให้การผลิตเดินหน้าอย่างราบรื่น.",
-    category: "เวิร์กโฟลว์",
-    tags: ["Checklist", "Designer"],
-    date: "2024-01-28",
-    readingTime: "3 นาที",
-    cover: "/next.svg",
-    author: "ทีมบริการลูกค้า",
-    authorRole: "ฝ่ายประสานงานโครงการ",
-    content: [
-      {
-        heading: "เช็กลิสต์ก่อนส่งงาน",
-        paragraphs: [
-          "ระบุขนาดผ้า ซ้ำลาย (repeat) และไฟล์ต้นฉบับที่มีความละเอียดอย่างน้อย 300 DPI.",
-          "แนบคู่มือสีและตัวอย่างงานอ้างอิงเพื่อให้ทีมผลิตเข้าใจจุดประสงค์ที่แท้จริง.",
+        keyTakeaways: [
+          "โรตารี่ตอบโจทย์ล็อตใหญ่ที่ต้องการความคุ้มทุน",
+          "ดิจิทัลเพิ่มความเร็วและความยืดหยุ่นในการออกแบบ",
+          "การผสมผสานช่วยบริหารความเสี่ยงและตอบสนองตลาดเร็ว",
         ],
       },
-      {
-        heading: "เอกสารประกอบ",
-        paragraphs: [
-          "ควรมีฟอร์มสรุปข้อมูลงาน เช่น โค้ดสี, จำนวนผลิต, วันที่ต้องการ และข้อมูลติดต่อผู้ประสานงาน.",
+      en: {
+        title: "Rotary vs. digital printing—choosing the right fit",
+        excerpt:
+          "A clear look at the strengths, limits, and best applications for each technology so you can invest with confidence.",
+        category: "Investment",
+        tags: ["ROI", "Production"],
+        readingTime: "7 min read",
+        author: "Production planning unit",
+        authorRole: "Factory strategy team",
+        content: [
+          {
+            heading: "Rotary advantages",
+            paragraphs: [
+              "Best suited for high-volume, repeating patterns with low cost per metre once you scale production.",
+            ],
+            bullets: [
+              "Run speeds up to 80 metres per minute.",
+              "Excels at solids and banded layouts.",
+              "Requires more time and tooling for screen preparation.",
+            ],
+          },
+          {
+            heading: "Digital flexibility",
+            paragraphs: [
+              "Ideal for detailed artwork and smaller runs, enabling fast design changes without new screens.",
+            ],
+            bullets: [
+              "Switch designs quickly and reduce setup time.",
+              "Test new colours and motifs instantly.",
+              "Cost per metre stays consistent, even at lower volumes.",
+            ],
+          },
+          {
+            heading: "Investment strategy",
+            paragraphs: [
+              "Blend both technologies to suit your range—use rotary for core SKUs and digital for special editions or personalised runs.",
+            ],
+            bullets: [
+              "Analyse job types and average monthly volumes.",
+              "Assess team readiness to maintain each platform.",
+              "Set KPIs for waste and customer response times.",
+            ],
+          },
         ],
-        bullets: [
-          "ไฟล์ artwork (.ai, .psd หรือ .tiff)",
-          "ไฟล์ mockup สำหรับตรวจสอบตำแหน่ง",
-          "หมายเหตุพิเศษเรื่องการตัดเย็บหรือฟินิชชิ่ง",
-        ],
-      },
-      {
-        heading: "การติดตามผล",
-        paragraphs: [
-          "หลังจากส่งไฟล์ ควรจัดประชุมสั้น ๆ เพื่อทบทวนรายละเอียดร่วมกัน และกำหนดช่องทางการอนุมัติรอบทดสอบ.",
-        ],
-      },
-    ],
-    keyTakeaways: [
-      "เตรียมไฟล์ความละเอียดสูงพร้อมระบุ repeat",
-      "ส่งเอกสารประกอบครบถ้วนลดความผิดพลาด",
-      "ติดตามการอนุมัติรอบทดสอบอย่างเป็นระบบ",
-    ],
-  },
-  {
-    slug: "finishing-techniques",
-    title: "เทคนิคฟินิชชิ่งที่เพิ่มมูลค่าให้ผืนผ้า",
-    excerpt:
-      "จากการเคลือบผิว การซอฟต์ทัช ไปจนถึงการกันน้ำ ค้นพบบริการฟินิชชิ่งที่ตอบโจทย์สินค้าของคุณ.",
-    category: "บริการ",
-    tags: ["Finishing", "Value Add"],
-    date: "2023-12-12",
-    readingTime: "4 นาที",
-    cover: "/vercel.svg",
-    author: "ฝ่ายฟินิชชิ่ง",
-    authorRole: "ผู้เชี่ยวชาญการปรับแต่งผ้า",
-    content: [
-      {
-        heading: "บริการยอดนิยม",
-        paragraphs: [
-          "การเคลือบซอฟต์ทัชและกันน้ำช่วยเพิ่มมูลค่าให้ผ้าสำหรับสินค้าพรีเมียม.",
-          "บริการป้องกันรังสียูวีและการเคลือบสารหน่วงไฟเหมาะกับงานตกแต่งภายนอก.",
-        ],
-      },
-      {
-        heading: "การเลือกบริการที่เหมาะสม",
-        paragraphs: [
-          "พิจารณาจากการใช้งานจริง อายุการใช้งานที่ต้องการ และข้อกำหนดของลูกค้า.",
-        ],
-        bullets: [
-          "สินค้าแฟชั่น: เน้นผิวสัมผัสและความพลิ้ว",
-          "ของตกแต่งบ้าน: เน้นการทนการซักและแสง",
-          "งานอุตสาหกรรม: เน้นคุณสมบัติเฉพาะด้านความปลอดภัย",
+        keyTakeaways: [
+          "Rotary delivers ROI on large, repeat orders.",
+          "Digital brings speed and design agility.",
+          "Combining both manages risk and keeps you market-ready.",
         ],
       },
-      {
-        heading: "ควบคุมคุณภาพหลังฟินิชชิ่ง",
-        paragraphs: [
-          "ตรวจสอบความสม่ำเสมอของเคลือบและทำการทดสอบเสถียรภาพก่อนส่งมอบ เพื่อให้ลูกค้าได้รับสินค้าตรงตามมาตรฐาน.",
-        ],
-      },
-    ],
-    keyTakeaways: [
-      "ฟินิชชิ่งเพิ่มมูลค่าและคุณสมบัติให้ผ้า",
-      "เลือกบริการตามการใช้งานจริงของสินค้า",
-      "ตั้งมาตรฐานตรวจสอบก่อนส่งมอบทุกครั้ง",
-    ],
+    },
   },
 ];
 
 export const blogCollections = [
   {
-    title: "คู่มือเริ่มต้น",
-    description: "ปรับพื้นฐานการพิมพ์ผ้าสำหรับทีมออกแบบและจัดซื้อ.",
     accent: "from-amber-500 to-orange-400",
+    translations: {
+      th: {
+        title: "คู่มือเริ่มต้น",
+        description: "ปรับพื้นฐานการพิมพ์ผ้าสำหรับทีมออกแบบและจัดซื้อ.",
+      },
+      en: {
+        title: "Starter guides",
+        description: "Level-up textile printing basics for design and procurement teams.",
+      },
+    },
   },
   {
-    title: "ไอเดียการประยุกต์",
-    description: "แรงบันดาลใจสำหรับแฟชั่น ไลฟ์สไตล์ และของตกแต่งบ้าน.",
     accent: "from-sky-500 to-indigo-400",
+    translations: {
+      th: {
+        title: "ไอเดียการประยุกต์",
+        description: "แรงบันดาลใจสำหรับแฟชั่น ไลฟ์สไตล์ และของตกแต่งบ้าน.",
+      },
+      en: {
+        title: "Applied ideas",
+        description: "Inspiration for fashion, lifestyle, and home décor brands.",
+      },
+    },
   },
   {
-    title: "อัปเดตโรงงาน",
-    description: "ติดตามโครงการพัฒนาและมาตรฐานใหม่ของไทยพีพาน.",
     accent: "from-emerald-500 to-teal-400",
+    translations: {
+      th: {
+        title: "อัปเดตโรงงาน",
+        description: "ติดตามโครงการพัฒนาและมาตรฐานใหม่ของไทยพีพาน.",
+      },
+      en: {
+        title: "Mill updates",
+        description: "Follow ThaiPaipan projects, upgrades, and certification news.",
+      },
+    },
   },
 ];
+
+export const getLocalizedPosts = (language) =>
+  blogPosts.map((post) => ({
+    slug: post.slug,
+    cover: post.cover,
+    date: post.date,
+    featured: Boolean(post.featured),
+    topics: post.topics,
+    ...post.translations[language],
+  }));
+
+export const getLocalizedPost = (slug, language) => {
+  const base = blogPosts.find((post) => post.slug === slug);
+  if (!base) {
+    return undefined;
+  }
+
+  return {
+    slug: base.slug,
+    cover: base.cover,
+    date: base.date,
+    featured: Boolean(base.featured),
+    topics: base.topics,
+    ...base.translations[language],
+  };
+};
+
+export const getLocalizedCollections = (language) =>
+  blogCollections.map((collection) => ({
+    accent: collection.accent,
+    ...collection.translations[language],
+  }));

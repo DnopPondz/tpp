@@ -88,7 +88,7 @@ export default function BlogView() {
           </div>
         </header>
 
-        <section className="grid gap-10 lg:grid-cols-[2fr_1fr]">
+        {/* <section className="grid gap-10 lg:grid-cols-[2fr_1fr]">
           <article className="overflow-hidden rounded-[3rem] border border-slate-200 bg-white shadow-2xl">
             <div className="relative h-[22rem] w-full overflow-hidden">
               <Image
@@ -161,7 +161,7 @@ export default function BlogView() {
               ))}
             </ul>
           </aside>
-        </section>
+        </section> */}
 
         <section id="articles" className="space-y-10">
           <div className="space-y-2">

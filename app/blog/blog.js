@@ -449,6 +449,762 @@ export const blogPosts = [
       },
     },
   },
+  {
+    slug: "rotary-vs-digital-2",
+    cover: "/file.svg",
+    date: "2024-02-18",
+    topics: ["production", "roi", "strategy"],
+    translations: {
+      th: {
+        title: "เปรียบเทียบงานพิมพ์โรตารี่และดิจิทัล เลือกอย่างไรให้เหมาะ",
+        excerpt:
+          "สรุปข้อดี ข้อจำกัด และการประยุกต์ใช้ของแต่ละเทคโนโลยี เพื่อช่วยให้คุณตัดสินใจลงทุนได้อย่างมั่นใจ.",
+        category: "การลงทุน",
+        tags: ["การลงทุน", "การผลิต"],
+        readingTime: "7 นาที",
+        author: "ฝ่ายวางแผนการผลิต",
+        authorRole: "ทีมกลยุทธ์โรงงาน",
+        content: [
+          {
+            heading: "ข้อได้เปรียบของโรตารี่",
+            paragraphs: [
+              "เหมาะสำหรับงานปริมาณมากและลวดลายที่ซ้ำต่อเนื่อง ด้วยต้นทุนต่อเมตรที่ต่ำเมื่อผลิตในปริมาณสูง.",
+            ],
+            bullets: [
+              "ความเร็วสูงถึง 80 เมตรต่อนาที",
+              "เหมาะกับสีพื้นและลายแถว",
+              "ต้องใช้แม่พิมพ์และเวลาเตรียมงานมากกว่า",
+            ],
+          },
+          {
+            heading: "ความยืดหยุ่นของดิจิทัล",
+            paragraphs: [
+              "รองรับงานที่ต้องการรายละเอียดสูงและล็อตขนาดเล็ก ปรับเปลี่ยนดีไซน์ได้รวดเร็วโดยไม่ต้องทำแม่พิมพ์.",
+            ],
+            bullets: [
+              "เปลี่ยนแบบได้รวดเร็ว ลดเวลาขึ้นงาน",
+              "ทดลองสีและลายใหม่ได้ทันที",
+              "ต้นทุนต่อเมตรคงที่แม้ปริมาณน้อย",
+            ],
+          },
+          {
+            heading: "กลยุทธ์การลงทุน",
+            paragraphs: [
+              "ผสมผสานสองเทคโนโลยีให้เหมาะกับพอร์ตสินค้า โดยใช้โรตารี่สำหรับล็อตหลัก และดิจิทัลสำหรับคอลเลกชันพิเศษหรือการปรับแต่งเฉพาะราย.",
+            ],
+            bullets: [
+              "วิเคราะห์ประเภทงานและปริมาณเฉลี่ยรายเดือน",
+              "ประเมินความพร้อมของทีมสำหรับการดูแลเครื่องแต่ละชนิด",
+              "ตั้ง KPI ด้านของเสียและเวลาตอบสนองลูกค้า",
+            ],
+          },
+        ],
+        keyTakeaways: [
+          "โรตารี่ตอบโจทย์ล็อตใหญ่ที่ต้องการความคุ้มทุน",
+          "ดิจิทัลเพิ่มความเร็วและความยืดหยุ่นในการออกแบบ",
+          "การผสมผสานช่วยบริหารความเสี่ยงและตอบสนองตลาดเร็ว",
+        ],
+      },
+      en: {
+        title: "Rotary vs. digital printing—choosing the right fit",
+        excerpt:
+          "A clear look at the strengths, limits, and best applications for each technology so you can invest with confidence.",
+        category: "Investment",
+        tags: ["ROI", "Production"],
+        readingTime: "7 min read",
+        author: "Production planning unit",
+        authorRole: "Factory strategy team",
+        content: [
+          {
+            heading: "Rotary advantages",
+            paragraphs: [
+              "Best suited for high-volume, repeating patterns with low cost per metre once you scale production.",
+            ],
+            bullets: [
+              "Run speeds up to 80 metres per minute.",
+              "Excels at solids and banded layouts.",
+              "Requires more time and tooling for screen preparation.",
+            ],
+          },
+          {
+            heading: "Digital flexibility",
+            paragraphs: [
+              "Ideal for detailed artwork and smaller runs, enabling fast design changes without new screens.",
+            ],
+            bullets: [
+              "Switch designs quickly and reduce setup time.",
+              "Test new colours and motifs instantly.",
+              "Cost per metre stays consistent, even at lower volumes.",
+            ],
+          },
+          {
+            heading: "Investment strategy",
+            paragraphs: [
+              "Blend both technologies to suit your range—use rotary for core SKUs and digital for special editions or personalised runs.",
+            ],
+            bullets: [
+              "Analyse job types and average monthly volumes.",
+              "Assess team readiness to maintain each platform.",
+              "Set KPIs for waste and customer response times.",
+            ],
+          },
+        ],
+        keyTakeaways: [
+          "Rotary delivers ROI on large, repeat orders.",
+          "Digital brings speed and design agility.",
+          "Combining both manages risk and keeps you market-ready.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "rotary-vs-digital-3",
+    cover: "/file.svg",
+    date: "2024-02-18",
+    topics: ["production", "roi", "strategy"],
+    translations: {
+      th: {
+        title: "เปรียบเทียบงานพิมพ์โรตารี่และดิจิทัล เลือกอย่างไรให้เหมาะ",
+        excerpt:
+          "สรุปข้อดี ข้อจำกัด และการประยุกต์ใช้ของแต่ละเทคโนโลยี เพื่อช่วยให้คุณตัดสินใจลงทุนได้อย่างมั่นใจ.",
+        category: "การลงทุน",
+        tags: ["การลงทุน", "การผลิต"],
+        readingTime: "7 นาที",
+        author: "ฝ่ายวางแผนการผลิต",
+        authorRole: "ทีมกลยุทธ์โรงงาน",
+        content: [
+          {
+            heading: "ข้อได้เปรียบของโรตารี่",
+            paragraphs: [
+              "เหมาะสำหรับงานปริมาณมากและลวดลายที่ซ้ำต่อเนื่อง ด้วยต้นทุนต่อเมตรที่ต่ำเมื่อผลิตในปริมาณสูง.",
+            ],
+            bullets: [
+              "ความเร็วสูงถึง 80 เมตรต่อนาที",
+              "เหมาะกับสีพื้นและลายแถว",
+              "ต้องใช้แม่พิมพ์และเวลาเตรียมงานมากกว่า",
+            ],
+          },
+          {
+            heading: "ความยืดหยุ่นของดิจิทัล",
+            paragraphs: [
+              "รองรับงานที่ต้องการรายละเอียดสูงและล็อตขนาดเล็ก ปรับเปลี่ยนดีไซน์ได้รวดเร็วโดยไม่ต้องทำแม่พิมพ์.",
+            ],
+            bullets: [
+              "เปลี่ยนแบบได้รวดเร็ว ลดเวลาขึ้นงาน",
+              "ทดลองสีและลายใหม่ได้ทันที",
+              "ต้นทุนต่อเมตรคงที่แม้ปริมาณน้อย",
+            ],
+          },
+          {
+            heading: "กลยุทธ์การลงทุน",
+            paragraphs: [
+              "ผสมผสานสองเทคโนโลยีให้เหมาะกับพอร์ตสินค้า โดยใช้โรตารี่สำหรับล็อตหลัก และดิจิทัลสำหรับคอลเลกชันพิเศษหรือการปรับแต่งเฉพาะราย.",
+            ],
+            bullets: [
+              "วิเคราะห์ประเภทงานและปริมาณเฉลี่ยรายเดือน",
+              "ประเมินความพร้อมของทีมสำหรับการดูแลเครื่องแต่ละชนิด",
+              "ตั้ง KPI ด้านของเสียและเวลาตอบสนองลูกค้า",
+            ],
+          },
+        ],
+        keyTakeaways: [
+          "โรตารี่ตอบโจทย์ล็อตใหญ่ที่ต้องการความคุ้มทุน",
+          "ดิจิทัลเพิ่มความเร็วและความยืดหยุ่นในการออกแบบ",
+          "การผสมผสานช่วยบริหารความเสี่ยงและตอบสนองตลาดเร็ว",
+        ],
+      },
+      en: {
+        title: "Rotary vs. digital printing—choosing the right fit",
+        excerpt:
+          "A clear look at the strengths, limits, and best applications for each technology so you can invest with confidence.",
+        category: "Investment",
+        tags: ["ROI", "Production"],
+        readingTime: "7 min read",
+        author: "Production planning unit",
+        authorRole: "Factory strategy team",
+        content: [
+          {
+            heading: "Rotary advantages",
+            paragraphs: [
+              "Best suited for high-volume, repeating patterns with low cost per metre once you scale production.",
+            ],
+            bullets: [
+              "Run speeds up to 80 metres per minute.",
+              "Excels at solids and banded layouts.",
+              "Requires more time and tooling for screen preparation.",
+            ],
+          },
+          {
+            heading: "Digital flexibility",
+            paragraphs: [
+              "Ideal for detailed artwork and smaller runs, enabling fast design changes without new screens.",
+            ],
+            bullets: [
+              "Switch designs quickly and reduce setup time.",
+              "Test new colours and motifs instantly.",
+              "Cost per metre stays consistent, even at lower volumes.",
+            ],
+          },
+          {
+            heading: "Investment strategy",
+            paragraphs: [
+              "Blend both technologies to suit your range—use rotary for core SKUs and digital for special editions or personalised runs.",
+            ],
+            bullets: [
+              "Analyse job types and average monthly volumes.",
+              "Assess team readiness to maintain each platform.",
+              "Set KPIs for waste and customer response times.",
+            ],
+          },
+        ],
+        keyTakeaways: [
+          "Rotary delivers ROI on large, repeat orders.",
+          "Digital brings speed and design agility.",
+          "Combining both manages risk and keeps you market-ready.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "rotary-vs-digital-4",
+    cover: "/file.svg",
+    date: "2024-02-18",
+    topics: ["production", "roi", "strategy"],
+    translations: {
+      th: {
+        title: "เปรียบเทียบงานพิมพ์โรตารี่และดิจิทัล เลือกอย่างไรให้เหมาะ",
+        excerpt:
+          "สรุปข้อดี ข้อจำกัด และการประยุกต์ใช้ของแต่ละเทคโนโลยี เพื่อช่วยให้คุณตัดสินใจลงทุนได้อย่างมั่นใจ.",
+        category: "การลงทุน",
+        tags: ["การลงทุน", "การผลิต"],
+        readingTime: "7 นาที",
+        author: "ฝ่ายวางแผนการผลิต",
+        authorRole: "ทีมกลยุทธ์โรงงาน",
+        content: [
+          {
+            heading: "ข้อได้เปรียบของโรตารี่",
+            paragraphs: [
+              "เหมาะสำหรับงานปริมาณมากและลวดลายที่ซ้ำต่อเนื่อง ด้วยต้นทุนต่อเมตรที่ต่ำเมื่อผลิตในปริมาณสูง.",
+            ],
+            bullets: [
+              "ความเร็วสูงถึง 80 เมตรต่อนาที",
+              "เหมาะกับสีพื้นและลายแถว",
+              "ต้องใช้แม่พิมพ์และเวลาเตรียมงานมากกว่า",
+            ],
+          },
+          {
+            heading: "ความยืดหยุ่นของดิจิทัล",
+            paragraphs: [
+              "รองรับงานที่ต้องการรายละเอียดสูงและล็อตขนาดเล็ก ปรับเปลี่ยนดีไซน์ได้รวดเร็วโดยไม่ต้องทำแม่พิมพ์.",
+            ],
+            bullets: [
+              "เปลี่ยนแบบได้รวดเร็ว ลดเวลาขึ้นงาน",
+              "ทดลองสีและลายใหม่ได้ทันที",
+              "ต้นทุนต่อเมตรคงที่แม้ปริมาณน้อย",
+            ],
+          },
+          {
+            heading: "กลยุทธ์การลงทุน",
+            paragraphs: [
+              "ผสมผสานสองเทคโนโลยีให้เหมาะกับพอร์ตสินค้า โดยใช้โรตารี่สำหรับล็อตหลัก และดิจิทัลสำหรับคอลเลกชันพิเศษหรือการปรับแต่งเฉพาะราย.",
+            ],
+            bullets: [
+              "วิเคราะห์ประเภทงานและปริมาณเฉลี่ยรายเดือน",
+              "ประเมินความพร้อมของทีมสำหรับการดูแลเครื่องแต่ละชนิด",
+              "ตั้ง KPI ด้านของเสียและเวลาตอบสนองลูกค้า",
+            ],
+          },
+        ],
+        keyTakeaways: [
+          "โรตารี่ตอบโจทย์ล็อตใหญ่ที่ต้องการความคุ้มทุน",
+          "ดิจิทัลเพิ่มความเร็วและความยืดหยุ่นในการออกแบบ",
+          "การผสมผสานช่วยบริหารความเสี่ยงและตอบสนองตลาดเร็ว",
+        ],
+      },
+      en: {
+        title: "Rotary vs. digital printing—choosing the right fit",
+        excerpt:
+          "A clear look at the strengths, limits, and best applications for each technology so you can invest with confidence.",
+        category: "Investment",
+        tags: ["ROI", "Production"],
+        readingTime: "7 min read",
+        author: "Production planning unit",
+        authorRole: "Factory strategy team",
+        content: [
+          {
+            heading: "Rotary advantages",
+            paragraphs: [
+              "Best suited for high-volume, repeating patterns with low cost per metre once you scale production.",
+            ],
+            bullets: [
+              "Run speeds up to 80 metres per minute.",
+              "Excels at solids and banded layouts.",
+              "Requires more time and tooling for screen preparation.",
+            ],
+          },
+          {
+            heading: "Digital flexibility",
+            paragraphs: [
+              "Ideal for detailed artwork and smaller runs, enabling fast design changes without new screens.",
+            ],
+            bullets: [
+              "Switch designs quickly and reduce setup time.",
+              "Test new colours and motifs instantly.",
+              "Cost per metre stays consistent, even at lower volumes.",
+            ],
+          },
+          {
+            heading: "Investment strategy",
+            paragraphs: [
+              "Blend both technologies to suit your range—use rotary for core SKUs and digital for special editions or personalised runs.",
+            ],
+            bullets: [
+              "Analyse job types and average monthly volumes.",
+              "Assess team readiness to maintain each platform.",
+              "Set KPIs for waste and customer response times.",
+            ],
+          },
+        ],
+        keyTakeaways: [
+          "Rotary delivers ROI on large, repeat orders.",
+          "Digital brings speed and design agility.",
+          "Combining both manages risk and keeps you market-ready.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "rotary-vs-digital-5",
+    cover: "/file.svg",
+    date: "2024-02-18",
+    topics: ["production", "roi", "strategy"],
+    translations: {
+      th: {
+        title: "เปรียบเทียบงานพิมพ์โรตารี่และดิจิทัล เลือกอย่างไรให้เหมาะ",
+        excerpt:
+          "สรุปข้อดี ข้อจำกัด และการประยุกต์ใช้ของแต่ละเทคโนโลยี เพื่อช่วยให้คุณตัดสินใจลงทุนได้อย่างมั่นใจ.",
+        category: "การลงทุน",
+        tags: ["การลงทุน", "การผลิต"],
+        readingTime: "7 นาที",
+        author: "ฝ่ายวางแผนการผลิต",
+        authorRole: "ทีมกลยุทธ์โรงงาน",
+        content: [
+          {
+            heading: "ข้อได้เปรียบของโรตารี่",
+            paragraphs: [
+              "เหมาะสำหรับงานปริมาณมากและลวดลายที่ซ้ำต่อเนื่อง ด้วยต้นทุนต่อเมตรที่ต่ำเมื่อผลิตในปริมาณสูง.",
+            ],
+            bullets: [
+              "ความเร็วสูงถึง 80 เมตรต่อนาที",
+              "เหมาะกับสีพื้นและลายแถว",
+              "ต้องใช้แม่พิมพ์และเวลาเตรียมงานมากกว่า",
+            ],
+          },
+          {
+            heading: "ความยืดหยุ่นของดิจิทัล",
+            paragraphs: [
+              "รองรับงานที่ต้องการรายละเอียดสูงและล็อตขนาดเล็ก ปรับเปลี่ยนดีไซน์ได้รวดเร็วโดยไม่ต้องทำแม่พิมพ์.",
+            ],
+            bullets: [
+              "เปลี่ยนแบบได้รวดเร็ว ลดเวลาขึ้นงาน",
+              "ทดลองสีและลายใหม่ได้ทันที",
+              "ต้นทุนต่อเมตรคงที่แม้ปริมาณน้อย",
+            ],
+          },
+          {
+            heading: "กลยุทธ์การลงทุน",
+            paragraphs: [
+              "ผสมผสานสองเทคโนโลยีให้เหมาะกับพอร์ตสินค้า โดยใช้โรตารี่สำหรับล็อตหลัก และดิจิทัลสำหรับคอลเลกชันพิเศษหรือการปรับแต่งเฉพาะราย.",
+            ],
+            bullets: [
+              "วิเคราะห์ประเภทงานและปริมาณเฉลี่ยรายเดือน",
+              "ประเมินความพร้อมของทีมสำหรับการดูแลเครื่องแต่ละชนิด",
+              "ตั้ง KPI ด้านของเสียและเวลาตอบสนองลูกค้า",
+            ],
+          },
+        ],
+        keyTakeaways: [
+          "โรตารี่ตอบโจทย์ล็อตใหญ่ที่ต้องการความคุ้มทุน",
+          "ดิจิทัลเพิ่มความเร็วและความยืดหยุ่นในการออกแบบ",
+          "การผสมผสานช่วยบริหารความเสี่ยงและตอบสนองตลาดเร็ว",
+        ],
+      },
+      en: {
+        title: "Rotary vs. digital printing—choosing the right fit",
+        excerpt:
+          "A clear look at the strengths, limits, and best applications for each technology so you can invest with confidence.",
+        category: "Investment",
+        tags: ["ROI", "Production"],
+        readingTime: "7 min read",
+        author: "Production planning unit",
+        authorRole: "Factory strategy team",
+        content: [
+          {
+            heading: "Rotary advantages",
+            paragraphs: [
+              "Best suited for high-volume, repeating patterns with low cost per metre once you scale production.",
+            ],
+            bullets: [
+              "Run speeds up to 80 metres per minute.",
+              "Excels at solids and banded layouts.",
+              "Requires more time and tooling for screen preparation.",
+            ],
+          },
+          {
+            heading: "Digital flexibility",
+            paragraphs: [
+              "Ideal for detailed artwork and smaller runs, enabling fast design changes without new screens.",
+            ],
+            bullets: [
+              "Switch designs quickly and reduce setup time.",
+              "Test new colours and motifs instantly.",
+              "Cost per metre stays consistent, even at lower volumes.",
+            ],
+          },
+          {
+            heading: "Investment strategy",
+            paragraphs: [
+              "Blend both technologies to suit your range—use rotary for core SKUs and digital for special editions or personalised runs.",
+            ],
+            bullets: [
+              "Analyse job types and average monthly volumes.",
+              "Assess team readiness to maintain each platform.",
+              "Set KPIs for waste and customer response times.",
+            ],
+          },
+        ],
+        keyTakeaways: [
+          "Rotary delivers ROI on large, repeat orders.",
+          "Digital brings speed and design agility.",
+          "Combining both manages risk and keeps you market-ready.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "rotary-vs-digital-6",
+    cover: "/file.svg",
+    date: "2024-02-18",
+    topics: ["production", "roi", "strategy"],
+    translations: {
+      th: {
+        title: "เปรียบเทียบงานพิมพ์โรตารี่และดิจิทัล เลือกอย่างไรให้เหมาะ",
+        excerpt:
+          "สรุปข้อดี ข้อจำกัด และการประยุกต์ใช้ของแต่ละเทคโนโลยี เพื่อช่วยให้คุณตัดสินใจลงทุนได้อย่างมั่นใจ.",
+        category: "การลงทุน",
+        tags: ["การลงทุน", "การผลิต"],
+        readingTime: "7 นาที",
+        author: "ฝ่ายวางแผนการผลิต",
+        authorRole: "ทีมกลยุทธ์โรงงาน",
+        content: [
+          {
+            heading: "ข้อได้เปรียบของโรตารี่",
+            paragraphs: [
+              "เหมาะสำหรับงานปริมาณมากและลวดลายที่ซ้ำต่อเนื่อง ด้วยต้นทุนต่อเมตรที่ต่ำเมื่อผลิตในปริมาณสูง.",
+            ],
+            bullets: [
+              "ความเร็วสูงถึง 80 เมตรต่อนาที",
+              "เหมาะกับสีพื้นและลายแถว",
+              "ต้องใช้แม่พิมพ์และเวลาเตรียมงานมากกว่า",
+            ],
+          },
+          {
+            heading: "ความยืดหยุ่นของดิจิทัล",
+            paragraphs: [
+              "รองรับงานที่ต้องการรายละเอียดสูงและล็อตขนาดเล็ก ปรับเปลี่ยนดีไซน์ได้รวดเร็วโดยไม่ต้องทำแม่พิมพ์.",
+            ],
+            bullets: [
+              "เปลี่ยนแบบได้รวดเร็ว ลดเวลาขึ้นงาน",
+              "ทดลองสีและลายใหม่ได้ทันที",
+              "ต้นทุนต่อเมตรคงที่แม้ปริมาณน้อย",
+            ],
+          },
+          {
+            heading: "กลยุทธ์การลงทุน",
+            paragraphs: [
+              "ผสมผสานสองเทคโนโลยีให้เหมาะกับพอร์ตสินค้า โดยใช้โรตารี่สำหรับล็อตหลัก และดิจิทัลสำหรับคอลเลกชันพิเศษหรือการปรับแต่งเฉพาะราย.",
+            ],
+            bullets: [
+              "วิเคราะห์ประเภทงานและปริมาณเฉลี่ยรายเดือน",
+              "ประเมินความพร้อมของทีมสำหรับการดูแลเครื่องแต่ละชนิด",
+              "ตั้ง KPI ด้านของเสียและเวลาตอบสนองลูกค้า",
+            ],
+          },
+        ],
+        keyTakeaways: [
+          "โรตารี่ตอบโจทย์ล็อตใหญ่ที่ต้องการความคุ้มทุน",
+          "ดิจิทัลเพิ่มความเร็วและความยืดหยุ่นในการออกแบบ",
+          "การผสมผสานช่วยบริหารความเสี่ยงและตอบสนองตลาดเร็ว",
+        ],
+      },
+      en: {
+        title: "Rotary vs. digital printing—choosing the right fit",
+        excerpt:
+          "A clear look at the strengths, limits, and best applications for each technology so you can invest with confidence.",
+        category: "Investment",
+        tags: ["ROI", "Production"],
+        readingTime: "7 min read",
+        author: "Production planning unit",
+        authorRole: "Factory strategy team",
+        content: [
+          {
+            heading: "Rotary advantages",
+            paragraphs: [
+              "Best suited for high-volume, repeating patterns with low cost per metre once you scale production.",
+            ],
+            bullets: [
+              "Run speeds up to 80 metres per minute.",
+              "Excels at solids and banded layouts.",
+              "Requires more time and tooling for screen preparation.",
+            ],
+          },
+          {
+            heading: "Digital flexibility",
+            paragraphs: [
+              "Ideal for detailed artwork and smaller runs, enabling fast design changes without new screens.",
+            ],
+            bullets: [
+              "Switch designs quickly and reduce setup time.",
+              "Test new colours and motifs instantly.",
+              "Cost per metre stays consistent, even at lower volumes.",
+            ],
+          },
+          {
+            heading: "Investment strategy",
+            paragraphs: [
+              "Blend both technologies to suit your range—use rotary for core SKUs and digital for special editions or personalised runs.",
+            ],
+            bullets: [
+              "Analyse job types and average monthly volumes.",
+              "Assess team readiness to maintain each platform.",
+              "Set KPIs for waste and customer response times.",
+            ],
+          },
+        ],
+        keyTakeaways: [
+          "Rotary delivers ROI on large, repeat orders.",
+          "Digital brings speed and design agility.",
+          "Combining both manages risk and keeps you market-ready.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "rotary-vs-digital-8",
+    cover: "/file.svg",
+    date: "2024-02-18",
+    topics: ["production", "roi", "strategy"],
+    translations: {
+      th: {
+        title: "เปรียบเทียบงานพิมพ์โรตารี่และดิจิทัล เลือกอย่างไรให้เหมาะ",
+        excerpt:
+          "สรุปข้อดี ข้อจำกัด และการประยุกต์ใช้ของแต่ละเทคโนโลยี เพื่อช่วยให้คุณตัดสินใจลงทุนได้อย่างมั่นใจ.",
+        category: "การลงทุน",
+        tags: ["การลงทุน", "การผลิต"],
+        readingTime: "7 นาที",
+        author: "ฝ่ายวางแผนการผลิต",
+        authorRole: "ทีมกลยุทธ์โรงงาน",
+        content: [
+          {
+            heading: "ข้อได้เปรียบของโรตารี่",
+            paragraphs: [
+              "เหมาะสำหรับงานปริมาณมากและลวดลายที่ซ้ำต่อเนื่อง ด้วยต้นทุนต่อเมตรที่ต่ำเมื่อผลิตในปริมาณสูง.",
+            ],
+            bullets: [
+              "ความเร็วสูงถึง 80 เมตรต่อนาที",
+              "เหมาะกับสีพื้นและลายแถว",
+              "ต้องใช้แม่พิมพ์และเวลาเตรียมงานมากกว่า",
+            ],
+          },
+          {
+            heading: "ความยืดหยุ่นของดิจิทัล",
+            paragraphs: [
+              "รองรับงานที่ต้องการรายละเอียดสูงและล็อตขนาดเล็ก ปรับเปลี่ยนดีไซน์ได้รวดเร็วโดยไม่ต้องทำแม่พิมพ์.",
+            ],
+            bullets: [
+              "เปลี่ยนแบบได้รวดเร็ว ลดเวลาขึ้นงาน",
+              "ทดลองสีและลายใหม่ได้ทันที",
+              "ต้นทุนต่อเมตรคงที่แม้ปริมาณน้อย",
+            ],
+          },
+          {
+            heading: "กลยุทธ์การลงทุน",
+            paragraphs: [
+              "ผสมผสานสองเทคโนโลยีให้เหมาะกับพอร์ตสินค้า โดยใช้โรตารี่สำหรับล็อตหลัก และดิจิทัลสำหรับคอลเลกชันพิเศษหรือการปรับแต่งเฉพาะราย.",
+            ],
+            bullets: [
+              "วิเคราะห์ประเภทงานและปริมาณเฉลี่ยรายเดือน",
+              "ประเมินความพร้อมของทีมสำหรับการดูแลเครื่องแต่ละชนิด",
+              "ตั้ง KPI ด้านของเสียและเวลาตอบสนองลูกค้า",
+            ],
+          },
+        ],
+        keyTakeaways: [
+          "โรตารี่ตอบโจทย์ล็อตใหญ่ที่ต้องการความคุ้มทุน",
+          "ดิจิทัลเพิ่มความเร็วและความยืดหยุ่นในการออกแบบ",
+          "การผสมผสานช่วยบริหารความเสี่ยงและตอบสนองตลาดเร็ว",
+        ],
+      },
+      en: {
+        title: "Rotary vs. digital printing—choosing the right fit",
+        excerpt:
+          "A clear look at the strengths, limits, and best applications for each technology so you can invest with confidence.",
+        category: "Investment",
+        tags: ["ROI", "Production"],
+        readingTime: "7 min read",
+        author: "Production planning unit",
+        authorRole: "Factory strategy team",
+        content: [
+          {
+            heading: "Rotary advantages",
+            paragraphs: [
+              "Best suited for high-volume, repeating patterns with low cost per metre once you scale production.",
+            ],
+            bullets: [
+              "Run speeds up to 80 metres per minute.",
+              "Excels at solids and banded layouts.",
+              "Requires more time and tooling for screen preparation.",
+            ],
+          },
+          {
+            heading: "Digital flexibility",
+            paragraphs: [
+              "Ideal for detailed artwork and smaller runs, enabling fast design changes without new screens.",
+            ],
+            bullets: [
+              "Switch designs quickly and reduce setup time.",
+              "Test new colours and motifs instantly.",
+              "Cost per metre stays consistent, even at lower volumes.",
+            ],
+          },
+          {
+            heading: "Investment strategy",
+            paragraphs: [
+              "Blend both technologies to suit your range—use rotary for core SKUs and digital for special editions or personalised runs.",
+            ],
+            bullets: [
+              "Analyse job types and average monthly volumes.",
+              "Assess team readiness to maintain each platform.",
+              "Set KPIs for waste and customer response times.",
+            ],
+          },
+        ],
+        keyTakeaways: [
+          "Rotary delivers ROI on large, repeat orders.",
+          "Digital brings speed and design agility.",
+          "Combining both manages risk and keeps you market-ready.",
+        ],
+      },
+    },
+  },
+  {
+    slug: "rotary-vs-digital-9",
+    cover: "/file.svg",
+    date: "2024-02-18",
+    topics: ["production", "roi", "strategy"],
+    translations: {
+      th: {
+        title: "เปรียบเทียบงานพิมพ์โรตารี่และดิจิทัล เลือกอย่างไรให้เหมาะ",
+        excerpt:
+          "สรุปข้อดี ข้อจำกัด และการประยุกต์ใช้ของแต่ละเทคโนโลยี เพื่อช่วยให้คุณตัดสินใจลงทุนได้อย่างมั่นใจ.",
+        category: "การลงทุน",
+        tags: ["การลงทุน", "การผลิต"],
+        readingTime: "7 นาที",
+        author: "ฝ่ายวางแผนการผลิต",
+        authorRole: "ทีมกลยุทธ์โรงงาน",
+        content: [
+          {
+            heading: "ข้อได้เปรียบของโรตารี่",
+            paragraphs: [
+              "เหมาะสำหรับงานปริมาณมากและลวดลายที่ซ้ำต่อเนื่อง ด้วยต้นทุนต่อเมตรที่ต่ำเมื่อผลิตในปริมาณสูง.",
+            ],
+            bullets: [
+              "ความเร็วสูงถึง 80 เมตรต่อนาที",
+              "เหมาะกับสีพื้นและลายแถว",
+              "ต้องใช้แม่พิมพ์และเวลาเตรียมงานมากกว่า",
+            ],
+          },
+          {
+            heading: "ความยืดหยุ่นของดิจิทัล",
+            paragraphs: [
+              "รองรับงานที่ต้องการรายละเอียดสูงและล็อตขนาดเล็ก ปรับเปลี่ยนดีไซน์ได้รวดเร็วโดยไม่ต้องทำแม่พิมพ์.",
+            ],
+            bullets: [
+              "เปลี่ยนแบบได้รวดเร็ว ลดเวลาขึ้นงาน",
+              "ทดลองสีและลายใหม่ได้ทันที",
+              "ต้นทุนต่อเมตรคงที่แม้ปริมาณน้อย",
+            ],
+          },
+          {
+            heading: "กลยุทธ์การลงทุน",
+            paragraphs: [
+              "ผสมผสานสองเทคโนโลยีให้เหมาะกับพอร์ตสินค้า โดยใช้โรตารี่สำหรับล็อตหลัก และดิจิทัลสำหรับคอลเลกชันพิเศษหรือการปรับแต่งเฉพาะราย.",
+            ],
+            bullets: [
+              "วิเคราะห์ประเภทงานและปริมาณเฉลี่ยรายเดือน",
+              "ประเมินความพร้อมของทีมสำหรับการดูแลเครื่องแต่ละชนิด",
+              "ตั้ง KPI ด้านของเสียและเวลาตอบสนองลูกค้า",
+            ],
+          },
+        ],
+        keyTakeaways: [
+          "โรตารี่ตอบโจทย์ล็อตใหญ่ที่ต้องการความคุ้มทุน",
+          "ดิจิทัลเพิ่มความเร็วและความยืดหยุ่นในการออกแบบ",
+          "การผสมผสานช่วยบริหารความเสี่ยงและตอบสนองตลาดเร็ว",
+        ],
+      },
+      en: {
+        title: "Rotary vs. digital printing—choosing the right fit",
+        excerpt:
+          "A clear look at the strengths, limits, and best applications for each technology so you can invest with confidence.",
+        category: "Investment",
+        tags: ["ROI", "Production"],
+        readingTime: "7 min read",
+        author: "Production planning unit",
+        authorRole: "Factory strategy team",
+        content: [
+          {
+            heading: "Rotary advantages",
+            paragraphs: [
+              "Best suited for high-volume, repeating patterns with low cost per metre once you scale production.",
+            ],
+            bullets: [
+              "Run speeds up to 80 metres per minute.",
+              "Excels at solids and banded layouts.",
+              "Requires more time and tooling for screen preparation.",
+            ],
+          },
+          {
+            heading: "Digital flexibility",
+            paragraphs: [
+              "Ideal for detailed artwork and smaller runs, enabling fast design changes without new screens.",
+            ],
+            bullets: [
+              "Switch designs quickly and reduce setup time.",
+              "Test new colours and motifs instantly.",
+              "Cost per metre stays consistent, even at lower volumes.",
+            ],
+          },
+          {
+            heading: "Investment strategy",
+            paragraphs: [
+              "Blend both technologies to suit your range—use rotary for core SKUs and digital for special editions or personalised runs.",
+            ],
+            bullets: [
+              "Analyse job types and average monthly volumes.",
+              "Assess team readiness to maintain each platform.",
+              "Set KPIs for waste and customer response times.",
+            ],
+          },
+        ],
+        keyTakeaways: [
+          "Rotary delivers ROI on large, repeat orders.",
+          "Digital brings speed and design agility.",
+          "Combining both manages risk and keeps you market-ready.",
+        ],
+      },
+    },
+  },
 ];
 
 export const getLocalizedPosts = (language) =>

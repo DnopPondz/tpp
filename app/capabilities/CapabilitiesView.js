@@ -4,7 +4,7 @@ import { useLanguage } from "@/components/LanguageProvider";
 
 const pageCopy = {
   th: {
-    heroHeading: "ขีดความสามารถด้านงานพิมพ์ผ้า",
+    heroHeading: "ความสามารถด้านงานพิมพ์ผ้า",
     heroDescription:
       "เรารองรับงานพิมพ์ผ้าทั้งแบบ Reactive, Disperse และ Pigment พร้อมควบคุมคุณภาพตั้งแต่การป้อนผ้าไปจนถึงฟินิชชิ่ง เพื่อให้งานทุกชิ้นตอบโจทย์การใช้งานของลูกค้า",
     clothWidth: {
@@ -178,9 +178,7 @@ export default function CapabilitiesView() {
     <div className="bg-gradient-to-b from-amber-50 via-white to-slate-100">
       <div className="mx-auto max-w-6xl space-y-16 px-6 pb-24 pt-20 lg:px-8">
         <header className="space-y-6">
-          <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-600 shadow">
-            {sections.capabilities.title}
-          </span>
+        
           <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
             {copy.heroHeading}
           </h1>

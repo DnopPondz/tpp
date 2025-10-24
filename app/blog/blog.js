@@ -1,3 +1,74 @@
+export const blogViewCopy = {
+  th: {
+    eyebrow: "Knowledge Hub",
+    heroTitle: "บทความและอินไซต์เพื่อธุรกิจสิ่งทอของคุณ",
+    heroDescription:
+      "คัดสรรองค์ความรู้ด้านการพิมพ์ผ้าที่อ่านง่ายและนำไปใช้ได้จริง ตั้งแต่นวัตกรรมเครื่องจักรจนถึงการดูแลคุณภาพงานผลิต.",
+    featureBadge: "เรื่องเด่น",
+    highlightListTitle: "หัวข้อที่น่าสนใจ",
+    highlightDescription:
+      "อัปเดตเทรนด์และคู่มือปฏิบัติที่ได้รับความนิยมจากผู้อ่าน",
+    allArticlesTitle: "บทความทั้งหมด",
+    allArticlesDescription:
+      "เรียงตามวันที่เผยแพร่เพื่อให้คุณไม่พลาดทุกประเด็นสำคัญ",
+    readFullCta: "อ่านบทความ",
+    pageStatus: (page, total, totalPosts) =>
+      `หน้า ${page} จาก ${total} (ทั้งหมด ${totalPosts} บทความ)`,
+    previous: "ก่อนหน้า",
+    next: "ถัดไป",
+    emptyState:
+      "ไม่มีบทความให้แสดงในขณะนี้ โปรดกลับมาใหม่อีกครั้งในภายหลัง",
+    emptyList: "ยังไม่มีบทความอื่นในขณะนี้",
+  },
+  en: {
+    eyebrow: "Knowledge Hub",
+    heroTitle: "Articles and insights for your textile business",
+    heroDescription:
+      "Curated textile printing knowledge you can act on—from machinery upgrades to production quality playbooks.",
+    featureBadge: "Featured",
+    highlightListTitle: "Popular topics",
+    highlightDescription:
+      "Trending stories and practical guides loved by our readers",
+    allArticlesTitle: "All articles",
+    allArticlesDescription:
+      "Sorted by publish date so you can catch every headline",
+    readFullCta: "Read article",
+    pageStatus: (page, total, totalPosts) =>
+      `Page ${page} of ${total} (${totalPosts} articles)`,
+    previous: "Previous",
+    next: "Next",
+    emptyState: "No articles are available right now. Please check back soon.",
+    emptyList: "There are no additional articles yet.",
+  },
+};
+
+export const blogArticleCopy = {
+  th: {
+    backLabel: "กลับหน้าบทความทั้งหมด",
+    summaryLabel: "เรื่องเด่น",
+    takeawaysTitle: "ประเด็นที่ควรนำไปต่อยอด",
+    relatedTitle: "บทความที่เกี่ยวข้อง",
+    relatedDescription:
+      "เจาะลึกเนื้อหาที่เชื่อมโยงกับหัวข้อนี้ เพื่อช่วยให้คุณวางแผนการผลิตได้รอบด้าน",
+    advisoryTitle: "สนใจปรึกาทีมผู้เชี่ยวชาญ",
+    advisoryDescription:
+      "ติดต่อเราเพื่อวางแผนการผลิต ทดลองสี หรือขอใบเสนอราคาเฉพาะสำหรับโปรเจกต์ของคุณ",
+    advisoryCta: "นัดหมายทีมฝ่ายขาย",
+  },
+  en: {
+    backLabel: "Back to all articles",
+    summaryLabel: "Feature",
+    takeawaysTitle: "Key takeaways",
+    relatedTitle: "Related articles",
+    relatedDescription:
+      "Dive deeper into connected topics so you can plan production with confidence.",
+    advisoryTitle: "Talk with our specialists",
+    advisoryDescription:
+      "Reach out to plan production, run colour trials, or request a tailored quotation for your next project.",
+    advisoryCta: "Book a sales consultation",
+  },
+};
+
 export const blogPosts = [
   {
     slug: "digital-printing-trends-2024",

@@ -5,53 +5,9 @@ import Link from "next/link";
 import { useMemo } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useLanguage } from "@/components/LanguageProvider";
-import { getLocalizedPosts } from "./blog";
+import { blogViewCopy, getLocalizedPosts } from "./blog";
 
 const POSTS_PER_PAGE = 9;
-
-const copy = {
-  th: {
-    eyebrow: "Knowledge Hub",
-    heroTitle: "บทความและอินไซต์เพื่อธุรกิจสิ่งทอของคุณ",
-    heroDescription:
-      "คัดสรรองค์ความรู้ด้านการพิมพ์ผ้าที่อ่านง่ายและนำไปใช้ได้จริง ตั้งแต่นวัตกรรมเครื่องจักรจนถึงการดูแลคุณภาพงานผลิต.",
-    featureBadge: "เรื่องเด่น",
-    highlightListTitle: "หัวข้อที่น่าสนใจ",
-    highlightDescription:
-      "อัปเดตเทรนด์และคู่มือปฏิบัติที่ได้รับความนิยมจากผู้อ่าน",
-    allArticlesTitle: "บทความทั้งหมด",
-    allArticlesDescription:
-      "เรียงตามวันที่เผยแพร่เพื่อให้คุณไม่พลาดทุกประเด็นสำคัญ",
-    readFullCta: "อ่านบทความ",
-    pageStatus: (page, total, totalPosts) =>
-      `หน้า ${page} จาก ${total} (ทั้งหมด ${totalPosts} บทความ)`,
-    previous: "ก่อนหน้า",
-    next: "ถัดไป",
-    emptyState:
-      "ไม่มีบทความให้แสดงในขณะนี้ โปรดกลับมาใหม่อีกครั้งในภายหลัง",
-    emptyList: "ยังไม่มีบทความอื่นในขณะนี้",
-  },
-  en: {
-    eyebrow: "Knowledge Hub",
-    heroTitle: "Articles and insights for your textile business",
-    heroDescription:
-      "Curated textile printing knowledge you can act on—from machinery upgrades to production quality playbooks.",
-    featureBadge: "Featured",
-    highlightListTitle: "Popular topics",
-    highlightDescription:
-      "Trending stories and practical guides loved by our readers",
-    allArticlesTitle: "All articles",
-    allArticlesDescription:
-      "Sorted by publish date so you can catch every headline",
-    readFullCta: "Read article",
-    pageStatus: (page, total, totalPosts) =>
-      `Page ${page} of ${total} (${totalPosts} articles)`,
-    previous: "Previous",
-    next: "Next",
-    emptyState: "No articles are available right now. Please check back soon.",
-    emptyList: "There are no additional articles yet.",
-  },
-};
 
 const formatDate = (value, language) => {
   const locale = language === "th" ? "th-TH" : "en-US";
@@ -71,7 +27,7 @@ export default function BlogView() {
     );
   }, [language]);
   const featuredPost = posts.find((post) => post.featured) ?? posts[0];
-  const t = copy[language];
+  const t = blogViewCopy[language];
 
   if (!featuredPost) {
     return (

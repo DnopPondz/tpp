@@ -4,34 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
-import { getLocalizedPost, getLocalizedPosts } from "../blog";
-
-const copy = {
-  th: {
-    backLabel: "กลับหน้าบทความทั้งหมด",
-    summaryLabel: "เรื่องเด่น",
-    takeawaysTitle: "ประเด็นที่ควรนำไปต่อยอด",
-    relatedTitle: "บทความที่เกี่ยวข้อง",
-    relatedDescription:
-      "เจาะลึกเนื้อหาที่เชื่อมโยงกับหัวข้อนี้ เพื่อช่วยให้คุณวางแผนการผลิตได้รอบด้าน",
-    advisoryTitle: "สนใจปรึกาทีมผู้เชี่ยวชาญ",
-    advisoryDescription:
-      "ติดต่อเราเพื่อวางแผนการผลิต ทดลองสี หรือขอใบเสนอราคาเฉพาะสำหรับโปรเจกต์ของคุณ",
-    advisoryCta: "นัดหมายทีมฝ่ายขาย",
-  },
-  en: {
-    backLabel: "Back to all articles",
-    summaryLabel: "Feature",
-    takeawaysTitle: "Key takeaways",
-    relatedTitle: "Related articles",
-    relatedDescription:
-      "Dive deeper into connected topics so you can plan production with confidence.",
-    advisoryTitle: "Talk with our specialists",
-    advisoryDescription:
-      "Reach out to plan production, run colour trials, or request a tailored quotation for your next project.",
-    advisoryCta: "Book a sales consultation",
-  },
-};
+import { blogArticleCopy, getLocalizedPost, getLocalizedPosts } from "../blog";
 
 const formatDate = (value, language) => {
   const locale = language === "th" ? "th-TH" : "en-US";
@@ -46,7 +19,7 @@ export default function BlogArticleView({ slug }) {
   const { language } = useLanguage();
   const post = useMemo(() => getLocalizedPost(slug, language), [slug, language]);
   const posts = useMemo(() => getLocalizedPosts(language), [language]);
-  const t = copy[language];
+  const t = blogArticleCopy[language];
 
   if (!post) {
     return null;

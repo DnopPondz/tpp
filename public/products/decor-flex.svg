@@ -1,0 +1,27 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="decorGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#78350f" />
+      <stop offset="45%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#fde68a" />
+    </linearGradient>
+    <radialGradient id="decorGlow" cx="0.8" cy="0.2" r="1.2">
+      <stop offset="0" stop-color="#fbbf24" stop-opacity="0.7" />
+      <stop offset="1" stop-color="#451a03" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="decorWeave" width="80" height="80" patternUnits="userSpaceOnUse" patternTransform="skewX(12)">
+      <path d="M0 0H80V80H0z" fill="none" />
+      <path d="M-10 20 L20 50" stroke="#451a03" stroke-width="8" opacity="0.12" />
+      <path d="M30 20 L60 50" stroke="#451a03" stroke-width="8" opacity="0.12" />
+      <path d="M70 20 L100 50" stroke="#451a03" stroke-width="8" opacity="0.12" />
+      <path d="M20 -10 L50 20" stroke="#fde68a" stroke-width="6" opacity="0.18" />
+      <path d="M60 -10 L90 20" stroke="#fde68a" stroke-width="6" opacity="0.18" />
+    </pattern>
+  </defs>
+  <rect width="1600" height="1200" fill="#451a03" />
+  <rect width="1600" height="1200" fill="url(#decorGradient)" opacity="0.92" />
+  <rect width="1600" height="1200" fill="url(#decorWeave)" />
+  <circle cx="320" cy="900" r="520" fill="url(#decorGlow)" />
+  <circle cx="1500" cy="240" r="340" fill="url(#decorGlow)" opacity="0.6" />
+  <path d="M0 1040 C280 880 520 1080 820 940 C1120 800 1360 980 1600 860 L1600 1200 L0 1200 Z" fill="#fbbf24" opacity="0.18" />
+</svg>

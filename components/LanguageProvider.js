@@ -23,6 +23,8 @@ const translations = {
       headline: "บริการพิมพ์ผ้าแบบครบวงจร",
       subtitle:
         "เราผลิตงานพิมพ์ผ้าให้กับอุตสาหกรรมสิ่งทอทั่วประเทศด้วยเทคโนโลยีที่แม่นยำและมาตรฐานระดับสากล",
+      description:
+        "เราผสมผสานประสบการณ์ด้านสิ่งทอเข้ากับเครื่องจักรรุ่นล่าสุด เพื่อให้ผลงานของคุณโดดเด่นทั้งสีสันและสัมผัส",
       primaryCta: "ปรึกษาผู้เชี่ยวชาญ",
       secondaryCta: "ดาวน์โหลดแคตตาล็อก",
       highlights: [
@@ -30,12 +32,21 @@ const translations = {
         "ทีมงานมืออาชีพมากกว่า 30 ปี",
         "ควบคุมคุณภาพทุกขั้นตอน",
       ],
+      metrics: [
+        { value: "30+", label: "ปีแห่งประสบการณ์" },
+        { value: "7", label: "ไลน์การผลิตครบวงจร" },
+        { value: "48 ชม.", label: "จัดทำตัวอย่างรวดเร็ว" },
+      ],
     },
     sections: {
       about: {
         title: "ทำไมต้องไทยพีพาน",
         description:
           "เราคัดสรรวัตถุดิบและสีพิมพ์ที่ดีที่สุด เพื่อให้ผืนผ้าของคุณโดดเด่น สวยงาม และทนทานในทุกการใช้งาน",
+        story: [
+          "ไทยพีพานก่อตั้งจากความตั้งใจที่จะยกระดับอุตสาหกรรมสิ่งทอไทย ด้วยทีมงานที่ผสมผสานงานฝีมือกับเทคโนโลยีการพิมพ์ทันสมัย",
+          "เราทำงานใกล้ชิดกับลูกค้าทั้งแฟชั่น ดีไซน์ และผู้ผลิตอุตสาหกรรม เพื่อให้ทุกโปรเจกต์เดินหน้าได้อย่างมั่นใจ",
+        ],
         pillars: [
           {
             title: "นวัตกรรม",
@@ -72,6 +83,8 @@ const translations = {
       },
       capabilities: {
         title: "ศักยภาพของเรา",
+        summary:
+          "ตั้งแต่การพัฒนาลายผ้า การเตรียมแม่พิมพ์ ไปจนถึงฟินิชชิ่งครบวงจร เราดูแลให้ทุกขั้นตอนราบรื่น",
         items: [
           {
             title: "การพิมพ์โรตารี่",
@@ -84,6 +97,29 @@ const translations = {
           {
             title: "การฟินิชชิ่งครบวงจร",
             detail: "บริการตกแต่งผ้าหลังการพิมพ์ตามความต้องการ",
+          },
+        ],
+      },
+      process: {
+        title: "ขั้นตอนการทำงานที่ชัดเจน",
+        subtitle:
+          "เราวางแผนร่วมกับลูกค้าเพื่อให้ทุกโปรเจกต์เดินหน้าได้อย่างราบรื่นและตรวจสอบได้",
+        steps: [
+          {
+            title: "ให้คำปรึกษา",
+            detail: "พูดคุยโจทย์งาน เลือกวัสดุ และกำหนดเวลาส่งมอบ",
+          },
+          {
+            title: "เตรียมตัวอย่าง",
+            detail: "สร้างต้นแบบสีจริง พร้อมปรับจูนให้ตรงตามความต้องการ",
+          },
+          {
+            title: "ผลิตและควบคุมคุณภาพ",
+            detail: "พิมพ์งานด้วยมาตรฐานสูงสุด พร้อมตรวจคุณภาพทุกล็อต",
+          },
+          {
+            title: "ส่งมอบตรงเวลา",
+            detail: "จัดการบรรจุภัณฑ์และขนส่งให้พร้อมใช้งาน",
           },
         ],
       },
@@ -108,6 +144,12 @@ const translations = {
           "ติดต่อทีมงานเพื่อรับคำปรึกษาและใบเสนอราคา เราพร้อมตอบกลับภายใน 1 วันทำการ",
         phoneLabel: "โทร",
         emailLabel: "อีเมล",
+      },
+      cta: {
+        title: "พร้อมต่อยอดความคิดสู่ผืนผ้าจริงแล้วหรือยัง?",
+        description:
+          "บอกเราเกี่ยวกับสไตล์ที่คุณต้องการ ทีมผู้เชี่ยวชาญจะช่วยวางแผนการผลิตและเทคนิคการพิมพ์ที่เหมาะสมที่สุด",
+        button: "นัดหมายพูดคุย",
       },
     },
     footer: {
@@ -161,6 +203,8 @@ const translations = {
       headline: "Complete Textile Printing Solutions",
       subtitle:
         "We produce precision printed fabrics for industries across Thailand with international quality standards.",
+      description:
+        "We bridge artisanal know-how with the latest machinery so your textiles ship with colour fidelity and consistent feel.",
       primaryCta: "Talk to a specialist",
       secondaryCta: "Download catalogue",
       highlights: [
@@ -168,12 +212,21 @@ const translations = {
         "More than 30 years of craft expertise",
         "Quality assurance at every stage",
       ],
+      metrics: [
+        { value: "30+", label: "Years of expertise" },
+        { value: "7", label: "Integrated production lines" },
+        { value: "48h", label: "Sample turnaround" },
+      ],
     },
     sections: {
       about: {
         title: "Why choose ThaiPaipan",
         description:
           "We select the finest fabrics and colorants so that your textiles stand out with beauty, durability, and vibrant detail.",
+        story: [
+          "ThaiPaipan was founded to elevate Thailand's textile industry by pairing craft artisanship with state-of-the-art printing.",
+          "We work side-by-side with fashion labels, designers, and industrial manufacturers to deliver dependable outcomes every time.",
+        ],
         pillars: [
           {
             title: "Innovation",
@@ -210,6 +263,8 @@ const translations = {
       },
       capabilities: {
         title: "Our capabilities",
+        summary:
+          "From pattern development and screen preparation to finishing, we orchestrate each stage under one roof.",
         items: [
           {
             title: "Rotary printing",
@@ -222,6 +277,29 @@ const translations = {
           {
             title: "Complete finishing",
             detail: "Post-print services tailored to your specifications.",
+          },
+        ],
+      },
+      process: {
+        title: "A transparent way of working",
+        subtitle:
+          "Every engagement follows a shared plan so your timelines, materials, and approvals stay on track.",
+        steps: [
+          {
+            title: "Consult & scope",
+            detail: "Align on textile goals, select fabrics, and confirm milestones.",
+          },
+          {
+            title: "Prototype",
+            detail: "Produce colour-accurate strike-offs with iterative refinements.",
+          },
+          {
+            title: "Produce & inspect",
+            detail: "Run production with rigorous in-line quality control checks.",
+          },
+          {
+            title: "Deliver",
+            detail: "Package and ship to your distribution or manufacturing sites.",
           },
         ],
       },
@@ -246,6 +324,12 @@ const translations = {
           "Reach out for consultation and a quotation. We respond within one business day.",
         phoneLabel: "Tel",
         emailLabel: "Email",
+      },
+      cta: {
+        title: "Ready to bring your textile ideas to life?",
+        description:
+          "Share your inspiration and we will recommend the ideal printing methods, finishing, and delivery schedule for your team.",
+        button: "Schedule a call",
       },
     },
     footer: {

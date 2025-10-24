@@ -13,8 +13,9 @@ export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
 }
 
-export function generateMetadata({ params }) {
-  const slug = normalizeSlug(params?.slug);
+export async function generateMetadata({ params }) {
+  const resolvedParams = await params;
+  const slug = normalizeSlug(resolvedParams?.slug);
   const post = getBlogPostBySlug(slug);
 
   if (!post) {
@@ -29,8 +30,9 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function BlogArticlePage({ params }) {
-  const slug = normalizeSlug(params?.slug);
+export default async function BlogArticlePage({ params }) {
+  const resolvedParams = await params;
+  const slug = normalizeSlug(resolvedParams?.slug);
   const post = getBlogPostBySlug(slug);
 
   if (!post) {

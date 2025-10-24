@@ -4,6 +4,13 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 
+const productBackgrounds = {
+  "eco-digital": "/products/eco-digital.svg",
+  "decor-flex": "/products/decor-flex.svg",
+  "industrial-guard": "/products/industrial-guard.svg",
+  "merch-lab": "/products/merch-lab.svg",
+};
+
 const pageCopy = {
   th: {
     heroHeading: "โซลูชันที่ออกแบบรอบธุรกิจของคุณ",
@@ -358,21 +365,26 @@ export default function ProductsView() {
           {copy.catalog.map((product) => (
             <article
               key={product.id}
-              className="flex h-full flex-col justify-between gap-6 rounded-4xl border border-slate-200 bg-white/90 p-10 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              className="group relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-4xl border border-white/20 bg-slate-900/70 p-10 text-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              style={{
+                backgroundImage: `linear-gradient(140deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.35)), url(${productBackgrounds[product.id] ?? ""})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
             >
               <div className="space-y-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber-300">
                   {product.target}
                 </p>
-                <h2 className="text-2xl font-semibold text-slate-900">{product.name}</h2>
-                <p className="text-sm leading-6 text-slate-600">{product.summary}</p>
+                <h2 className="text-2xl font-semibold text-white">{product.name}</h2>
+                <p className="text-sm leading-6 text-slate-100/90">{product.summary}</p>
               </div>
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <span className="text-sm font-semibold text-amber-600">{hero.primaryCta}</span>
+                <span className="text-sm font-semibold text-amber-200">{hero.primaryCta}</span>
                 <button
                   type="button"
                   onClick={() => setSelectedProduct(product)}
-                  className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-5 py-2 text-sm font-semibold text-white shadow transition hover:bg-amber-600"
+                  className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-5 py-2 text-sm font-semibold text-slate-900 shadow transition hover:bg-amber-300"
                 >
                   {copy.detailCta}
                   <span aria-hidden>→</span>

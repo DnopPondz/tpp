@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useMemo } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useLanguage } from "@/components/LanguageProvider";
-import { getLocalizedCollections, getLocalizedPosts } from "./blog";
+import { getLocalizedPosts } from "./blog";
 
 const POSTS_PER_PAGE = 9;
 
@@ -70,10 +70,6 @@ export default function BlogView() {
       (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
     );
   }, [language]);
-  const collections = useMemo(
-    () => getLocalizedCollections(language),
-    [language]
-  );
   const featuredPost = posts.find((post) => post.featured) ?? posts[0];
   const t = copy[language];
 
@@ -123,35 +119,16 @@ export default function BlogView() {
 
   return (
     <div className="bg-gradient-to-b from-amber-50 via-white to-slate-100">
-      <div className="mx-auto max-w-6xl space-y-16 px-6 pb-24 pt-28 lg:px-8">
-        <header className="grid gap-10 rounded-[3rem] border border-amber-100 bg-white/80 p-10 shadow-xl backdrop-blur">
-          <div className="space-y-6">
-            <span className="inline-flex w-fit items-center gap-2 rounded-full bg-amber-100/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-700">
-              {t.eyebrow}
-            </span>
-            <div className="space-y-4">
-              <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
-                {t.heroTitle}
-              </h1>
-              <p className="text-lg leading-8 text-slate-600">{t.heroDescription}</p>
-            </div>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-3">
-            {collections.map((collection) => (
-              <div
-                key={collection.title}
-                className={`rounded-3xl border border-transparent bg-gradient-to-br ${collection.accent} p-[1px] shadow-lg`}
-              >
-                <div className="h-full rounded-[calc(1.5rem-1px)] bg-white/95 p-6">
-                  <p className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-                    {collection.title}
-                  </p>
-                  <p className="mt-2 text-base text-slate-700">
-                    {collection.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+      <div className="mx-auto max-w-6xl space-y-16 px-6 pb-24 pt-28 text-center sm:text-left lg:px-8">
+        <header className="space-y-6 rounded-[3rem] border border-amber-100 bg-white/80 p-10 text-center shadow-xl backdrop-blur sm:text-left">
+          <span className="inline-flex w-fit items-center gap-2 rounded-full bg-amber-100/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-700">
+            {t.eyebrow}
+          </span>
+          <div className="space-y-4">
+            <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+              {t.heroTitle}
+            </h1>
+            <p className="text-lg leading-8 text-slate-600">{t.heroDescription}</p>
           </div>
         </header>
 

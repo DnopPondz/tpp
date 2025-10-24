@@ -380,48 +380,6 @@ export const blogPosts = [
   },
 ];
 
-export const blogCollections = [
-  {
-    accent: "from-amber-500 to-orange-400",
-    translations: {
-      th: {
-        title: "คู่มือเริ่มต้น",
-        description: "ปรับพื้นฐานการพิมพ์ผ้าสำหรับทีมออกแบบและจัดซื้อ.",
-      },
-      en: {
-        title: "Starter guides",
-        description: "Level-up textile printing basics for design and procurement teams.",
-      },
-    },
-  },
-  {
-    accent: "from-sky-500 to-indigo-400",
-    translations: {
-      th: {
-        title: "ไอเดียการประยุกต์",
-        description: "แรงบันดาลใจสำหรับแฟชั่น ไลฟ์สไตล์ และของตกแต่งบ้าน.",
-      },
-      en: {
-        title: "Applied ideas",
-        description: "Inspiration for fashion, lifestyle, and home décor brands.",
-      },
-    },
-  },
-  {
-    accent: "from-emerald-500 to-teal-400",
-    translations: {
-      th: {
-        title: "อัปเดตโรงงาน",
-        description: "ติดตามโครงการพัฒนาและมาตรฐานใหม่ของไทยพีพาน.",
-      },
-      en: {
-        title: "Mill updates",
-        description: "Follow ThaiPaipan projects, upgrades, and certification news.",
-      },
-    },
-  },
-];
-
 export const getLocalizedPosts = (language) =>
   blogPosts.map((post) => ({
     slug: post.slug,
@@ -447,9 +405,3 @@ export const getLocalizedPost = (slug, language) => {
     ...base.translations[language],
   };
 };
-
-export const getLocalizedCollections = (language) =>
-  blogCollections.map((collection) => ({
-    accent: collection.accent,
-    ...collection.translations[language],
-  }));

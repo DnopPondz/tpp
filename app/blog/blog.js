@@ -453,6 +453,9 @@ export const blogPosts = [
   },
 ];
 
+export const getBlogPostBySlug = (slug) =>
+  blogPosts.find((post) => post.slug === slug);
+
 export const getLocalizedPosts = (language) =>
   blogPosts.map((post) => ({
     slug: post.slug,
@@ -464,7 +467,7 @@ export const getLocalizedPosts = (language) =>
   }));
 
 export const getLocalizedPost = (slug, language) => {
-  const base = blogPosts.find((post) => post.slug === slug);
+  const base = getBlogPostBySlug(slug);
   if (!base) {
     return undefined;
   }

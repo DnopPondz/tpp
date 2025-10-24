@@ -1,15 +1,21 @@
 import { notFound } from "next/navigation";
 import BlogArticleView from "./BlogArticleView";
-import { blogPosts } from "../blog";
+import { blogPosts, getBlogPostBySlug } from "../blog";
 
-const getBasePost = (slug) => blogPosts.find((post) => post.slug === slug);
+const normalizeSlug = (raw) => {
+  if (Array.isArray(raw)) {
+    return raw[0];
+  }
+  return raw ?? "";
+};
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
 }
 
 export function generateMetadata({ params }) {
-  const post = getBasePost(params.slug);
+  const slug = normalizeSlug(params?.slug);
+  const post = getBlogPostBySlug(slug);
 
   if (!post) {
     return {
@@ -24,11 +30,12 @@ export function generateMetadata({ params }) {
 }
 
 export default function BlogArticlePage({ params }) {
-  const post = getBasePost(params.slug);
+  const slug = normalizeSlug(params?.slug);
+  const post = getBlogPostBySlug(slug);
 
   if (!post) {
     notFound();
   }
 
-  return <BlogArticleView slug={params.slug} />;
+  return <BlogArticleView slug={slug} />;
 }

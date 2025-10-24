@@ -111,6 +111,38 @@ const translations = {
         emailLabel: "อีเมล",
       },
     },
+    footer: {
+      tagline:
+        "เราพัฒนาความเชี่ยวชาญการพิมพ์ผ้าเพื่อยกระดับผลิตภัณฑ์ของลูกค้า พร้อมสนับสนุนธุรกิจไทยให้เติบโตอย่างยั่งยืน",
+      quickLinksTitle: "เมนูลัด",
+      contactTitle: "ติดต่อโรงงาน",
+      addressLines: [
+        "บริษัท ไทยพีพาน เท็กซ์ไทล์ พริ้นติ้ง จำกัด",
+        "70 หมู่ 5 ถนนสุวินทวงศ์",
+        "แขวงโคกแฝด เขตหนองจอก กรุงเทพมหานคร 10530",
+      ],
+      contactNumbers: [
+        "โทร. +66(0)2735-9109-10",
+        "โทร. +66(0)2182-3306",
+        "โทร. +66(0)2182-3301",
+        "แฟกซ์ +66(0)2735-8941",
+      ],
+      emailLabel: "อีเมล",
+      email: "sales@thaipaipan.co.th",
+      hoursTitle: "เวลาทำการ",
+      hours: [
+        "จันทร์-เสาร์ 08:30-17:30 น.",
+        "หยุดวันอาทิตย์และวันหยุดนักขัตฤกษ์",
+      ],
+      socialsTitle: "ติดตามเรา",
+      socials: [
+        { label: "Facebook", href: "https://www.facebook.com/Thaipaipan" },
+        { label: "LINE", href: "https://line.me/R/ti/p/@thaipaipan" },
+        { label: "Instagram", href: "https://www.instagram.com/thaipaipan" },
+      ],
+      legal: "© {year} ThaiPaipan Textile Printing Co., Ltd. สงวนลิขสิทธิ์",
+      certifications: "มาตรฐาน ISO 9001 และการใช้หมึกพิมพ์ที่เป็นมิตรต่อสิ่งแวดล้อม",
+    },
   },
   en: {
     brand: {
@@ -217,6 +249,39 @@ const translations = {
         phoneLabel: "Tel",
         emailLabel: "Email",
       },
+    },
+    footer: {
+      tagline:
+        "We combine craftsmanship and modern technology to elevate your textiles with consistent colour and reliable turnaround times.",
+      quickLinksTitle: "Quick links",
+      contactTitle: "Contact the mill",
+      addressLines: [
+        "ThaiPaipan Textile Printing Co., Ltd.",
+        "70 Moo 5, Suwinthawong Road",
+        "Khok Faet, Nong Chok, Bangkok 10530",
+        "Thailand",
+      ],
+      contactNumbers: [
+        "Tel +66(0)2735-9109-10",
+        "Tel +66(0)2182-3306",
+        "Tel +66(0)2182-3301",
+        "Fax +66(0)2735-8941",
+      ],
+      emailLabel: "Email",
+      email: "sales@thaipaipan.co.th",
+      hoursTitle: "Operating hours",
+      hours: [
+        "Monday – Saturday 08:30-17:30",
+        "Closed on Sundays and public holidays",
+      ],
+      socialsTitle: "Connect with us",
+      socials: [
+        { label: "Facebook", href: "https://www.facebook.com/Thaipaipan" },
+        { label: "LINE", href: "https://line.me/R/ti/p/@thaipaipan" },
+        { label: "Instagram", href: "https://www.instagram.com/thaipaipan" },
+      ],
+      legal: "© {year} ThaiPaipan Textile Printing Co., Ltd. All rights reserved.",
+      certifications: "ISO 9001 certified · Eco-conscious dye systems",
     },
   },
 };

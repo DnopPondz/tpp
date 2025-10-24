@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "@/components/LanguageProvider";
 
-const menuItems = [
+export const menuItems = [
   { key: "home", href: "/" },
   { key: "about", href: "/about" },
   { key: "capabilities", href: "/capabilities" },

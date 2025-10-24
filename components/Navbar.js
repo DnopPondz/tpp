@@ -150,9 +150,12 @@ export default function Navbar() {
         <div className="lg:hidden">
           <div
             id="mobile-menu"
-            className={`grid origin-top gap-2 rounded-2xl border border-slate-200 bg-white/90 p-4 text-sm font-medium text-slate-700 shadow-lg transition-all ${
-              isMenuOpen ? "scale-y-100 opacity-100" : "pointer-events-none scale-y-95 opacity-0"
+            className={`grid origin-top gap-2 rounded-2xl border border-slate-200 bg-white/90 text-sm font-medium text-slate-700 shadow-lg transition-all ${
+              isMenuOpen
+                ? "mt-2 max-h-[80vh] scale-y-100 opacity-100 p-4"
+                : "mt-0 pointer-events-none max-h-0 scale-y-95 overflow-hidden p-0 opacity-0"
             }`}
+            aria-hidden={!isMenuOpen}
           >
             {menuItems.map((item) => {
               const isActive = activeKey === item.key;

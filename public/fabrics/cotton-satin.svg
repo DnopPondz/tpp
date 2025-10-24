@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Soft satin weave in pastel yellow">
+  <defs>
+    <linearGradient id="cottonBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fff6cf" />
+      <stop offset="100%" stop-color="#ffd86b" />
+    </linearGradient>
+    <pattern id="mesh" width="40" height="40" patternUnits="userSpaceOnUse">
+      <rect width="40" height="40" fill="none" stroke="#f2c85c" stroke-width="2" opacity="0.4" />
+      <path d="M0 0 L40 40" stroke="#f0b84d" stroke-width="2" opacity="0.3" />
+      <path d="M40 0 L0 40" stroke="#f0b84d" stroke-width="2" opacity="0.3" />
+    </pattern>
+    <radialGradient id="cottonGlow" cx="0.2" cy="0.2" r="0.8">
+      <stop offset="0%" stop-color="#fff8dc" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ffc845" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#cottonBg)" />
+  <rect width="800" height="600" fill="url(#mesh)" />
+  <circle cx="140" cy="120" r="180" fill="url(#cottonGlow)" />
+  <circle cx="600" cy="460" r="220" fill="url(#cottonGlow)" transform="rotate(12 600 460)" />
+  <g fill="#f9b233" fill-opacity="0.25">
+    <path d="M80 520 C200 420, 320 500, 440 420 C560 340, 680 460, 760 360" />
+    <path d="M40 460 C160 360, 280 440, 400 360 C520 280, 640 400, 720 300" />
+  </g>
+</svg>

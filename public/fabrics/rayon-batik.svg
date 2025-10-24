@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Batik fabric pattern in warm hues">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffdd63" />
+      <stop offset="100%" stop-color="#f26d9d" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffe6a7" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#ff8aa6" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="leaf" width="120" height="120" patternUnits="userSpaceOnUse" patternTransform="rotate(15)">
+      <path d="M0 60 C30 30, 90 30, 120 60 C90 90, 30 90, 0 60 Z" fill="#5c1746" fill-opacity="0.35" />
+      <path d="M60 0 C30 30, 30 90, 60 120 C90 90, 90 30, 60 0 Z" fill="#240b36" fill-opacity="0.25" />
+    </pattern>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)" />
+  <rect width="800" height="600" fill="url(#leaf)" />
+  <circle cx="200" cy="160" r="180" fill="url(#glow)" />
+  <circle cx="620" cy="420" r="200" fill="url(#glow)" />
+  <g fill="#401322" fill-opacity="0.45" stroke="#ffeed6" stroke-width="4" stroke-opacity="0.2">
+    <path d="M80 500 C160 420, 240 420, 320 500" />
+    <path d="M220 520 C300 440, 380 440, 460 520" />
+    <path d="M360 540 C440 460, 520 460, 600 540" />
+    <path d="M500 560 C580 480, 660 480, 740 560" />
+  </g>
+</svg>

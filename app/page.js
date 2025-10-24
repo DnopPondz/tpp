@@ -1,11 +1,117 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useMemo, useState } from "react";
 import { useLanguage } from "@/components/LanguageProvider";
 
+const heroSlides = {
+  th: [
+    {
+      id: "rayon-batik",
+      image: "/fabrics/rayon-batik.svg",
+      alt: "ลายผ้าสีเหลืองชมพูแบบบาติก",
+      label: "โชว์เคสผ้าพิมพ์พรีเมียม",
+      title: "ลายผ้า: 1502",
+      material: "ชนิดผ้า: เรยอน",
+      width: "หน้ากว้าง: 44/45\"",
+      usage: "การใช้งาน: ชุดลำลอง",
+    },
+    {
+      id: "cotton-satin",
+      image: "/fabrics/cotton-satin.svg",
+      alt: "ผ้าคอตตอนซาตินสีเหลืองพาสเทลพร้อมลายกราฟิก",
+      label: "โชว์เคสผ้าพิมพ์พรีเมียม",
+      title: "ลายผ้า: 2210",
+      material: "ชนิดผ้า: คอตตอนซาติน",
+      width: "หน้ากว้าง: 58\"",
+      usage: "การใช้งาน: ชุดเดรสและเชิ้ต",
+    },
+    {
+      id: "linen-texture",
+      image: "/fabrics/linen-texture.svg",
+      alt: "พื้นผ้าลินินสีฟ้าอมเขียวพร้อมลายทอ",
+      label: "โชว์เคสผ้าพิมพ์พรีเมียม",
+      title: "ลายผ้า: 3045",
+      material: "ชนิดผ้า: ลินินผสม",
+      width: "หน้ากว้าง: 57\"",
+      usage: "การใช้งาน: ของตกแต่งบ้าน",
+    },
+    {
+      id: "polyester-tech",
+      image: "/fabrics/polyester-tech.svg",
+      alt: "ผ้าโพลีเอสเตอร์ลายเรขาคณิตสีม่วงน้ำเงิน",
+      label: "โชว์เคสผ้าพิมพ์พรีเมียม",
+      title: "ลายผ้า: 4128",
+      material: "ชนิดผ้า: โพลีเอสเตอร์",
+      width: "หน้ากว้าง: 60\"",
+      usage: "การใช้งาน: ชุดกีฬา",
+    },
+  ],
+  en: [
+    {
+      id: "rayon-batik",
+      image: "/fabrics/rayon-batik.svg",
+      alt: "Yellow and magenta batik fabric pattern",
+      label: "Premium Textile Showcase",
+      title: "Pattern ID: 1502",
+      material: "Fabric: Rayon",
+      width: "Width: 44/45\"",
+      usage: "Application: Resort wear",
+    },
+    {
+      id: "cotton-satin",
+      image: "/fabrics/cotton-satin.svg",
+      alt: "Pastel yellow cotton satin fabric with graphic motifs",
+      label: "Premium Textile Showcase",
+      title: "Pattern ID: 2210",
+      material: "Fabric: Cotton satin",
+      width: "Width: 58\"",
+      usage: "Application: Dresses & shirts",
+    },
+    {
+      id: "linen-texture",
+      image: "/fabrics/linen-texture.svg",
+      alt: "Teal linen blend fabric texture",
+      label: "Premium Textile Showcase",
+      title: "Pattern ID: 3045",
+      material: "Fabric: Linen blend",
+      width: "Width: 57\"",
+      usage: "Application: Home décor",
+    },
+    {
+      id: "polyester-tech",
+      image: "/fabrics/polyester-tech.svg",
+      alt: "Purple and blue geometric technical knit fabric",
+      label: "Premium Textile Showcase",
+      title: "Pattern ID: 4128",
+      material: "Fabric: Polyester",
+      width: "Width: 60\"",
+      usage: "Application: Activewear",
+    },
+  ],
+};
+
 export default function Home() {
-  const { translations } = useLanguage();
+  const { language, translations } = useLanguage();
   const { brand, hero, sections } = translations;
+  const slides = useMemo(() => heroSlides[language], [language]);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    setCurrentSlide(0);
+  }, [language]);
+
+  useEffect(() => {
+    if (!slides.length) {
+      return undefined;
+    }
+
+    const intervalId = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 6000);
+
+    return () => clearInterval(intervalId);
+  }, [slides]);
 
   return (
     <div className="mx-auto max-w-6xl space-y-24 px-6 pt-24 lg:px-8">
@@ -40,17 +146,51 @@ export default function Home() {
           </ul>
         </div>
         <div className="relative h-[28rem] w-full overflow-hidden rounded-[2.5rem] border border-amber-100 bg-amber-50 shadow-xl">
-          <Image
-            src="/hero-textile.svg"
-            alt="Colorful printed textile fabric"
-            fill
-            priority
-            sizes="(max-width: 1024px) 100vw, 50vw"
-            className="object-cover"
-          />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-amber-500/70 to-transparent p-6 text-white">
-            <p className="text-sm uppercase tracking-widest">Premium Textile Showcase</p>
-            <p className="text-lg font-semibold">{hero.headline}</p>
+          <div className="absolute inset-0">
+            {slides.map((slide, index) => (
+              <div
+                key={slide.id}
+                className={`absolute inset-0 transition-opacity duration-700 ease-out ${
+                  index === currentSlide ? "opacity-100" : "opacity-0"
+                }`}
+                aria-hidden={index !== currentSlide}
+              >
+                <Image
+                  src={slide.image}
+                  alt={slide.alt}
+                  fill
+                  priority={index === 0}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="absolute right-6 top-6 flex gap-2">
+            {slides.map((slide, index) => (
+              <button
+                key={slide.id}
+                type="button"
+                onClick={() => setCurrentSlide(index)}
+                className={`h-2.5 w-8 rounded-full transition ${
+                  index === currentSlide ? "bg-white" : "bg-white/40 hover:bg-white/70"
+                }`}
+                aria-label={`${index + 1} / ${slides.length}`}
+              />
+            ))}
+          </div>
+
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-900/80 via-slate-900/40 to-transparent p-6 text-white">
+            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-amber-200">
+              {slides[currentSlide]?.label}
+            </p>
+            <div className="mt-2 space-y-1 text-sm sm:text-base">
+              <p className="text-lg font-semibold sm:text-xl">{slides[currentSlide]?.title}</p>
+              <p>{slides[currentSlide]?.material}</p>
+              <p>{slides[currentSlide]?.width}</p>
+              <p>{slides[currentSlide]?.usage}</p>
+            </div>
           </div>
         </div>
       </section>

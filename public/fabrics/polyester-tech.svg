@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Geometric technical knit in purple and blue">
+  <defs>
+    <linearGradient id="techBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d1b5f" />
+      <stop offset="100%" stop-color="#513b9d" />
+    </linearGradient>
+    <linearGradient id="techOverlay" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7a6bff" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#2dd4ff" stop-opacity="0.35" />
+    </linearGradient>
+    <pattern id="tri" width="60" height="60" patternUnits="userSpaceOnUse">
+      <polygon points="30 0, 60 60, 0 60" fill="#2d1f76" opacity="0.55" />
+      <polygon points="30 0, 60 60, 0 60" fill="#32a6ff" opacity="0.25" transform="translate(0, -30)" />
+      <polygon points="30 0, 60 60, 0 60" fill="#873fd6" opacity="0.3" transform="translate(0, 30)" />
+    </pattern>
+    <radialGradient id="techGlow" cx="0.3" cy="0.3" r="0.7">
+      <stop offset="0%" stop-color="#8b7bff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#1d1b5f" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#techBg)" />
+  <rect width="800" height="600" fill="url(#tri)" opacity="0.9" />
+  <rect width="800" height="600" fill="url(#techOverlay)" />
+  <rect width="800" height="600" fill="url(#techGlow)" />
+  <g stroke="#7ce3ff" stroke-opacity="0.35" stroke-width="3" fill="none">
+    <path d="M0 520 L120 420 L240 520 L360 420 L480 520 L600 420 L720 520 L840 420" />
+    <path d="M0 460 L120 360 L240 460 L360 360 L480 460 L600 360 L720 460 L840 360" opacity="0.6" />
+  </g>
+</svg>

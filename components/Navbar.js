@@ -2,15 +2,16 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useLanguage } from "@/components/LanguageProvider";
 
 const menuItems = [
-  { key: "home", href: "#hero" },
-  { key: "about", href: "#about" },
-  { key: "capabilities", href: "#capabilities" },
-  { key: "products", href: "#products" },
-  { key: "news", href: "#news" },
-  { key: "contact", href: "#contact" },
+  { key: "home", href: "/" },
+  { key: "about", href: "/about" },
+  { key: "capabilities", href: "/capabilities" },
+  { key: "products", href: "/products" },
+  { key: "news", href: "/blog" },
+  { key: "contact", href: "/contact" },
 ];
 
 const languageOptions = [
@@ -28,54 +29,23 @@ const contactNumbers = [
 export default function Navbar() {
   const { language, setLanguage, translations, toggleLanguage } = useLanguage();
   const [activeKey, setActiveKey] = useState(menuItems[0].key);
+  const pathname = usePathname();
 
   useEffect(() => {
-    if (typeof window === "undefined") {
-      return undefined;
+    const matched = menuItems.find((item) => {
+      if (item.href === "/blog") {
+        return pathname.startsWith("/blog");
+      }
+      if (item.href === "/") {
+        return pathname === "/";
+      }
+      return pathname.startsWith(item.href);
+    });
+
+    if (matched) {
+      setActiveKey(matched.key);
     }
-
-    const sections = menuItems
-      .map((item) => document.querySelector(item.href))
-      .filter((section) => section instanceof HTMLElement);
-
-    const handleHashChange = () => {
-      const { hash } = window.location;
-      if (!hash) return;
-      const matched = menuItems.find((item) => item.href === hash);
-      if (matched) {
-        setActiveKey(matched.key);
-      }
-    };
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-        if (!visible) {
-          return;
-        }
-        const matched = menuItems.find((item) => item.href === `#${visible.target.id}`);
-        if (matched) {
-          setActiveKey(matched.key);
-        }
-      },
-      {
-        rootMargin: "-40% 0px -40% 0px",
-        threshold: [0, 0.25, 0.5, 0.75, 1],
-      }
-    );
-
-    sections.forEach((section) => observer.observe(section));
-    handleHashChange();
-    window.addEventListener("hashchange", handleHashChange);
-
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-      sections.forEach((section) => observer.unobserve(section));
-      observer.disconnect();
-    };
-  }, []);
+  }, [pathname]);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/95 backdrop-blur">

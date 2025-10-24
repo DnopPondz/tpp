@@ -110,10 +110,10 @@ export default function BlogPage() {
                 ))}
               </div>
               <Link
-                href="#articles"
+                href={`/blog/${featuredPost.slug}`}
                 className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-5 py-2 text-sm font-semibold text-white shadow-lg transition hover:bg-amber-600"
               >
-                อ่านบทความอื่น ๆ
+                อ่านบทความฉบับเต็ม
                 <span aria-hidden>→</span>
               </Link>
             </div>
@@ -124,13 +124,15 @@ export default function BlogPage() {
             <ul className="space-y-5 text-sm text-amber-900/80">
               {regularPosts.slice(0, 3).map((post) => (
                 <li key={post.slug} className="space-y-2 border-b border-amber-200/60 pb-4 last:border-none last:pb-0">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-600">
-                    {post.category}
-                  </p>
-                  <p className="font-medium text-slate-900">{post.title}</p>
-                  <p className="text-xs text-amber-800/80">
-                    {formatDate(post.date)} • {post.readingTime}
-                  </p>
+                  <Link href={`/blog/${post.slug}`} className="group block space-y-2">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-600">
+                      {post.category}
+                    </p>
+                    <p className="font-medium text-slate-900 transition group-hover:text-amber-600">{post.title}</p>
+                    <p className="text-xs text-amber-800/80">
+                      {formatDate(post.date)} • {post.readingTime}
+                    </p>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -165,9 +167,10 @@ export default function BlogPage() {
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {regularPosts.map((post) => (
-              <article
+              <Link
                 key={post.slug}
-                className="group flex h-full flex-col gap-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                href={`/blog/${post.slug}`}
+                className="group flex h-full flex-col gap-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-amber-300 hover:shadow-xl"
               >
                 <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-600">
                   <span>{post.category}</span>
@@ -176,7 +179,7 @@ export default function BlogPage() {
                     {formatDate(post.date)}
                   </time>
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 group-hover:text-amber-600">
+                <h3 className="text-xl font-semibold text-slate-900 transition group-hover:text-amber-600">
                   {post.title}
                 </h3>
                 <p className="text-sm leading-6 text-slate-600">{post.excerpt}</p>
@@ -190,7 +193,7 @@ export default function BlogPage() {
                   </div>
                   <span className="font-semibold text-amber-500">{post.readingTime}</span>
                 </div>
-              </article>
+              </Link>
             ))}
           </div>
         </section>

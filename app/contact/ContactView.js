@@ -100,15 +100,15 @@ export default function ContactView() {
   const copy = pageCopy[language];
 
   return (
-    <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <div className="bg-gradient-to-b from-slate-100 via-white to-slate-100">
       <div className="mx-auto max-w-6xl space-y-16 px-6 pb-24 pt-20 lg:px-8">
-        <header className="space-y-4 rounded-[3rem] border border-slate-800 bg-slate-900/80 p-10 text-center shadow-xl backdrop-blur">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-200">{sections.contact.title}</p>
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">{copy.heroHeading}</h1>
-          <p className="mx-auto max-w-3xl text-lg leading-8 text-slate-300">{sections.contact.description}</p>
+        <header className="space-y-4 rounded-[3rem] border border-slate-200 bg-white p-10 text-center shadow-xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">{sections.contact.title}</p>
+          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">{copy.heroHeading}</h1>
+          <p className="mx-auto max-w-3xl text-lg leading-8 text-slate-600">{sections.contact.description}</p>
         </header>
 
-        <section className="grid gap-6 rounded-[3rem] border border-slate-800 bg-white/95 p-12 shadow-2xl lg:grid-cols-[1.2fr_1fr]">
+        <section className="grid gap-6 rounded-[3rem] border border-slate-200 bg-white p-12 shadow-2xl lg:grid-cols-[1.2fr_1fr]">
           <div className="space-y-6">
             <h2 className="text-2xl font-semibold text-slate-900">{copy.contactSectionTitle}</h2>
             <div className="grid gap-4 md:grid-cols-2">
@@ -151,7 +151,7 @@ export default function ContactView() {
           </div>
         </section>
 
-        <section className="grid gap-6 rounded-[3rem] border border-slate-800 bg-white/95 p-12 shadow-xl lg:grid-cols-2">
+        <section className="grid gap-6 rounded-[3rem] border border-slate-200 bg-white p-12 shadow-xl lg:grid-cols-2">
           <div className="space-y-4">
             <h2 className="text-2xl font-semibold text-slate-900">{copy.resourcesTitle}</h2>
             <p className="text-base text-slate-600">{copy.resourcesDescription}</p>

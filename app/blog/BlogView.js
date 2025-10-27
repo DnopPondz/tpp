@@ -31,16 +31,16 @@ export default function BlogView() {
 
   if (!featuredPost) {
     return (
-      <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+      <div className="bg-gradient-to-b from-slate-100 via-white to-slate-100">
         <div className="mx-auto max-w-4xl space-y-10 px-6 pb-24 pt-28 text-center lg:px-8">
-          <span className="inline-flex w-fit items-center gap-2 rounded-full bg-blue-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-200">
+          <span className="inline-flex w-fit items-center gap-2 rounded-full bg-blue-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">
             {t.eyebrow}
           </span>
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
             {t.heroTitle}
           </h1>
-          <p className="text-lg leading-8 text-slate-300">{t.heroDescription}</p>
-          <p className="text-base text-slate-400">{t.emptyState}</p>
+          <p className="text-lg leading-8 text-slate-600">{t.heroDescription}</p>
+          <p className="text-base text-slate-500">{t.emptyState}</p>
         </div>
       </div>
     );
@@ -74,9 +74,9 @@ export default function BlogView() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <div className="bg-gradient-to-b from-slate-100 via-white to-slate-100">
       <div className="mx-auto max-w-6xl space-y-16 px-6 pb-24 pt-28 text-center sm:text-left lg:px-8">
-        <header className="space-y-6 rounded-[3rem] border border-slate-800 bg-white/95 p-10 text-center shadow-2xl backdrop-blur sm:text-left">
+        <header className="space-y-6 rounded-[3rem] border border-slate-200 bg-white p-10 text-center shadow-2xl sm:text-left">
           <span className="inline-flex w-fit items-center gap-2 rounded-full bg-blue-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">
             {t.eyebrow}
           </span>
@@ -89,7 +89,7 @@ export default function BlogView() {
         </header>
 
         <section className="grid gap-10 lg:grid-cols-[2fr_1fr]">
-          <article className="overflow-hidden rounded-[3rem] border border-slate-800 bg-white shadow-2xl">
+          <article className="overflow-hidden rounded-[3rem] border border-slate-200 bg-white shadow-2xl">
             <div className="relative h-[22rem] w-full overflow-hidden">
               <Image
                 src={featuredPost.cover}
@@ -99,9 +99,9 @@ export default function BlogView() {
                 sizes="(max-width: 1024px) 100vw, 60vw"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/10 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 space-y-3 px-8 pb-8">
-                <span className="inline-flex items-center gap-2 rounded-full bg-blue-500/20 px-4 py-1 text-xs font-medium uppercase tracking-[0.2em] text-white">
+                <span className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-4 py-1 text-xs font-medium uppercase tracking-[0.2em] text-white">
                   {t.featureBadge}
                 </span>
                 <h2 className="text-3xl font-semibold text-white">
@@ -140,7 +140,7 @@ export default function BlogView() {
             </div>
           </article>
 
-          <aside className="flex h-full flex-col gap-6 rounded-[2.5rem] border border-slate-200 bg-white/90 p-8 shadow-xl">
+          <aside className="flex h-full flex-col gap-6 rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-xl">
             <div className="space-y-1">
               <h3 className="text-lg font-semibold text-slate-900">{t.highlightListTitle}</h3>
               <p className="text-sm text-slate-600">{t.highlightDescription}</p>
@@ -165,8 +165,8 @@ export default function BlogView() {
 
         <section id="articles" className="space-y-10">
           <div className="space-y-2 text-center sm:text-left">
-            <h2 className="text-3xl font-semibold text-white sm:text-slate-100">{t.allArticlesTitle}</h2>
-            <p className="text-base text-slate-300 sm:text-slate-200">{t.allArticlesDescription}</p>
+            <h2 className="text-3xl font-semibold text-slate-900">{t.allArticlesTitle}</h2>
+            <p className="text-base text-slate-600">{t.allArticlesDescription}</p>
           </div>
 
           {paginatedPosts.length > 0 ? (
@@ -174,7 +174,7 @@ export default function BlogView() {
               {paginatedPosts.map((post) => (
                 <article
                   key={post.slug}
-                  className="group flex h-full flex-col overflow-hidden rounded-[2.25rem] border border-slate-800 bg-white/95 shadow-sm transition hover:-translate-y-1 hover:border-blue-400 hover:shadow-xl"
+                  className="group flex h-full flex-col overflow-hidden rounded-[2.25rem] border border-slate-200 bg-white shadow-sm transition hover:-translate-y-1 hover:border-blue-400 hover:shadow-xl"
                 >
                   <div className="relative h-48 w-full overflow-hidden">
                     <Image
@@ -218,20 +218,20 @@ export default function BlogView() {
           )}
 
           <div className="flex flex-col items-center gap-4">
-            <p className="text-sm text-slate-300">
+            <p className="text-sm text-slate-600">
               {t.pageStatus(currentPage, totalPages, regularPosts.length)}
             </p>
             <nav aria-label="pagination">
-              <ul className="flex items-center gap-2 text-sm font-semibold text-slate-200">
+              <ul className="flex items-center gap-2 text-sm font-semibold text-slate-600">
                 <li>
                   {currentPage === 1 ? (
-                    <span className="inline-flex items-center rounded-full border border-slate-700 px-4 py-2 text-slate-500">
+                    <span className="inline-flex items-center rounded-full border border-slate-200 px-4 py-2 text-slate-400">
                       {t.previous}
                     </span>
                   ) : (
                     <Link
                       href={createPageHref(currentPage - 1)}
-                      className="inline-flex items-center rounded-full border border-slate-700 px-4 py-2 transition hover:border-blue-400 hover:text-blue-200"
+                      className="inline-flex items-center rounded-full border border-slate-300 px-4 py-2 transition hover:border-blue-400 hover:bg-blue-50 hover:text-blue-700"
                     >
                       {t.previous}
                     </Link>
@@ -245,8 +245,8 @@ export default function BlogView() {
                         aria-current={page === currentPage ? "page" : undefined}
                         className={`inline-flex min-w-[2.5rem] items-center justify-center rounded-full border px-3 py-2 transition ${
                           page === currentPage
-                            ? "border-blue-500 bg-blue-500 text-white"
-                            : "border-slate-700 hover:border-blue-400 hover:text-blue-200"
+                            ? "border-blue-600 bg-blue-600 text-white"
+                            : "border-slate-300 hover:border-blue-400 hover:bg-blue-50 hover:text-blue-700"
                         }`}
                       >
                         {page}
@@ -256,13 +256,13 @@ export default function BlogView() {
                 )}
                 <li>
                   {currentPage === totalPages ? (
-                    <span className="inline-flex items-center rounded-full border border-slate-700 px-4 py-2 text-slate-500">
+                    <span className="inline-flex items-center rounded-full border border-slate-200 px-4 py-2 text-slate-400">
                       {t.next}
                     </span>
                   ) : (
                     <Link
                       href={createPageHref(currentPage + 1)}
-                      className="inline-flex items-center rounded-full border border-slate-700 px-4 py-2 transition hover:border-blue-400 hover:text-blue-200"
+                      className="inline-flex items-center rounded-full border border-slate-300 px-4 py-2 transition hover:border-blue-400 hover:bg-blue-50 hover:text-blue-700"
                     >
                       {t.next}
                     </Link>

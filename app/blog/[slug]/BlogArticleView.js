@@ -61,12 +61,12 @@ export default function BlogArticleView({ slug }) {
   }, [posts, post, slug]);
 
   return (
-    <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <div className="bg-gradient-to-b from-slate-100 via-white to-slate-100">
       <div className="mx-auto max-w-6xl space-y-12 px-6 pb-24 pt-10 lg:px-8">
-        <div className="flex items-center gap-3 text-sm text-blue-200">
+        <div className="flex items-center gap-3 text-sm text-blue-600">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900 px-4 py-2 font-medium shadow-sm transition hover:border-blue-400 hover:text-blue-200"
+            className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-2 font-medium shadow-sm transition hover:border-blue-400 hover:bg-blue-50 hover:text-blue-700"
           >
             <span aria-hidden>←</span>
             {t.backLabel}
@@ -74,7 +74,7 @@ export default function BlogArticleView({ slug }) {
         </div>
 
         <div className="grid gap-12 lg:grid-cols-[2fr_1fr]">
-          <article className="space-y-10 rounded-[3rem] border border-slate-800 bg-white/95 p-10 shadow-2xl">
+          <article className="space-y-10 rounded-[3rem] border border-slate-200 bg-white p-10 shadow-2xl">
             <header className="space-y-6">
               <div className="flex flex-wrap items-center gap-3 text-sm text-slate-500">
                 <span className="rounded-full bg-blue-50 px-3 py-1 font-semibold text-blue-600">
@@ -185,7 +185,7 @@ export default function BlogArticleView({ slug }) {
             </div>
           </article>
 
-          <aside className="space-y-8 rounded-[2.5rem] border border-slate-800 bg-white/95 p-8 shadow-xl">
+          <aside className="space-y-8 rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-xl">
             <div className="space-y-3">
               <h2 className="text-lg font-semibold text-slate-900">{t.relatedTitle}</h2>
               <p className="text-sm text-slate-500">{t.relatedDescription}</p>

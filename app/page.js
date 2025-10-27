@@ -124,29 +124,29 @@ export default function Home() {
   const activeSlide = slides[currentSlide] ?? slides[0] ?? null;
 
   return (
-    <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <div className="bg-gradient-to-b from-slate-100 via-white to-slate-100">
       <div className="mx-auto max-w-6xl space-y-24 px-6 pb-24 pt-32 lg:px-8">
-        <section className="relative overflow-hidden rounded-[3rem] border border-slate-800 bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 p-10 shadow-2xl lg:p-14">
-          <div className="pointer-events-none absolute -left-16 top-10 h-64 w-64 rounded-full bg-blue-500/10 blur-3xl" />
-          <div className="pointer-events-none absolute -right-32 bottom-0 h-72 w-72 rounded-full bg-blue-600/10 blur-3xl" />
+        <section className="relative overflow-hidden rounded-[3rem] border border-slate-200 bg-gradient-to-br from-white via-slate-50 to-white p-10 shadow-2xl lg:p-14">
+          <div className="pointer-events-none absolute -left-16 top-10 h-64 w-64 rounded-full bg-blue-200/40 blur-3xl" />
+          <div className="pointer-events-none absolute -right-32 bottom-0 h-72 w-72 rounded-full bg-blue-300/40 blur-3xl" />
           <div className="relative z-10 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-            <div className="space-y-8 text-slate-100">
+            <div className="space-y-8 text-slate-700">
               <div className="space-y-4">
-                <span className="inline-flex items-center rounded-full border border-blue-400/40 bg-slate-900/80 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-blue-200">
+                <span className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-blue-700">
                   {brand.tagline}
                 </span>
-                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
                   {hero.headline}
                 </h1>
-                <p className="text-lg leading-8 text-slate-300">{hero.subtitle}</p>
-                <p className="text-base leading-7 text-slate-300">{hero.description}</p>
+                <p className="text-lg leading-8 text-slate-600">{hero.subtitle}</p>
+                <p className="text-base leading-7 text-slate-600">{hero.description}</p>
               </div>
 
               <div className="flex flex-wrap gap-4">
-                <button className="rounded-full bg-blue-500 px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-blue-600">
+                <button className="rounded-full bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-blue-500">
                   {hero.primaryCta}
                 </button>
-                <button className="rounded-full border border-blue-400 bg-slate-900/70 px-6 py-3 text-base font-semibold text-blue-200 transition hover:border-blue-300 hover:text-white">
+                <button className="rounded-full border border-blue-200 bg-blue-50 px-6 py-3 text-base font-semibold text-blue-700 transition hover:border-blue-300 hover:bg-blue-100">
                   {hero.secondaryCta}
                 </button>
               </div>
@@ -155,19 +155,19 @@ export default function Home() {
                 {hero.highlights.map((highlight) => (
                   <li
                     key={highlight}
-                    className="flex items-start gap-3 rounded-2xl border border-slate-800 bg-slate-900/60 p-4 shadow-sm"
+                    className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white/80 p-4 shadow-sm"
                   >
-                    <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-500/20 text-sm font-semibold text-blue-200">
+                    <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-sm font-semibold text-blue-600">
                       ★
                     </span>
-                    <span className="text-sm leading-6 text-slate-200">{highlight}</span>
+                    <span className="text-sm leading-6 text-slate-600">{highlight}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div className="relative">
-              <div className="relative h-[26rem] overflow-hidden rounded-[2.5rem] border border-blue-500/20 bg-slate-900/50 shadow-2xl">
+              <div className="relative h-[26rem] overflow-hidden rounded-[2.5rem] border border-blue-100 bg-white shadow-2xl">
                 <div className="absolute inset-0">
                   {slides.map((slide, index) => (
                     <div
@@ -199,14 +199,14 @@ export default function Home() {
                   ))}
                 </div>
 
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent p-6 text-white" aria-live="polite">
-                  <p className="text-xs font-semibold uppercase tracking-[0.4em] text-blue-200/90">{activeSlide?.label}</p>
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/80 to-transparent p-6 text-slate-700" aria-live="polite">
+                  <p className="text-xs font-semibold uppercase tracking-[0.4em] text-blue-600/80">{activeSlide?.label}</p>
                   <div className="mt-3 space-y-1 text-sm sm:text-base">
-                    <p className="text-lg font-semibold sm:text-xl">{activeSlide?.title}</p>
+                    <p className="text-lg font-semibold text-slate-900 sm:text-xl">{activeSlide?.title}</p>
                     <p>{activeSlide?.material}</p>
                     <p>{activeSlide?.width}</p>
                     <p>{activeSlide?.usage}</p>
-                    <p className="pt-1 text-xs font-medium text-white/80 sm:text-sm">{activeSlide?.description}</p>
+                    <p className="pt-1 text-xs font-medium text-slate-600 sm:text-sm">{activeSlide?.description}</p>
                   </div>
                 </div>
               </div>
@@ -217,16 +217,16 @@ export default function Home() {
             {hero.metrics?.map((metric) => (
               <div
                 key={metric.label}
-                className="rounded-2xl border border-blue-500/20 bg-slate-900/60 p-4 text-center shadow-sm backdrop-blur"
+                className="rounded-2xl border border-blue-100 bg-blue-50/70 p-4 text-center shadow-sm"
               >
-                <p className="text-3xl font-bold text-blue-200">{metric.value}</p>
-                <p className="text-sm font-medium text-slate-300">{metric.label}</p>
+                <p className="text-3xl font-bold text-blue-700">{metric.value}</p>
+                <p className="text-sm font-medium text-slate-600">{metric.label}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="grid gap-12 rounded-[3rem] border border-slate-800 bg-white/95 p-10 shadow-xl lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:p-14">
+        <section className="grid gap-12 rounded-[3rem] border border-slate-200 bg-white p-10 shadow-xl lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:p-14">
           <div className="space-y-6">
             <div className="space-y-3">
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">{sections.about.title}</p>
@@ -301,7 +301,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="space-y-8 rounded-[3rem] border border-slate-800 bg-white/95 p-10 shadow-xl lg:p-14">
+        <section className="space-y-8 rounded-[3rem] border border-slate-200 bg-white p-10 shadow-xl lg:p-14">
           <div className="flex flex-col gap-3 text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">{sections.process.title}</p>
             <h2 className="text-3xl font-semibold text-slate-900 sm:text-4xl">{sections.process.subtitle}</h2>
@@ -324,7 +324,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="space-y-10 rounded-[3rem] border border-slate-800 bg-white/95 p-10 shadow-xl lg:p-14">
+        <section className="space-y-10 rounded-[3rem] border border-slate-200 bg-white p-10 shadow-xl lg:p-14">
           <div className="flex flex-col gap-3 text-center">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">{sections.products.title}</p>
             <h2 className="text-3xl font-semibold text-slate-900 sm:text-4xl">{sections.products.description}</h2>
@@ -349,7 +349,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="space-y-10 rounded-[3rem] border border-slate-800 bg-white/95 p-10 shadow-xl lg:p-14">
+        <section className="space-y-10 rounded-[3rem] border border-slate-200 bg-white p-10 shadow-xl lg:p-14">
           <div className="flex items-end justify-between gap-6">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">{sections.news.title}</p>
@@ -375,7 +375,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="grid gap-10 rounded-[3rem] border border-slate-800 bg-gradient-to-br from-white via-blue-50 to-slate-100 p-10 shadow-xl lg:grid-cols-[1.1fr_0.9fr] lg:p-14">
+        <section className="grid gap-10 rounded-[3rem] border border-slate-200 bg-gradient-to-br from-white via-blue-50 to-slate-100 p-10 shadow-xl lg:grid-cols-[1.1fr_0.9fr] lg:p-14">
           <div className="space-y-6">
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">{sections.contact.title}</p>
             <h2 className="text-3xl font-semibold text-slate-900 sm:text-4xl">{sections.contact.description}</h2>
@@ -392,7 +392,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-5 rounded-3xl border border-white/60 bg-white/80 p-8 shadow-lg backdrop-blur">
+          <div className="flex flex-col gap-5 rounded-3xl border border-slate-200 bg-white p-8 shadow-lg">
             <h3 className="text-2xl font-semibold text-slate-900">{sections.cta.title}</h3>
             <p className="text-sm leading-6 text-slate-600">{sections.cta.description}</p>
             <div className="space-y-3 text-sm text-slate-500">

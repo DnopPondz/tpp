@@ -347,9 +347,9 @@ export default function ProductsView() {
   }, [language]);
 
   return (
-    <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <div className="bg-gradient-to-b from-slate-100 via-white to-slate-100">
       <div className="mx-auto max-w-6xl space-y-20 px-6 pb-24 pt-20 lg:px-8">
-        <header className="space-y-5 rounded-[3rem] border border-slate-800 bg-white/95 p-10 text-center shadow-2xl">
+        <header className="space-y-5 rounded-[3rem] border border-slate-200 bg-white p-10 text-center shadow-2xl">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
             {sections.products.title}
           </p>
@@ -365,26 +365,26 @@ export default function ProductsView() {
           {copy.catalog.map((product) => (
             <article
               key={product.id}
-              className="group relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-4xl border border-blue-500/30 bg-slate-900/70 p-10 text-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              className="group relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-4xl border border-slate-200 bg-white/90 p-10 text-slate-700 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
               style={{
-                backgroundImage: `linear-gradient(140deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.35)), url(${productBackgrounds[product.id] ?? ""})`,
+                backgroundImage: `linear-gradient(140deg, rgba(226, 232, 240, 0.92), rgba(191, 219, 254, 0.35)), url(${productBackgrounds[product.id] ?? ""})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             >
               <div className="space-y-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-200">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-700">
                   {product.target}
                 </p>
-                <h2 className="text-2xl font-semibold text-white">{product.name}</h2>
-                <p className="text-sm leading-6 text-slate-100/90">{product.summary}</p>
+                <h2 className="text-2xl font-semibold text-slate-900">{product.name}</h2>
+                <p className="text-sm leading-6 text-slate-600">{product.summary}</p>
               </div>
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <span className="text-sm font-semibold text-blue-200">{hero.primaryCta}</span>
+                <span className="text-sm font-semibold text-blue-700">{hero.primaryCta}</span>
                 <button
                   type="button"
                   onClick={() => setSelectedProduct(product)}
-                  className="inline-flex items-center gap-2 rounded-full bg-blue-400 px-5 py-2 text-sm font-semibold text-slate-900 shadow transition hover:bg-blue-300"
+                  className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-5 py-2 text-sm font-semibold text-white shadow transition hover:bg-blue-500"
                 >
                   {copy.detailCta}
                   <span aria-hidden>→</span>
@@ -394,7 +394,7 @@ export default function ProductsView() {
           ))}
         </section>
 
-        <section className="grid gap-8 rounded-[3rem] border border-slate-800 bg-white/95 p-12 shadow-xl lg:grid-cols-[1fr_1.2fr]">
+        <section className="grid gap-8 rounded-[3rem] border border-slate-200 bg-white p-12 shadow-xl lg:grid-cols-[1fr_1.2fr]">
           <div className="space-y-4">
             <h2 className="text-3xl font-semibold text-slate-900">{copy.serviceIntro.title}</h2>
             <p className="text-base text-slate-600">{copy.serviceIntro.description}</p>
@@ -409,7 +409,7 @@ export default function ProductsView() {
           </div>
         </section>
 
-        <section className="rounded-[3rem] border border-slate-200 bg-white/90 p-12 shadow-xl">
+        <section className="rounded-[3rem] border border-slate-200 bg-white p-12 shadow-xl">
           <div className="grid gap-6 md:grid-cols-2">
             {sections.products.categories.map((category) => (
               <div key={category.title} className="space-y-3 rounded-3xl border border-slate-200 bg-slate-50/70 p-6">
@@ -428,7 +428,7 @@ export default function ProductsView() {
             </Link>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 rounded-full border border-blue-400 px-6 py-3 text-sm font-semibold text-blue-600 transition hover:border-blue-500 hover:text-blue-700"
+              className="inline-flex items-center gap-2 rounded-full border border-blue-300 px-6 py-3 text-sm font-semibold text-blue-600 transition hover:border-blue-400 hover:bg-blue-50 hover:text-blue-700"
             >
               {copy.insightsCta}
               <span aria-hidden>↗</span>

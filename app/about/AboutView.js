@@ -106,9 +106,9 @@ export default function AboutView() {
   const copy = pageCopy[language];
 
   return (
-    <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <div className="bg-gradient-to-b from-slate-100 via-white to-slate-100">
       <div className="mx-auto max-w-6xl space-y-20 px-6 pb-24 pt-16 lg:px-8">
-        <header className="grid gap-12 rounded-[3rem] border border-slate-800 bg-white/95 p-10 shadow-2xl backdrop-blur lg:grid-cols-[1.1fr_0.9fr] lg:p-16">
+        <header className="grid gap-12 rounded-[3rem] border border-slate-200 bg-white p-10 shadow-2xl lg:grid-cols-[1.1fr_0.9fr] lg:p-16">
           <div className="space-y-8">
             <div className="space-y-2">
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">{brand.tagline}</p>
@@ -133,7 +133,7 @@ export default function AboutView() {
           </div>
         </header>
 
-        <section className="grid gap-12 rounded-[3rem] border border-slate-800 bg-white p-10 shadow-xl lg:grid-cols-[1fr_0.8fr] lg:p-16">
+        <section className="grid gap-12 rounded-[3rem] border border-slate-200 bg-white p-10 shadow-xl lg:grid-cols-[1fr_0.8fr] lg:p-16">
           <div className="space-y-10 text-slate-700">
             <div className="space-y-4 rounded-3xl border border-slate-200 bg-slate-50/70 p-8">
               <h2 className="text-2xl font-semibold text-slate-900">{copy.philosophyTitle}</h2>

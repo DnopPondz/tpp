@@ -175,9 +175,9 @@ export default function CapabilitiesView() {
   const copy = pageCopy[language];
 
   return (
-    <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <div className="bg-gradient-to-b from-slate-100 via-white to-slate-100">
       <div className="mx-auto max-w-6xl space-y-16 px-6 pb-24 pt-20 lg:px-8">
-        <header className="space-y-6 rounded-[3rem] border border-slate-800 bg-white/95 p-10 text-center shadow-2xl lg:text-left">
+        <header className="space-y-6 rounded-[3rem] border border-slate-200 bg-white p-10 text-center shadow-2xl lg:text-left">
           <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700 shadow">
             {sections.capabilities.title}
           </span>
@@ -187,7 +187,7 @@ export default function CapabilitiesView() {
           <p className="max-w-3xl text-lg leading-8 text-slate-600">{copy.heroDescription}</p>
         </header>
 
-        <section className="grid gap-8 rounded-[3rem] border border-slate-800 bg-white/95 p-10 shadow-xl lg:grid-cols-[1.2fr_1fr] lg:p-14">
+        <section className="grid gap-8 rounded-[3rem] border border-slate-200 bg-white p-10 shadow-xl lg:grid-cols-[1.2fr_1fr] lg:p-14">
           <div className="space-y-8">
             <DetailCard {...copy.clothWidth} />
             <ListCard {...copy.fabricTypes} columnsClass="sm:grid-cols-2" />

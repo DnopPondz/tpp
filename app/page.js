@@ -126,140 +126,126 @@ export default function Home() {
   return (
     <div className="theme-surface">
       <div className="mx-auto max-w-6xl space-y-24 px-6 pb-24 pt-32 lg:px-8">
-        <section className="relative overflow-hidden rounded-[3rem] border border-slate-200 bg-gradient-to-br from-white via-slate-50 to-white p-10 shadow-2xl transition-colors duration-300 dark:border-slate-800 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 lg:p-14">
-          <div className="pointer-events-none absolute -left-16 top-10 h-64 w-64 rounded-full bg-blue-200/40 blur-3xl dark:bg-blue-900/30" />
-          <div className="pointer-events-none absolute -right-32 bottom-0 h-72 w-72 rounded-full bg-blue-300/40 blur-3xl dark:bg-blue-900/20" />
-          <div className="relative z-10 grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-            <div className="space-y-8 text-slate-700 dark:text-slate-300">
+        <section className="theme-panel rounded-[3rem] border border-border-subtle p-10 shadow-2xl transition-colors duration-300 lg:p-14">
+          <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div className="space-y-8 text-foreground/80">
               <div className="space-y-4">
-                <span className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-blue-700 dark:border-blue-900 dark:bg-blue-950/50 dark:text-blue-200">
+                <span className="inline-flex items-center rounded-full border border-blue-200 bg-surface-muted px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-blue-700">
                   {brand.tagline}
                 </span>
-                <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-5xl lg:text-6xl">
+                <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
                   {hero.headline}
                 </h1>
-                <p className="text-lg leading-8 text-slate-600 dark:text-slate-300">{hero.subtitle}</p>
-                <p className="text-base leading-7 text-slate-600 dark:text-slate-300">{hero.description}</p>
+                <p className="text-lg leading-8">{hero.subtitle}</p>
+                <p className="text-base leading-7">{hero.description}</p>
               </div>
 
               <div className="flex flex-wrap gap-4">
                 <button className="rounded-full bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-lg transition hover:bg-blue-500">
                   {hero.primaryCta}
                 </button>
-                <button className="rounded-full border border-blue-200 bg-blue-50 px-6 py-3 text-base font-semibold text-blue-700 transition hover:border-blue-300 hover:bg-blue-100 dark:border-blue-900 dark:bg-blue-950/60 dark:text-blue-200 dark:hover:border-blue-800 dark:hover:bg-blue-900/40">
+                <button className="rounded-full border border-blue-200 bg-surface-muted px-6 py-3 text-base font-semibold text-blue-700 transition hover:border-blue-300 hover:bg-surface-muted/80">
                   {hero.secondaryCta}
                 </button>
               </div>
 
               <ul className="grid gap-4 sm:grid-cols-2">
                 {hero.highlights.map((highlight) => (
-                  <li
-                    key={highlight}
-                    className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-white/80 p-4 shadow-sm transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900/70"
-                  >
-                    <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-sm font-semibold text-blue-600 dark:bg-blue-900/60 dark:text-blue-200">
+                  <li key={highlight} className="theme-card flex items-start gap-3 rounded-2xl border p-4 shadow-sm">
+                    <span className="mt-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-surface-muted text-sm font-semibold text-blue-600">
                       ★
                     </span>
-                    <span className="text-sm leading-6 text-slate-600 dark:text-slate-300">{highlight}</span>
+                    <span className="text-sm leading-6">{highlight}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="relative">
-              <div className="relative h-[26rem] overflow-hidden rounded-[2.5rem] border border-blue-100 bg-white shadow-2xl transition-colors duration-300 dark:border-blue-900 dark:bg-slate-950">
-                <div className="absolute inset-0">
-                  {slides.map((slide, index) => (
-                    <div
-                      key={slide.id}
-                      className={`absolute inset-0 transition-opacity duration-700 ease-out ${index === currentSlide ? "opacity-100" : "opacity-0"}`}
-                      aria-hidden={index !== currentSlide}
-                    >
-                      <Image
-                        src={slide.image}
-                        alt={slide.alt}
-                        fill
-                        priority={index === 0}
-                        sizes="(max-width: 1024px) 100vw, 40vw"
-                        className="object-cover"
-                      />
-                    </div>
-                  ))}
-                </div>
-
-                <div className="absolute right-6 top-6 flex gap-2">
-                  {slides.map((slide, index) => (
-                    <button
-                      key={slide.id}
-                      type="button"
-                      onClick={() => setCurrentSlide(index)}
-                      className={`h-2.5 w-8 rounded-full transition ${index === currentSlide ? "bg-blue-400" : "bg-blue-400/40 hover:bg-blue-400/70"}`}
-                      aria-label={`${index + 1} / ${slides.length}`}
+            <div className="theme-card relative h-[26rem] overflow-hidden rounded-[2.5rem] border shadow-2xl transition-colors duration-300">
+              <div className="absolute inset-0">
+                {slides.map((slide, index) => (
+                  <div
+                    key={slide.id}
+                    className={`absolute inset-0 transition-opacity duration-700 ease-out ${index === currentSlide ? "opacity-100" : "opacity-0"}`}
+                    aria-hidden={index !== currentSlide}
+                  >
+                    <Image
+                      src={slide.image}
+                      alt={slide.alt}
+                      fill
+                      priority={index === 0}
+                      sizes="(max-width: 1024px) 100vw, 40vw"
+                      className="object-cover"
                     />
-                  ))}
-                </div>
-
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/80 to-transparent p-6 text-slate-700 transition-colors duration-300 dark:from-slate-950 dark:via-slate-900/80 dark:text-slate-200" aria-live="polite">
-                  <p className="text-xs font-semibold uppercase tracking-[0.4em] text-blue-600/80 dark:text-blue-300/80">{activeSlide?.label}</p>
-                  <div className="mt-3 space-y-1 text-sm sm:text-base">
-                    <p className="text-lg font-semibold text-slate-900 dark:text-slate-100 sm:text-xl">{activeSlide?.title}</p>
-                    <p>{activeSlide?.material}</p>
-                    <p>{activeSlide?.width}</p>
-                    <p>{activeSlide?.usage}</p>
-                    <p className="pt-1 text-xs font-medium text-slate-600 dark:text-slate-300 sm:text-sm">{activeSlide?.description}</p>
                   </div>
+                ))}
+              </div>
+
+              <div className="absolute right-6 top-6 flex gap-2">
+                {slides.map((slide, index) => (
+                  <button
+                    key={slide.id}
+                    type="button"
+                    onClick={() => setCurrentSlide(index)}
+                    className={`h-2.5 w-8 rounded-full transition ${index === currentSlide ? "bg-blue-500" : "bg-blue-500/30 hover:bg-blue-500/60"}`}
+                    aria-label={`${index + 1} / ${slides.length}`}
+                  />
+                ))}
+              </div>
+
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-background via-background/90 to-transparent p-6 text-foreground/80" aria-live="polite">
+                <p className="text-xs font-semibold uppercase tracking-[0.4em] text-blue-600/80">{activeSlide?.label}</p>
+                <div className="mt-3 space-y-1 text-sm sm:text-base">
+                  <p className="text-lg font-semibold text-foreground sm:text-xl">{activeSlide?.title}</p>
+                  <p>{activeSlide?.material}</p>
+                  <p>{activeSlide?.width}</p>
+                  <p>{activeSlide?.usage}</p>
+                  <p className="pt-1 text-xs font-medium sm:text-sm">{activeSlide?.description}</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="relative z-10 mt-10 grid gap-4 sm:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-3">
             {hero.metrics?.map((metric) => (
-              <div
-                key={metric.label}
-                className="rounded-2xl border border-blue-100 bg-blue-50/70 p-4 text-center shadow-sm transition-colors duration-300 dark:border-blue-900 dark:bg-blue-950/60"
-              >
-                <p className="text-3xl font-bold text-blue-700 dark:text-blue-300">{metric.value}</p>
-                <p className="text-sm font-medium text-slate-600 dark:text-slate-300">{metric.label}</p>
+              <div key={metric.label} className="theme-card rounded-2xl border p-4 text-center shadow-sm">
+                <p className="text-3xl font-bold text-blue-600">{metric.value}</p>
+                <p className="text-sm font-medium text-foreground/80">{metric.label}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="grid gap-12 rounded-[3rem] border border-slate-200 bg-white p-10 shadow-xl transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:p-14">
+        <section className="theme-panel grid gap-12 rounded-[3rem] border border-border-subtle p-10 shadow-xl transition-colors duration-300 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:p-14">
           <div className="space-y-6">
             <div className="space-y-3">
-              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600 dark:text-blue-300">{sections.about.title}</p>
-              <h2 className="text-3xl font-semibold text-slate-900 dark:text-slate-100 sm:text-4xl">{sections.about.description}</h2>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">{sections.about.title}</p>
+              <h2 className="text-3xl font-semibold text-foreground sm:text-4xl">{sections.about.description}</h2>
             </div>
-            <div className="space-y-4 text-base leading-7 text-slate-600 dark:text-slate-300">
+            <div className="space-y-4 text-base leading-7 text-foreground/80">
               {sections.about.story?.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
             <div className="grid gap-4 sm:grid-cols-3">
               {sections.about.pillars.map((pillar) => (
-                <div
-                  key={pillar.title}
-                  className="flex h-full flex-col gap-2 rounded-2xl border border-blue-100 bg-blue-50/50 p-5 shadow-sm transition-colors duration-300 dark:border-blue-900 dark:bg-blue-950/40"
-                >
-                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-300">
+                <div key={pillar.title} className="theme-card flex h-full flex-col gap-2 rounded-2xl border p-5 shadow-sm">
+                  <span className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-600">
                     {pillar.title}
                   </span>
-                  <p className="text-sm text-slate-600 dark:text-slate-300">{pillar.detail}</p>
+                  <p className="text-sm text-foreground/80">{pillar.detail}</p>
                 </div>
               ))}
             </div>
           </div>
 
           <div className="relative flex h-full flex-col justify-center">
-            <div className="relative overflow-hidden rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-xl transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-100/50 via-transparent to-slate-100/40 dark:from-blue-900/30 dark:to-slate-950/40" />
-              <div className="relative space-y-6">
-                <h3 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">{brand.slogan}</h3>
-                <p className="text-sm leading-7 text-slate-600 dark:text-slate-300">{sections.capabilities.summary}</p>
+            <div className="theme-card relative overflow-hidden rounded-[2.5rem] border p-8 shadow-xl">
+              <div className="space-y-6">
+                <h3 className="text-2xl font-semibold text-foreground">{brand.slogan}</h3>
+                <p className="text-sm leading-7 text-foreground/80">{sections.capabilities.summary}</p>
                 {activeSlide ? (
-                  <div className="relative h-52 overflow-hidden rounded-3xl border border-blue-100 bg-blue-50 transition-colors duration-300 dark:border-blue-900 dark:bg-blue-950/40">
+                  <div className="theme-card relative h-52 overflow-hidden rounded-3xl border">
                     <Image
                       src={activeSlide.image}
                       alt={activeSlide.alt}
@@ -274,26 +260,23 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="space-y-10 rounded-[2.5rem] border border-slate-200 bg-white p-10 shadow-xl transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900 lg:p-14">
+        <section className="theme-panel space-y-10 rounded-[2.5rem] border border-border-subtle p-10 shadow-xl transition-colors duration-300 lg:p-14">
           <div className="flex flex-col gap-3 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300">{sections.capabilities.title}</p>
-            <h2 className="text-3xl font-semibold text-slate-900 dark:text-slate-100 sm:text-4xl">{sections.capabilities.summary}</h2>
-            <p className="text-base text-slate-600 dark:text-slate-300">{hero.description}</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">{sections.capabilities.title}</p>
+            <h2 className="text-3xl font-semibold text-foreground sm:text-4xl">{sections.capabilities.summary}</h2>
+            <p className="text-base text-foreground/80">{hero.description}</p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {sections.capabilities.items.map((item, index) => (
-              <div
-                key={item.title}
-                className="flex h-full flex-col gap-4 rounded-3xl border border-blue-100 bg-blue-50/60 p-6 text-left shadow-sm transition-colors duration-300 dark:border-blue-900 dark:bg-blue-950/40"
-              >
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-white text-base font-semibold text-blue-600 dark:bg-slate-900 dark:text-blue-300">
+              <div key={item.title} className="theme-card flex h-full flex-col gap-4 rounded-3xl border p-6 text-left shadow-sm">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-surface-muted text-base font-semibold text-blue-600">
                   {index + 1}
                 </span>
                 <div className="space-y-2">
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">{item.title}</h3>
-                  <p className="text-sm leading-6 text-slate-600 dark:text-slate-300">{item.detail}</p>
+                  <h3 className="text-lg font-semibold text-foreground">{item.title}</h3>
+                  <p className="text-sm leading-6 text-foreground/80">{item.detail}</p>
                 </div>
-                <span className="mt-auto text-xs font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-300">
+                <span className="mt-auto text-xs font-semibold uppercase tracking-[0.2em] text-blue-600">
                   {brand.name}
                 </span>
               </div>
@@ -301,45 +284,41 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="space-y-8 rounded-[3rem] border border-slate-200 bg-white p-10 shadow-xl transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900 lg:p-14">
+        <section className="theme-panel space-y-8 rounded-[3rem] border border-border-subtle p-10 shadow-xl transition-colors duration-300 lg:p-14">
           <div className="flex flex-col gap-3 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300">{sections.process.title}</p>
-            <h2 className="text-3xl font-semibold text-slate-900 dark:text-slate-100 sm:text-4xl">{sections.process.subtitle}</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">{sections.process.title}</p>
+            <h2 className="text-3xl font-semibold text-foreground sm:text-4xl">{sections.process.subtitle}</h2>
           </div>
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {sections.process.steps.map((step, index) => (
-              <div
-                key={step.title}
-                className="flex h-full flex-col gap-4 rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900"
-              >
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-blue-50 text-base font-semibold text-blue-600 dark:bg-blue-900/40 dark:text-blue-200">
+              <div key={step.title} className="theme-card flex h-full flex-col gap-4 rounded-3xl border p-6 shadow-sm">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-surface-muted text-base font-semibold text-blue-600">
                   {(index + 1).toString().padStart(2, "0")}
                 </span>
                 <div className="space-y-2">
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">{step.title}</h3>
-                  <p className="text-sm leading-6 text-slate-600 dark:text-slate-300">{step.detail}</p>
+                  <h3 className="text-lg font-semibold text-foreground">{step.title}</h3>
+                  <p className="text-sm leading-6 text-foreground/80">{step.detail}</p>
                 </div>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="space-y-10 rounded-[3rem] border border-slate-200 bg-white p-10 shadow-xl transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900 lg:p-14">
+        <section className="theme-panel space-y-10 rounded-[3rem] border border-border-subtle p-10 shadow-xl transition-colors duration-300 lg:p-14">
           <div className="flex flex-col gap-3 text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300">{sections.products.title}</p>
-            <h2 className="text-3xl font-semibold text-slate-900 dark:text-slate-100 sm:text-4xl">{sections.products.description}</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">{sections.products.title}</p>
+            <h2 className="text-3xl font-semibold text-foreground sm:text-4xl">{sections.products.description}</h2>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             {sections.products.categories.map((category) => (
               <article
                 key={category.title}
-                className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900"
+                className="theme-card relative overflow-hidden rounded-3xl border p-6 shadow-sm"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-100/40 via-transparent to-slate-100/30 dark:from-blue-900/30 dark:to-slate-950/30" />
                 <div className="relative flex h-full flex-col gap-4">
-                  <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100">{category.title}</h3>
-                  <p className="text-sm leading-6 text-slate-600 dark:text-slate-300">{category.detail}</p>
-                  <div className="mt-auto flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-300">
+                  <h3 className="text-xl font-semibold text-foreground">{category.title}</h3>
+                  <p className="text-sm leading-6 text-foreground/80">{category.detail}</p>
+                  <div className="mt-auto flex items-center gap-2 text-sm font-semibold text-blue-600">
                     <span>→</span>
                     <span>{hero.primaryCta}</span>
                   </div>
@@ -349,13 +328,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="space-y-10 rounded-[3rem] border border-slate-200 bg-white p-10 shadow-xl transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900 lg:p-14">
+        <section className="theme-panel space-y-10 rounded-[3rem] border border-border-subtle p-10 shadow-xl transition-colors duration-300 lg:p-14">
           <div className="flex items-end justify-between gap-6">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300">{sections.news.title}</p>
-              <h2 className="mt-2 text-3xl font-semibold text-slate-900 dark:text-slate-100 sm:text-4xl">{brand.slogan}</h2>
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">{sections.news.title}</p>
+              <h2 className="mt-2 text-3xl font-semibold text-foreground sm:text-4xl">{brand.slogan}</h2>
             </div>
-            <button className="hidden rounded-full border border-blue-400 px-5 py-2 text-sm font-medium text-blue-600 transition hover:border-blue-500 hover:text-blue-700 dark:border-blue-800 dark:text-blue-300 dark:hover:border-blue-700 dark:hover:text-blue-200 sm:block">
+            <button className="hidden rounded-full border border-blue-400 px-5 py-2 text-sm font-medium text-blue-600 transition hover:border-blue-500 hover:text-blue-700 sm:block">
               {hero.secondaryCta}
             </button>
           </div>
@@ -363,11 +342,11 @@ export default function Home() {
             {sections.news.articles.map((article) => (
               <article
                 key={article.title}
-                className="flex h-full flex-col gap-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900"
+                className="theme-card flex h-full flex-col gap-4 rounded-3xl border p-6 shadow-sm"
               >
-                <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100">{article.title}</h3>
-                <p className="text-sm leading-6 text-slate-600 dark:text-slate-300">{article.summary}</p>
-                <button className="mt-auto w-fit rounded-full border border-blue-400 px-4 py-2 text-sm font-medium text-blue-600 transition hover:border-blue-500 hover:text-blue-700 dark:border-blue-800 dark:text-blue-300 dark:hover:border-blue-700 dark:hover:text-blue-200">
+                <h3 className="text-xl font-semibold text-foreground">{article.title}</h3>
+                <p className="text-sm leading-6 text-foreground/80">{article.summary}</p>
+                <button className="mt-auto w-fit rounded-full border border-blue-400 px-4 py-2 text-sm font-medium text-blue-600 transition hover:border-blue-500 hover:text-blue-700">
                   {hero.secondaryCta}
                 </button>
               </article>
@@ -375,27 +354,27 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="grid gap-10 rounded-[3rem] border border-slate-200 bg-gradient-to-br from-white via-blue-50 to-slate-100 p-10 shadow-xl transition-colors duration-300 dark:border-slate-800 dark:from-slate-950 dark:via-blue-950/30 dark:to-slate-900 lg:grid-cols-[1.1fr_0.9fr] lg:p-14">
+        <section className="theme-panel grid gap-10 rounded-[3rem] border border-border-subtle p-10 shadow-xl transition-colors duration-300 lg:grid-cols-[1.1fr_0.9fr] lg:p-14">
           <div className="space-y-6">
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300">{sections.contact.title}</p>
-            <h2 className="text-3xl font-semibold text-slate-900 dark:text-slate-100 sm:text-4xl">{sections.contact.description}</h2>
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">{sections.contact.title}</p>
+            <h2 className="text-3xl font-semibold text-foreground sm:text-4xl">{sections.contact.description}</h2>
             <div className="grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-blue-100 bg-white p-5 shadow-sm transition-colors duration-300 dark:border-blue-900 dark:bg-slate-900">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-300">{sections.contact.phoneLabel}</p>
-                <p className="text-base text-slate-700 dark:text-slate-200">+66 (0)2735 9109-10</p>
-                <p className="text-base text-slate-700 dark:text-slate-200">+66 (0)2182 3306</p>
+              <div className="theme-card rounded-2xl border p-5 shadow-sm">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">{sections.contact.phoneLabel}</p>
+                <p className="text-base text-foreground/80">+66 (0)2735 9109-10</p>
+                <p className="text-base text-foreground/80">+66 (0)2182 3306</p>
               </div>
-              <div className="rounded-2xl border border-blue-100 bg-white p-5 shadow-sm transition-colors duration-300 dark:border-blue-900 dark:bg-slate-900">
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-300">{sections.contact.emailLabel}</p>
-                <p className="text-base text-slate-700 dark:text-slate-200">sales@thaipaipan.com</p>
-                <p className="text-base text-slate-700 dark:text-slate-200">service@thaipaipan.com</p>
+              <div className="theme-card rounded-2xl border p-5 shadow-sm">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">{sections.contact.emailLabel}</p>
+                <p className="text-base text-foreground/80">sales@thaipaipan.com</p>
+                <p className="text-base text-foreground/80">service@thaipaipan.com</p>
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-5 rounded-3xl border border-slate-200 bg-white p-8 shadow-lg transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900">
-            <h3 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">{sections.cta.title}</h3>
-            <p className="text-sm leading-6 text-slate-600 dark:text-slate-300">{sections.cta.description}</p>
-            <div className="space-y-3 text-sm text-slate-500 dark:text-slate-300">
+          <div className="theme-card flex flex-col gap-5 rounded-3xl border p-8 shadow-lg">
+            <h3 className="text-2xl font-semibold text-foreground">{sections.cta.title}</h3>
+            <p className="text-sm leading-6 text-foreground/80">{sections.cta.description}</p>
+            <div className="space-y-3 text-sm text-foreground/70">
               {footer.hours.map((line) => (
                 <p key={line}>{line}</p>
               ))}

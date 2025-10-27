@@ -61,12 +61,12 @@ export default function BlogArticleView({ slug }) {
   }, [posts, post, slug]);
 
   return (
-    <div className="bg-gradient-to-b from-slate-100 via-white to-slate-100">
+    <div className="bg-gradient-to-b from-slate-100 via-white to-slate-100 transition-colors duration-300 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
       <div className="mx-auto max-w-6xl space-y-12 px-6 pb-24 pt-10 lg:px-8">
-        <div className="flex items-center gap-3 text-sm text-blue-600">
+        <div className="flex items-center gap-3 text-sm text-blue-600 dark:text-blue-300">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-2 font-medium shadow-sm transition hover:border-blue-400 hover:bg-blue-50 hover:text-blue-700"
+            className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-4 py-2 font-medium shadow-sm transition hover:border-blue-400 hover:bg-blue-50 hover:text-blue-700 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-100 dark:hover:border-blue-500 dark:hover:bg-blue-900/40 dark:hover:text-blue-200"
           >
             <span aria-hidden>←</span>
             {t.backLabel}
@@ -74,30 +74,30 @@ export default function BlogArticleView({ slug }) {
         </div>
 
         <div className="grid gap-12 lg:grid-cols-[2fr_1fr]">
-          <article className="space-y-10 rounded-[3rem] border border-slate-200 bg-white p-10 shadow-2xl">
+          <article className="space-y-10 rounded-[3rem] border border-slate-200 bg-white p-10 shadow-2xl transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900">
             <header className="space-y-6">
-              <div className="flex flex-wrap items-center gap-3 text-sm text-slate-500">
-                <span className="rounded-full bg-blue-50 px-3 py-1 font-semibold text-blue-600">
+              <div className="flex flex-wrap items-center gap-3 text-sm text-slate-500 dark:text-slate-400">
+                <span className="rounded-full bg-blue-50 px-3 py-1 font-semibold text-blue-600 dark:bg-blue-950/50 dark:text-blue-200">
                   {post.category}
                 </span>
                 <time dateTime={post.date}>{formatDate(post.date, language)}</time>
-                <span className="h-1 w-1 rounded-full bg-slate-200" aria-hidden />
+                <span className="h-1 w-1 rounded-full bg-slate-200 dark:bg-slate-600" aria-hidden />
                 <span>{post.readingTime}</span>
-                <span className="h-1 w-1 rounded-full bg-slate-200" aria-hidden />
-                <span className="font-medium text-blue-600">{t.summaryLabel}</span>
+                <span className="h-1 w-1 rounded-full bg-slate-200 dark:bg-slate-600" aria-hidden />
+                <span className="font-medium text-blue-600 dark:text-blue-300">{t.summaryLabel}</span>
               </div>
-              <h1 className="text-4xl font-bold tracking-tight text-slate-900">
+              <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
                 {post.title}
               </h1>
-              <p className="text-lg leading-8 text-slate-600">{post.excerpt}</p>
-              <div className="flex flex-wrap items-center gap-3 text-sm text-slate-500">
-                <div className="flex items-center gap-2 font-medium text-blue-700">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-600">
+              <p className="text-lg leading-8 text-slate-600 dark:text-slate-300">{post.excerpt}</p>
+              <div className="flex flex-wrap items-center gap-3 text-sm text-slate-500 dark:text-slate-400">
+                <div className="flex items-center gap-2 font-medium text-blue-700 dark:text-blue-300">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-600 dark:bg-blue-950/50 dark:text-blue-200">
                     {post.author?.charAt(0)}
                   </span>
                   <div className="flex flex-col">
                     <span>{post.author}</span>
-                    <span className="text-xs text-slate-400">{post.authorRole}</span>
+                    <span className="text-xs text-slate-400 dark:text-slate-500">{post.authorRole}</span>
                   </div>
                 </div>
               </div>
@@ -117,19 +117,19 @@ export default function BlogArticleView({ slug }) {
             {sectionAnchors.length > 1 && (
               <nav
                 aria-label="table of contents"
-                className="rounded-3xl border border-slate-200 bg-slate-50/80 p-6"
+                className="rounded-3xl border border-slate-200 bg-slate-50/80 p-6 transition-colors duration-300 dark:border-slate-700 dark:bg-slate-900"
               >
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-300">
                   {t.tableOfContentsTitle}
                 </p>
-                <ol className="mt-4 space-y-2 text-sm text-slate-600">
+                <ol className="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
                   {sectionAnchors.map((section, index) => (
                     <li key={section.id}>
                       <a
                         href={`#${section.id}`}
-                        className="inline-flex items-center gap-2 rounded-full px-3 py-1 transition hover:text-blue-600"
+                        className="inline-flex items-center gap-2 rounded-full px-3 py-1 transition hover:text-blue-600 dark:hover:text-blue-300"
                       >
-                        <span className="text-xs font-semibold text-blue-600">
+                        <span className="text-xs font-semibold text-blue-600 dark:text-blue-300">
                           {String(index + 1).padStart(2, "0")}
                         </span>
                         <span>{section.heading}</span>
@@ -140,11 +140,11 @@ export default function BlogArticleView({ slug }) {
               </nav>
             )}
 
-            <div className="space-y-12 text-base leading-7 text-slate-700">
+            <div className="space-y-12 text-base leading-7 text-slate-700 dark:text-slate-300">
               {sectionAnchors.map((section) => (
                 <section key={section.id} id={section.id} className="space-y-4">
                   <div className="space-y-2">
-                    <h2 className="text-2xl font-semibold text-slate-900">
+                    <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">
                       {section.heading}
                     </h2>
                     {section.paragraphs?.map((paragraph, index) => (
@@ -152,7 +152,7 @@ export default function BlogArticleView({ slug }) {
                     ))}
                   </div>
                   {section.bullets && section.bullets.length > 0 && (
-                    <ul className="list-disc space-y-2 rounded-2xl bg-slate-50/80 p-6 text-sm leading-6 text-slate-600 marker:text-blue-500">
+                    <ul className="list-disc space-y-2 rounded-2xl bg-slate-50/80 p-6 text-sm leading-6 text-slate-600 marker:text-blue-500 dark:bg-slate-900 dark:text-slate-300">
                       {section.bullets.map((item, index) => (
                         <li key={`${section.id}-bullet-${index}`}>{item}</li>
                       ))}
@@ -162,12 +162,12 @@ export default function BlogArticleView({ slug }) {
               ))}
             </div>
 
-            <div className="rounded-3xl border border-blue-100 bg-blue-50/70 p-8 text-sm text-slate-800">
-              <p className="text-base font-semibold text-blue-700">{t.takeawaysTitle}</p>
+            <div className="rounded-3xl border border-blue-100 bg-blue-50/70 p-8 text-sm text-slate-800 transition-colors duration-300 dark:border-blue-900 dark:bg-blue-950/40 dark:text-slate-200">
+              <p className="text-base font-semibold text-blue-700 dark:text-blue-300">{t.takeawaysTitle}</p>
               <ul className="mt-4 space-y-3">
                 {post.keyTakeaways?.map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <span className="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-white text-xs font-semibold text-blue-600">
+                    <span className="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-white text-xs font-semibold text-blue-600 dark:bg-slate-900 dark:text-blue-300">
                       ★
                     </span>
                     <span>{item}</span>
@@ -176,31 +176,31 @@ export default function BlogArticleView({ slug }) {
               </ul>
             </div>
 
-            <div className="flex flex-wrap gap-3 text-sm text-blue-600">
+            <div className="flex flex-wrap gap-3 text-sm text-blue-600 dark:text-blue-300">
               {post.tags.map((tag) => (
-                <span key={tag} className="rounded-full bg-blue-50 px-4 py-1 font-medium">
+                <span key={tag} className="rounded-full bg-blue-50 px-4 py-1 font-medium dark:bg-blue-950/50">
                   #{tag}
                 </span>
               ))}
             </div>
           </article>
 
-          <aside className="space-y-8 rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-xl">
+          <aside className="space-y-8 rounded-[2.5rem] border border-slate-200 bg-white p-8 shadow-xl transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900">
             <div className="space-y-3">
-              <h2 className="text-lg font-semibold text-slate-900">{t.relatedTitle}</h2>
-              <p className="text-sm text-slate-500">{t.relatedDescription}</p>
+              <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">{t.relatedTitle}</h2>
+              <p className="text-sm text-slate-500 dark:text-slate-400">{t.relatedDescription}</p>
               <div className="space-y-4">
                 {relatedPosts.map((item) => (
                   <Link
                     key={item.slug}
                     href={`/blog/${item.slug}`}
-                    className="block rounded-2xl border border-slate-200 bg-slate-50/70 p-4 transition hover:border-blue-400 hover:text-blue-700"
+                    className="block rounded-2xl border border-slate-200 bg-slate-50/70 p-4 transition hover:border-blue-400 hover:text-blue-700 dark:border-slate-700 dark:bg-slate-900 dark:hover:border-blue-500 dark:hover:text-blue-300"
                   >
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-600">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-300">
                       {item.category}
                     </p>
-                    <p className="mt-1 text-sm font-semibold text-slate-900">{item.title}</p>
-                    <p className="mt-1 text-xs text-slate-500">
+                    <p className="mt-1 text-sm font-semibold text-slate-900 dark:text-slate-100">{item.title}</p>
+                    <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
                       {formatDate(item.date, language)} • {item.readingTime}
                     </p>
                   </Link>
@@ -208,8 +208,8 @@ export default function BlogArticleView({ slug }) {
               </div>
             </div>
 
-            <div className="space-y-3 rounded-2xl border border-blue-100 bg-blue-50/70 p-6 text-sm text-slate-800">
-              <h2 className="text-lg font-semibold text-blue-700">{t.advisoryTitle}</h2>
+            <div className="space-y-3 rounded-2xl border border-blue-100 bg-blue-50/70 p-6 text-sm text-slate-800 transition-colors duration-300 dark:border-blue-900 dark:bg-blue-950/40 dark:text-slate-200">
+              <h2 className="text-lg font-semibold text-blue-700 dark:text-blue-300">{t.advisoryTitle}</h2>
               <p>{t.advisoryDescription}</p>
               <Link
                 href="/contact"

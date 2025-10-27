@@ -278,35 +278,35 @@ function ProductModal({ product, onClose, labels }) {
         role="dialog"
         aria-modal="true"
         aria-labelledby="product-title"
-        className="relative z-10 w-full max-w-3xl overflow-hidden rounded-4xl border border-white/40 bg-white/95 shadow-2xl"
+        className="relative z-10 w-full max-w-3xl overflow-hidden rounded-4xl border border-white/40 bg-white/95 shadow-2xl transition-colors duration-300 dark:border-slate-700 dark:bg-slate-900"
       >
         <button
           type="button"
           onClick={onClose}
-          className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 shadow-sm transition hover:text-slate-700"
+          className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 shadow-sm transition hover:text-slate-700 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-200 dark:hover:text-slate-50"
           aria-label={labels.closeAria}
         >
           ×
         </button>
         <div className="grid gap-8 p-10 lg:grid-cols-[1.1fr_1fr]">
           <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300">
               {product.target}
             </p>
-            <h3 id="product-title" className="text-3xl font-semibold text-slate-900">
+            <h3 id="product-title" className="text-3xl font-semibold text-slate-900 dark:text-slate-100">
               {product.name}
             </h3>
-            <p className="text-base text-slate-600">{product.details.description}</p>
+            <p className="text-base text-slate-600 dark:text-slate-300">{product.details.description}</p>
           </div>
           <div className="space-y-6">
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-900/80">
+              <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-900/80 dark:text-slate-100">
                 {labels.highlightsTitle}
               </h4>
-              <ul className="mt-3 space-y-2 text-sm text-slate-600">
+              <ul className="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
                 {product.details.highlights.map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <span className="mt-1 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-[10px] font-bold text-blue-600">
+                    <span className="mt-1 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-[10px] font-bold text-blue-600 dark:bg-blue-950/60 dark:text-blue-200">
                       ✓
                     </span>
                     <span>{item}</span>
@@ -315,14 +315,14 @@ function ProductModal({ product, onClose, labels }) {
               </ul>
             </div>
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-900/80">
+              <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-900/80 dark:text-slate-100">
                 {labels.applicationsTitle}
               </h4>
-              <ul className="mt-3 flex flex-wrap gap-2 text-xs font-semibold text-blue-600">
+              <ul className="mt-3 flex flex-wrap gap-2 text-xs font-semibold text-blue-600 dark:text-blue-300">
                 {product.details.applications.map((useCase) => (
                   <li
                     key={useCase}
-                    className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1"
+                    className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1 dark:border-blue-900 dark:bg-blue-950/40"
                   >
                     {useCase}
                   </li>
@@ -347,16 +347,16 @@ export default function ProductsView() {
   }, [language]);
 
   return (
-    <div className="bg-gradient-to-b from-slate-100 via-white to-slate-100">
+    <div className="bg-gradient-to-b from-slate-100 via-white to-slate-100 transition-colors duration-300 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
       <div className="mx-auto max-w-6xl space-y-20 px-6 pb-24 pt-20 lg:px-8">
-        <header className="space-y-5 rounded-[3rem] border border-slate-200 bg-white p-10 text-center shadow-2xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
+        <header className="space-y-5 rounded-[3rem] border border-slate-200 bg-white p-10 text-center shadow-2xl transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-300">
             {sections.products.title}
           </p>
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-5xl">
             {copy.heroHeading}
           </h1>
-          <p className="mx-auto max-w-3xl text-lg leading-8 text-slate-600">
+          <p className="mx-auto max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300">
             {sections.products.description}
           </p>
         </header>
@@ -365,7 +365,7 @@ export default function ProductsView() {
           {copy.catalog.map((product) => (
             <article
               key={product.id}
-              className="group relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-4xl border border-slate-200 bg-white/90 p-10 text-slate-700 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              className="group relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-4xl border border-slate-200 bg-white/90 p-10 text-slate-700 shadow-sm transition hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900/90 dark:text-slate-300"
               style={{
                 backgroundImage: `linear-gradient(140deg, rgba(226, 232, 240, 0.92), rgba(191, 219, 254, 0.35)), url(${productBackgrounds[product.id] ?? ""})`,
                 backgroundSize: "cover",
@@ -373,14 +373,14 @@ export default function ProductsView() {
               }}
             >
               <div className="space-y-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-700">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-700 dark:text-blue-300">
                   {product.target}
                 </p>
-                <h2 className="text-2xl font-semibold text-slate-900">{product.name}</h2>
-                <p className="text-sm leading-6 text-slate-600">{product.summary}</p>
+                <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">{product.name}</h2>
+                <p className="text-sm leading-6 text-slate-600 dark:text-slate-300">{product.summary}</p>
               </div>
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <span className="text-sm font-semibold text-blue-700">{hero.primaryCta}</span>
+                <span className="text-sm font-semibold text-blue-700 dark:text-blue-300">{hero.primaryCta}</span>
                 <button
                   type="button"
                   onClick={() => setSelectedProduct(product)}
@@ -394,27 +394,27 @@ export default function ProductsView() {
           ))}
         </section>
 
-        <section className="grid gap-8 rounded-[3rem] border border-slate-200 bg-white p-12 shadow-xl lg:grid-cols-[1fr_1.2fr]">
+        <section className="grid gap-8 rounded-[3rem] border border-slate-200 bg-white p-12 shadow-xl transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900 lg:grid-cols-[1fr_1.2fr]">
           <div className="space-y-4">
-            <h2 className="text-3xl font-semibold text-slate-900">{copy.serviceIntro.title}</h2>
-            <p className="text-base text-slate-600">{copy.serviceIntro.description}</p>
+            <h2 className="text-3xl font-semibold text-slate-900 dark:text-slate-100">{copy.serviceIntro.title}</h2>
+            <p className="text-base text-slate-600 dark:text-slate-300">{copy.serviceIntro.description}</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-3">
             {copy.serviceAddOns.map((service) => (
-              <div key={service.title} className="rounded-3xl border border-slate-200 bg-slate-50/80 p-6 text-sm text-slate-700">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-600">{service.title}</p>
+              <div key={service.title} className="rounded-3xl border border-slate-200 bg-slate-50/80 p-6 text-sm text-slate-700 transition-colors duration-300 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300">{service.title}</p>
                 <p className="mt-2">{service.description}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="rounded-[3rem] border border-slate-200 bg-white p-12 shadow-xl">
+        <section className="rounded-[3rem] border border-slate-200 bg-white p-12 shadow-xl transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900">
           <div className="grid gap-6 md:grid-cols-2">
             {sections.products.categories.map((category) => (
-              <div key={category.title} className="space-y-3 rounded-3xl border border-slate-200 bg-slate-50/70 p-6">
-                <h3 className="text-xl font-semibold text-slate-900">{category.title}</h3>
-                <p className="text-sm text-slate-600">{category.detail}</p>
+              <div key={category.title} className="space-y-3 rounded-3xl border border-slate-200 bg-slate-50/70 p-6 transition-colors duration-300 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300">
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-100">{category.title}</h3>
+                <p className="text-sm text-slate-600 dark:text-slate-300">{category.detail}</p>
               </div>
             ))}
           </div>
@@ -428,7 +428,7 @@ export default function ProductsView() {
             </Link>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 rounded-full border border-blue-300 px-6 py-3 text-sm font-semibold text-blue-600 transition hover:border-blue-400 hover:bg-blue-50 hover:text-blue-700"
+              className="inline-flex items-center gap-2 rounded-full border border-blue-300 px-6 py-3 text-sm font-semibold text-blue-600 transition hover:border-blue-400 hover:bg-blue-50 hover:text-blue-700 dark:border-blue-800 dark:text-blue-300 dark:hover:border-blue-600 dark:hover:bg-blue-900/40 dark:hover:text-blue-200"
             >
               {copy.insightsCta}
               <span aria-hidden>↗</span>

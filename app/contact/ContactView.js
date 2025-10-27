@@ -100,41 +100,41 @@ export default function ContactView() {
   const copy = pageCopy[language];
 
   return (
-    <div className="bg-gradient-to-b from-slate-100 via-white to-slate-100">
+    <div className="bg-gradient-to-b from-slate-100 via-white to-slate-100 transition-colors duration-300 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
       <div className="mx-auto max-w-6xl space-y-16 px-6 pb-24 pt-20 lg:px-8">
-        <header className="space-y-4 rounded-[3rem] border border-slate-200 bg-white p-10 text-center shadow-xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">{sections.contact.title}</p>
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">{copy.heroHeading}</h1>
-          <p className="mx-auto max-w-3xl text-lg leading-8 text-slate-600">{sections.contact.description}</p>
+        <header className="space-y-4 rounded-[3rem] border border-slate-200 bg-white p-10 text-center shadow-xl transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-300">{sections.contact.title}</p>
+          <h1 className="text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-5xl">{copy.heroHeading}</h1>
+          <p className="mx-auto max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300">{sections.contact.description}</p>
         </header>
 
-        <section className="grid gap-6 rounded-[3rem] border border-slate-200 bg-white p-12 shadow-2xl lg:grid-cols-[1.2fr_1fr]">
+        <section className="grid gap-6 rounded-[3rem] border border-slate-200 bg-white p-12 shadow-2xl transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900 lg:grid-cols-[1.2fr_1fr]">
           <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-slate-900">{copy.contactSectionTitle}</h2>
+            <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">{copy.contactSectionTitle}</h2>
             <div className="grid gap-4 md:grid-cols-2">
               {copy.contactChannels.map((channel) => (
-                <div key={channel.label} className="rounded-3xl border border-blue-100 bg-blue-50/70 p-6 text-sm text-slate-800">
-                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-600">{channel.label}</p>
+                <div key={channel.label} className="rounded-3xl border border-blue-100 bg-blue-50/70 p-6 text-sm text-slate-800 transition-colors duration-300 dark:border-blue-900 dark:bg-blue-950/40 dark:text-slate-200">
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-600 dark:text-blue-300">{channel.label}</p>
                   <ul className="mt-3 space-y-2">
                     {channel.phones.map((phone) => (
                       <li key={phone}>{phone}</li>
                     ))}
                   </ul>
-                  <p className="mt-3 font-medium text-slate-900">{channel.email}</p>
+                  <p className="mt-3 font-medium text-slate-900 dark:text-slate-100">{channel.email}</p>
                 </div>
               ))}
             </div>
-            <div className="rounded-3xl border border-dashed border-blue-200 p-6 text-sm text-slate-600">
-              <p className="font-semibold text-blue-700">{copy.projectPrepTitle}</p>
+            <div className="rounded-3xl border border-dashed border-blue-200 p-6 text-sm text-slate-600 transition-colors duration-300 dark:border-blue-800 dark:text-slate-300">
+              <p className="font-semibold text-blue-700 dark:text-blue-300">{copy.projectPrepTitle}</p>
               <p className="mt-2">{copy.projectPrepDescription}</p>
             </div>
           </div>
-          <div className="space-y-5 rounded-3xl border border-slate-200 bg-slate-50/90 p-8 text-sm text-slate-700">
-            <h2 className="text-lg font-semibold text-slate-900">ข้อมูลการเยี่ยมชมโรงงาน</h2>
+          <div className="space-y-5 rounded-3xl border border-slate-200 bg-slate-50/90 p-8 text-sm text-slate-700 transition-colors duration-300 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300">
+            <h2 className="text-lg font-semibold text-slate-900 dark:text-slate-100">ข้อมูลการเยี่ยมชมโรงงาน</h2>
             <ul className="space-y-4">
               {copy.visitInfo.map((item) => (
                 <li key={item.title} className="space-y-1">
-                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{item.title}</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500 dark:text-slate-400">{item.title}</p>
                   <p>{item.detail}</p>
                 </li>
               ))}
@@ -151,30 +151,30 @@ export default function ContactView() {
           </div>
         </section>
 
-        <section className="grid gap-6 rounded-[3rem] border border-slate-200 bg-white p-12 shadow-xl lg:grid-cols-2">
+        <section className="grid gap-6 rounded-[3rem] border border-slate-200 bg-white p-12 shadow-xl transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900 lg:grid-cols-2">
           <div className="space-y-4">
-            <h2 className="text-2xl font-semibold text-slate-900">{copy.resourcesTitle}</h2>
-            <p className="text-base text-slate-600">{copy.resourcesDescription}</p>
+            <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100">{copy.resourcesTitle}</h2>
+            <p className="text-base text-slate-600 dark:text-slate-300">{copy.resourcesDescription}</p>
             <Link
               href="/blog/color-management-workflow"
-              className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-5 py-2 text-sm font-semibold text-blue-700 shadow transition hover:bg-blue-100"
+              className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-5 py-2 text-sm font-semibold text-blue-700 shadow transition hover:bg-blue-100 dark:bg-blue-950/50 dark:text-blue-200 dark:hover:bg-blue-900/40"
             >
               {copy.resourcesLink}
               <span aria-hidden>→</span>
             </Link>
           </div>
-          <div className="rounded-3xl border border-slate-200 bg-white p-8">
-            <h3 className="text-lg font-semibold text-slate-900">{copy.formTitle}</h3>
-            <p className="mt-3 text-sm text-slate-600">{copy.formDescription}</p>
+          <div className="rounded-3xl border border-slate-200 bg-white p-8 transition-colors duration-300 dark:border-slate-700 dark:bg-slate-900">
+            <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">{copy.formTitle}</h3>
+            <p className="mt-3 text-sm text-slate-600 dark:text-slate-300">{copy.formDescription}</p>
             <form className="mt-6 space-y-3">
-              <label className="block text-sm font-medium text-slate-700" htmlFor="contact-email">
+              <label className="block text-sm font-medium text-slate-700 dark:text-slate-300" htmlFor="contact-email">
                 {copy.emailLabel}
               </label>
               <input
                 id="contact-email"
                 type="email"
                 placeholder={copy.emailPlaceholder}
-                className="w-full rounded-full border border-slate-300 px-4 py-3 text-sm shadow-sm outline-none transition focus:border-blue-400"
+                className="w-full rounded-full border border-slate-300 px-4 py-3 text-sm shadow-sm outline-none transition focus:border-blue-400 dark:border-slate-600 dark:bg-slate-900 dark:text-slate-100"
               />
               <button
                 type="button"

@@ -61,7 +61,7 @@ export default function BlogArticleView({ slug }) {
   }, [posts, post, slug]);
 
   return (
-    <div className="bg-gradient-to-b from-slate-100 via-white to-slate-100 transition-colors duration-300 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <div className="theme-surface">
       <div className="mx-auto max-w-6xl space-y-12 px-6 pb-24 pt-10 lg:px-8">
         <div className="flex items-center gap-3 text-sm text-blue-600 dark:text-blue-300">
           <Link

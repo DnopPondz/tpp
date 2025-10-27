@@ -11,7 +11,7 @@ export default function Footer() {
   const { brand, nav, footer } = translations;
 
   return (
-    <footer className="border-t border-slate-200 bg-white text-slate-600 transition-colors duration-300 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300">
+    <footer className="border-t border-slate-200 bg-white text-slate-600 transition-colors duration-300 dark:border-slate-800 dark:bg-black dark:text-slate-300">
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">

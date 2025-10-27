@@ -347,7 +347,7 @@ export default function ProductsView() {
   }, [language]);
 
   return (
-    <div className="bg-gradient-to-b from-slate-100 via-white to-slate-100 transition-colors duration-300 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <div className="theme-surface">
       <div className="mx-auto max-w-6xl space-y-20 px-6 pb-24 pt-20 lg:px-8">
         <header className="space-y-5 rounded-[3rem] border border-slate-200 bg-white p-10 text-center shadow-2xl transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600 dark:text-blue-300">

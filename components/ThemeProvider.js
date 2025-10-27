@@ -46,7 +46,15 @@ export function ThemeProvider({ children }) {
     }
 
     const root = document.documentElement;
-    root.classList.toggle("dark", theme === "dark");
+    const body = document.body;
+    const isDark = theme === "dark";
+
+    root.classList.toggle("dark", isDark);
+    root.dataset.theme = theme;
+    body.classList.toggle("dark", isDark);
+    body.dataset.theme = theme;
+    body.style.colorScheme = isDark ? "dark" : "light";
+
     window.localStorage.setItem(THEME_STORAGE_KEY, theme);
   }, [theme]);
 

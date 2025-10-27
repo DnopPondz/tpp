@@ -124,7 +124,7 @@ export default function Home() {
   const activeSlide = slides[currentSlide] ?? slides[0] ?? null;
 
   return (
-    <div className="bg-gradient-to-b from-slate-100 via-white to-slate-100 transition-colors duration-300 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <div className="theme-surface">
       <div className="mx-auto max-w-6xl space-y-24 px-6 pb-24 pt-32 lg:px-8">
         <section className="relative overflow-hidden rounded-[3rem] border border-slate-200 bg-gradient-to-br from-white via-slate-50 to-white p-10 shadow-2xl transition-colors duration-300 dark:border-slate-800 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 lg:p-14">
           <div className="pointer-events-none absolute -left-16 top-10 h-64 w-64 rounded-full bg-blue-200/40 blur-3xl dark:bg-blue-900/30" />

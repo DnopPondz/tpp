@@ -106,7 +106,7 @@ export default function AboutView() {
   const copy = pageCopy[language];
 
   return (
-    <div className="bg-gradient-to-b from-slate-100 via-white to-slate-100 transition-colors duration-300 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <div className="theme-surface">
       <div className="mx-auto max-w-6xl space-y-20 px-6 pb-24 pt-16 lg:px-8">
         <header className="grid gap-12 rounded-[3rem] border border-slate-200 bg-white p-10 shadow-2xl transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900 lg:grid-cols-[1.1fr_0.9fr] lg:p-16">
           <div className="space-y-8">

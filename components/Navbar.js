@@ -114,7 +114,7 @@ export default function Navbar() {
   const languageLabel = language === "th" ? "เลือกภาษา" : "Language";
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur transition-colors duration-300 dark:border-slate-800 dark:bg-slate-950/80">
+    <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/85 backdrop-blur transition-colors duration-300 dark:border-slate-800 dark:bg-black/80">
       <div className="hidden border-b border-slate-100 bg-blue-50/80 text-xs text-slate-600 transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900/80 dark:text-slate-300 md:block">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-2 lg:px-8">
           <span className="font-medium text-slate-700 dark:text-slate-200">

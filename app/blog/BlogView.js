@@ -74,7 +74,7 @@ export default function BlogView() {
   };
 
   return (
-    <div className="bg-gradient-to-b from-slate-100 via-white to-slate-100 transition-colors duration-300 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+    <div className="theme-surface">
       <div className="mx-auto max-w-6xl space-y-16 px-6 pb-24 pt-28 text-center sm:text-left lg:px-8">
         <header className="space-y-6 rounded-[3rem] border border-slate-200 bg-white p-10 text-center shadow-2xl transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900 sm:text-left">
           <span className="inline-flex w-fit items-center gap-2 rounded-full bg-blue-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700 dark:bg-blue-950/50 dark:text-blue-200">

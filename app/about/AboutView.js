@@ -106,12 +106,12 @@ export default function AboutView() {
   const copy = pageCopy[language];
 
   return (
-    <div className="bg-slate-50">
+    <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       <div className="mx-auto max-w-6xl space-y-20 px-6 pb-24 pt-16 lg:px-8">
-        <header className="grid gap-12 rounded-[3rem] border border-slate-200 bg-white/80 p-10 shadow-xl backdrop-blur lg:grid-cols-[1.1fr_0.9fr] lg:p-16">
+        <header className="grid gap-12 rounded-[3rem] border border-slate-800 bg-white/95 p-10 shadow-2xl backdrop-blur lg:grid-cols-[1.1fr_0.9fr] lg:p-16">
           <div className="space-y-8">
             <div className="space-y-2">
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">{brand.tagline}</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">{brand.tagline}</p>
               <h1 className="text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">{copy.introHeading}</h1>
             </div>
             <div className="space-y-5 text-base leading-7 text-slate-700">
@@ -133,7 +133,7 @@ export default function AboutView() {
           </div>
         </header>
 
-        <section className="grid gap-12 rounded-[3rem] border border-slate-200 bg-white p-10 shadow-lg lg:grid-cols-[1fr_0.8fr] lg:p-16">
+        <section className="grid gap-12 rounded-[3rem] border border-slate-800 bg-white p-10 shadow-xl lg:grid-cols-[1fr_0.8fr] lg:p-16">
           <div className="space-y-10 text-slate-700">
             <div className="space-y-4 rounded-3xl border border-slate-200 bg-slate-50/70 p-8">
               <h2 className="text-2xl font-semibold text-slate-900">{copy.philosophyTitle}</h2>

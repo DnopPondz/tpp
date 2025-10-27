@@ -11,12 +11,12 @@ export default function Footer() {
   const { brand, nav, footer } = translations;
 
   return (
-    <footer className="border-t border-slate-200 bg-slate-900 text-slate-100">
+    <footer className="border-t border-slate-800 bg-slate-950 text-slate-100">
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-amber-400 bg-amber-100 text-lg font-bold text-amber-700 shadow-inner">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full border border-blue-500/60 bg-blue-500/10 text-lg font-bold text-blue-300 shadow-inner">
                 TP
               </div>
               <div>
@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wide text-amber-300">
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-300">
               {footer.quickLinksTitle}
             </h3>
             <ul className="mt-4 space-y-2 text-sm">
@@ -47,7 +47,7 @@ export default function Footer() {
 
           <div className="space-y-4">
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-amber-300">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-300">
                 {footer.contactTitle}
               </h3>
               <div className="mt-4 space-y-2 text-sm text-slate-300">
@@ -64,7 +64,7 @@ export default function Footer() {
                 <span className="font-semibold text-white">{footer.emailLabel}:</span>{" "}
                 <a
                   href={`mailto:${footer.email}`}
-                  className="text-amber-300 transition hover:text-amber-200"
+                  className="text-blue-300 transition hover:text-blue-200"
                 >
                   {footer.email}
                 </a>
@@ -74,7 +74,7 @@ export default function Footer() {
 
           <div className="space-y-4">
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-amber-300">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-300">
                 {footer.hoursTitle}
               </h3>
               <ul className="mt-4 space-y-2 text-sm text-slate-300">
@@ -84,7 +84,7 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wide text-amber-300">
+              <h3 className="text-sm font-semibold uppercase tracking-wide text-blue-300">
                 {footer.socialsTitle}
               </h3>
               <ul className="mt-4 space-y-2 text-sm">
@@ -96,7 +96,7 @@ export default function Footer() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <span className="h-1.5 w-1.5 rounded-full bg-amber-400" aria-hidden />
+                      <span className="h-1.5 w-1.5 rounded-full bg-blue-400" aria-hidden />
                       {social.label}
                     </Link>
                   </li>

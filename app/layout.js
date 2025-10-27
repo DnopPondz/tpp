@@ -23,10 +23,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} bg-slate-50 text-slate-900`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} bg-slate-950 text-slate-100`}
+      >
         <LanguageProvider>
           <Navbar />
-          <main className="min-h-screen bg-slate-50 pb-24">{children}</main>
+          <main className="min-h-screen bg-slate-950 pb-24">{children}</main>
           <Footer />
         </LanguageProvider>
       </body>

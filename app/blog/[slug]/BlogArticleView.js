@@ -61,12 +61,12 @@ export default function BlogArticleView({ slug }) {
   }, [posts, post, slug]);
 
   return (
-    <div className="bg-gradient-to-b from-amber-50 via-white to-slate-100">
+    <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       <div className="mx-auto max-w-6xl space-y-12 px-6 pb-24 pt-10 lg:px-8">
-        <div className="flex items-center gap-3 text-sm text-amber-700">
+        <div className="flex items-center gap-3 text-sm text-blue-200">
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 rounded-full border border-amber-200 bg-white px-4 py-2 font-medium shadow-sm transition hover:border-amber-400 hover:text-amber-800"
+            className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900 px-4 py-2 font-medium shadow-sm transition hover:border-blue-400 hover:text-blue-200"
           >
             <span aria-hidden>←</span>
             {t.backLabel}
@@ -74,25 +74,25 @@ export default function BlogArticleView({ slug }) {
         </div>
 
         <div className="grid gap-12 lg:grid-cols-[2fr_1fr]">
-          <article className="space-y-10 rounded-[3rem] border border-slate-200 bg-white p-10 shadow-2xl">
+          <article className="space-y-10 rounded-[3rem] border border-slate-800 bg-white/95 p-10 shadow-2xl">
             <header className="space-y-6">
               <div className="flex flex-wrap items-center gap-3 text-sm text-slate-500">
-                <span className="rounded-full bg-amber-50 px-3 py-1 font-semibold text-amber-600">
+                <span className="rounded-full bg-blue-50 px-3 py-1 font-semibold text-blue-600">
                   {post.category}
                 </span>
                 <time dateTime={post.date}>{formatDate(post.date, language)}</time>
                 <span className="h-1 w-1 rounded-full bg-slate-200" aria-hidden />
                 <span>{post.readingTime}</span>
                 <span className="h-1 w-1 rounded-full bg-slate-200" aria-hidden />
-                <span className="font-medium text-amber-600">{t.summaryLabel}</span>
+                <span className="font-medium text-blue-600">{t.summaryLabel}</span>
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-slate-900">
                 {post.title}
               </h1>
               <p className="text-lg leading-8 text-slate-600">{post.excerpt}</p>
               <div className="flex flex-wrap items-center gap-3 text-sm text-slate-500">
-                <div className="flex items-center gap-2 font-medium text-amber-700">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-amber-100 text-amber-600">
+                <div className="flex items-center gap-2 font-medium text-blue-700">
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 text-blue-600">
                     {post.author?.charAt(0)}
                   </span>
                   <div className="flex flex-col">
@@ -117,9 +117,9 @@ export default function BlogArticleView({ slug }) {
             {sectionAnchors.length > 1 && (
               <nav
                 aria-label="table of contents"
-                className="rounded-3xl border border-slate-100 bg-slate-50/80 p-6"
+                className="rounded-3xl border border-slate-200 bg-slate-50/80 p-6"
               >
-                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-500">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
                   {t.tableOfContentsTitle}
                 </p>
                 <ol className="mt-4 space-y-2 text-sm text-slate-600">
@@ -127,9 +127,9 @@ export default function BlogArticleView({ slug }) {
                     <li key={section.id}>
                       <a
                         href={`#${section.id}`}
-                        className="inline-flex items-center gap-2 rounded-full px-3 py-1 transition hover:text-amber-600"
+                        className="inline-flex items-center gap-2 rounded-full px-3 py-1 transition hover:text-blue-600"
                       >
-                        <span className="text-xs font-semibold text-amber-500">
+                        <span className="text-xs font-semibold text-blue-600">
                           {String(index + 1).padStart(2, "0")}
                         </span>
                         <span>{section.heading}</span>
@@ -152,7 +152,7 @@ export default function BlogArticleView({ slug }) {
                     ))}
                   </div>
                   {section.bullets && section.bullets.length > 0 && (
-                    <ul className="list-disc space-y-2 rounded-2xl bg-slate-50/80 p-6 text-sm leading-6 text-slate-600 marker:text-amber-500">
+                    <ul className="list-disc space-y-2 rounded-2xl bg-slate-50/80 p-6 text-sm leading-6 text-slate-600 marker:text-blue-500">
                       {section.bullets.map((item, index) => (
                         <li key={`${section.id}-bullet-${index}`}>{item}</li>
                       ))}
@@ -162,12 +162,12 @@ export default function BlogArticleView({ slug }) {
               ))}
             </div>
 
-            <div className="rounded-3xl border border-amber-200 bg-amber-50/60 p-8 text-sm text-amber-900">
-              <p className="text-base font-semibold text-amber-700">{t.takeawaysTitle}</p>
+            <div className="rounded-3xl border border-blue-100 bg-blue-50/70 p-8 text-sm text-slate-800">
+              <p className="text-base font-semibold text-blue-700">{t.takeawaysTitle}</p>
               <ul className="mt-4 space-y-3">
                 {post.keyTakeaways?.map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <span className="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-white text-xs font-semibold text-amber-600">
+                    <span className="mt-1 inline-flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-white text-xs font-semibold text-blue-600">
                       ★
                     </span>
                     <span>{item}</span>
@@ -176,16 +176,16 @@ export default function BlogArticleView({ slug }) {
               </ul>
             </div>
 
-            <div className="flex flex-wrap gap-3 text-sm text-amber-600">
+            <div className="flex flex-wrap gap-3 text-sm text-blue-600">
               {post.tags.map((tag) => (
-                <span key={tag} className="rounded-full bg-amber-100 px-4 py-1 font-medium">
+                <span key={tag} className="rounded-full bg-blue-50 px-4 py-1 font-medium">
                   #{tag}
                 </span>
               ))}
             </div>
           </article>
 
-          <aside className="space-y-8 rounded-[2.5rem] border border-slate-200 bg-white/90 p-8 shadow-xl">
+          <aside className="space-y-8 rounded-[2.5rem] border border-slate-800 bg-white/95 p-8 shadow-xl">
             <div className="space-y-3">
               <h2 className="text-lg font-semibold text-slate-900">{t.relatedTitle}</h2>
               <p className="text-sm text-slate-500">{t.relatedDescription}</p>
@@ -194,9 +194,9 @@ export default function BlogArticleView({ slug }) {
                   <Link
                     key={item.slug}
                     href={`/blog/${item.slug}`}
-                    className="block rounded-2xl border border-slate-200 bg-slate-50/60 p-4 transition hover:border-amber-300 hover:text-amber-700"
+                    className="block rounded-2xl border border-slate-200 bg-slate-50/70 p-4 transition hover:border-blue-400 hover:text-blue-700"
                   >
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-500">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-600">
                       {item.category}
                     </p>
                     <p className="mt-1 text-sm font-semibold text-slate-900">{item.title}</p>
@@ -208,12 +208,12 @@ export default function BlogArticleView({ slug }) {
               </div>
             </div>
 
-            <div className="space-y-3 rounded-2xl border border-amber-200 bg-amber-50/60 p-6 text-sm text-amber-900">
-              <h2 className="text-lg font-semibold text-amber-700">{t.advisoryTitle}</h2>
+            <div className="space-y-3 rounded-2xl border border-blue-100 bg-blue-50/70 p-6 text-sm text-slate-800">
+              <h2 className="text-lg font-semibold text-blue-700">{t.advisoryTitle}</h2>
               <p>{t.advisoryDescription}</p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-4 py-2 text-sm font-semibold text-white shadow transition hover:bg-amber-600"
+                className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-4 py-2 text-sm font-semibold text-white shadow transition hover:bg-blue-700"
               >
                 {t.advisoryCta}
                 <span aria-hidden>→</span>

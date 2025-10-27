@@ -150,7 +150,7 @@ function ListCard({ title, items, columnsClass = "" }) {
           <li key={item} className="flex items-start gap-3">
             <span
               aria-hidden="true"
-              className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-amber-500"
+              className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-500"
             />
             <span>{item}</span>
           </li>
@@ -162,8 +162,8 @@ function ListCard({ title, items, columnsClass = "" }) {
 
 function DetailCard({ title, description }) {
   return (
-    <div className="space-y-3 rounded-3xl border border-amber-200 bg-amber-50 p-8 text-sm text-amber-900 shadow-sm">
-      <h2 className="text-xl font-semibold text-amber-800">{title}</h2>
+    <div className="space-y-3 rounded-3xl border border-blue-100 bg-blue-50/60 p-8 text-sm text-slate-800 shadow-sm">
+      <h2 className="text-xl font-semibold text-blue-700">{title}</h2>
       <p>{description}</p>
     </div>
   );
@@ -175,10 +175,10 @@ export default function CapabilitiesView() {
   const copy = pageCopy[language];
 
   return (
-    <div className="bg-gradient-to-b from-amber-50 via-white to-slate-100">
+    <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       <div className="mx-auto max-w-6xl space-y-16 px-6 pb-24 pt-20 lg:px-8">
-        <header className="space-y-6">
-          <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-600 shadow">
+        <header className="space-y-6 rounded-[3rem] border border-slate-800 bg-white/95 p-10 text-center shadow-2xl lg:text-left">
+          <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-700 shadow">
             {sections.capabilities.title}
           </span>
           <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
@@ -187,7 +187,7 @@ export default function CapabilitiesView() {
           <p className="max-w-3xl text-lg leading-8 text-slate-600">{copy.heroDescription}</p>
         </header>
 
-        <section className="grid gap-8 lg:grid-cols-[1.2fr_1fr]">
+        <section className="grid gap-8 rounded-[3rem] border border-slate-800 bg-white/95 p-10 shadow-xl lg:grid-cols-[1.2fr_1fr] lg:p-14">
           <div className="space-y-8">
             <DetailCard {...copy.clothWidth} />
             <ListCard {...copy.fabricTypes} columnsClass="sm:grid-cols-2" />

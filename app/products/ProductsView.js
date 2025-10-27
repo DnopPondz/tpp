@@ -290,7 +290,7 @@ function ProductModal({ product, onClose, labels }) {
         </button>
         <div className="grid gap-8 p-10 lg:grid-cols-[1.1fr_1fr]">
           <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-600">
               {product.target}
             </p>
             <h3 id="product-title" className="text-3xl font-semibold text-slate-900">
@@ -306,7 +306,7 @@ function ProductModal({ product, onClose, labels }) {
               <ul className="mt-3 space-y-2 text-sm text-slate-600">
                 {product.details.highlights.map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <span className="mt-1 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-amber-100 text-[10px] font-bold text-amber-600">
+                    <span className="mt-1 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-[10px] font-bold text-blue-600">
                       ✓
                     </span>
                     <span>{item}</span>
@@ -318,11 +318,11 @@ function ProductModal({ product, onClose, labels }) {
               <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-900/80">
                 {labels.applicationsTitle}
               </h4>
-              <ul className="mt-3 flex flex-wrap gap-2 text-xs font-semibold text-amber-600">
+              <ul className="mt-3 flex flex-wrap gap-2 text-xs font-semibold text-blue-600">
                 {product.details.applications.map((useCase) => (
                   <li
                     key={useCase}
-                    className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1"
+                    className="rounded-full border border-blue-200 bg-blue-50 px-3 py-1"
                   >
                     {useCase}
                   </li>
@@ -347,10 +347,10 @@ export default function ProductsView() {
   }, [language]);
 
   return (
-    <div className="bg-gradient-to-b from-white via-slate-50 to-amber-50/40">
+    <div className="bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       <div className="mx-auto max-w-6xl space-y-20 px-6 pb-24 pt-20 lg:px-8">
-        <header className="space-y-5 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600">
+        <header className="space-y-5 rounded-[3rem] border border-slate-800 bg-white/95 p-10 text-center shadow-2xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
             {sections.products.title}
           </p>
           <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
@@ -365,7 +365,7 @@ export default function ProductsView() {
           {copy.catalog.map((product) => (
             <article
               key={product.id}
-              className="group relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-4xl border border-white/20 bg-slate-900/70 p-10 text-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              className="group relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-4xl border border-blue-500/30 bg-slate-900/70 p-10 text-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
               style={{
                 backgroundImage: `linear-gradient(140deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.35)), url(${productBackgrounds[product.id] ?? ""})`,
                 backgroundSize: "cover",
@@ -373,18 +373,18 @@ export default function ProductsView() {
               }}
             >
               <div className="space-y-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber-300">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-200">
                   {product.target}
                 </p>
                 <h2 className="text-2xl font-semibold text-white">{product.name}</h2>
                 <p className="text-sm leading-6 text-slate-100/90">{product.summary}</p>
               </div>
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <span className="text-sm font-semibold text-amber-200">{hero.primaryCta}</span>
+                <span className="text-sm font-semibold text-blue-200">{hero.primaryCta}</span>
                 <button
                   type="button"
                   onClick={() => setSelectedProduct(product)}
-                  className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-5 py-2 text-sm font-semibold text-slate-900 shadow transition hover:bg-amber-300"
+                  className="inline-flex items-center gap-2 rounded-full bg-blue-400 px-5 py-2 text-sm font-semibold text-slate-900 shadow transition hover:bg-blue-300"
                 >
                   {copy.detailCta}
                   <span aria-hidden>→</span>
@@ -394,15 +394,15 @@ export default function ProductsView() {
           ))}
         </section>
 
-        <section className="grid gap-8 rounded-[3rem] border border-amber-100 bg-amber-50/70 p-12 shadow-inner lg:grid-cols-[1fr_1.2fr]">
+        <section className="grid gap-8 rounded-[3rem] border border-slate-800 bg-white/95 p-12 shadow-xl lg:grid-cols-[1fr_1.2fr]">
           <div className="space-y-4">
-            <h2 className="text-3xl font-semibold text-amber-900">{copy.serviceIntro.title}</h2>
-            <p className="text-base text-amber-900/80">{copy.serviceIntro.description}</p>
+            <h2 className="text-3xl font-semibold text-slate-900">{copy.serviceIntro.title}</h2>
+            <p className="text-base text-slate-600">{copy.serviceIntro.description}</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-3">
             {copy.serviceAddOns.map((service) => (
-              <div key={service.title} className="rounded-3xl border border-white/60 bg-white/90 p-6 text-sm text-slate-700">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">{service.title}</p>
+              <div key={service.title} className="rounded-3xl border border-slate-200 bg-slate-50/80 p-6 text-sm text-slate-700">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-600">{service.title}</p>
                 <p className="mt-2">{service.description}</p>
               </div>
             ))}
@@ -421,14 +421,14 @@ export default function ProductsView() {
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-white shadow transition hover:bg-amber-600"
+              className="inline-flex items-center gap-2 rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow transition hover:bg-blue-700"
             >
               {copy.contactCta}
               <span aria-hidden>→</span>
             </Link>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 rounded-full border border-amber-400 px-6 py-3 text-sm font-semibold text-amber-600 transition hover:border-amber-500 hover:text-amber-700"
+              className="inline-flex items-center gap-2 rounded-full border border-blue-400 px-6 py-3 text-sm font-semibold text-blue-600 transition hover:border-blue-500 hover:text-blue-700"
             >
               {copy.insightsCta}
               <span aria-hidden>↗</span>

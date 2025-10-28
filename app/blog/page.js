@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import BlogView from "./BlogView";
 
 export const metadata = {
@@ -7,5 +8,9 @@ export const metadata = {
 };
 
 export default function BlogPage() {
-  return <BlogView />;
+  return (
+    <Suspense fallback={null}>
+      <BlogView />
+    </Suspense>
+  );
 }

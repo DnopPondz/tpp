@@ -106,15 +106,19 @@ export default function AboutView() {
   const copy = pageCopy[language];
 
   return (
-    <div className="bg-slate-50">
-      <div className="mx-auto max-w-6xl space-y-20 px-6 pb-24 pt-16 lg:px-8">
-        <header className="grid gap-12 rounded-[3rem] border border-slate-200 bg-white/80 p-10 shadow-xl backdrop-blur lg:grid-cols-[1.1fr_0.9fr] lg:p-16">
-          <div className="space-y-8">
+    <div className="theme-surface relative">
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute -left-24 top-20 h-80 w-80 rounded-full bg-blue-400/15 blur-3xl dark:bg-blue-500/25" />
+        <div className="absolute right-[-18rem] top-[12rem] h-[22rem] w-[22rem] rounded-full bg-indigo-400/15 blur-3xl dark:bg-indigo-500/25" />
+      </div>
+      <div className="relative mx-auto max-w-6xl space-y-20 px-6 pb-24 pt-16 lg:px-8">
+        <header className="theme-panel panel-aura grid gap-12 rounded-[3rem] border border-border-subtle p-10 shadow-2xl transition-colors duration-300 lg:grid-cols-[1.1fr_0.9fr] lg:p-16">
+          <div className="space-y-8 text-foreground/80">
             <div className="space-y-2">
-              <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">{brand.tagline}</p>
-              <h1 className="text-4xl font-bold leading-tight text-slate-900 sm:text-5xl">{copy.introHeading}</h1>
+              <span className="floating-badge">{brand.tagline}</span>
+              <h1 className="text-4xl font-bold leading-tight text-foreground sm:text-5xl">{copy.introHeading}</h1>
             </div>
-            <div className="space-y-5 text-base leading-7 text-slate-700">
+            <div className="space-y-5 text-base leading-7">
               {copy.introParagraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
@@ -124,7 +128,7 @@ export default function AboutView() {
             {copy.galleryPlaceholders.map((label) => (
               <div
                 key={label}
-                className="relative flex aspect-[4/3] items-center justify-center rounded-3xl border border-dashed border-slate-300 bg-slate-100 text-center text-xs font-medium uppercase tracking-[0.2em] text-slate-400"
+                className="card-elevated theme-card relative flex aspect-[4/3] items-center justify-center rounded-3xl border border-dashed border-border-subtle/70 text-center text-xs font-medium uppercase tracking-[0.2em] text-foreground/60"
                 aria-hidden="true"
               >
                 {label}
@@ -133,33 +137,33 @@ export default function AboutView() {
           </div>
         </header>
 
-        <section className="grid gap-12 rounded-[3rem] border border-slate-200 bg-white p-10 shadow-lg lg:grid-cols-[1fr_0.8fr] lg:p-16">
-          <div className="space-y-10 text-slate-700">
-            <div className="space-y-4 rounded-3xl border border-slate-200 bg-slate-50/70 p-8">
-              <h2 className="text-2xl font-semibold text-slate-900">{copy.philosophyTitle}</h2>
-              <p className="text-lg font-medium text-slate-800">“{copy.philosophyStatement}”</p>
+        <section className="theme-panel panel-aura grid gap-12 rounded-[3rem] border border-border-subtle p-10 shadow-xl transition-colors duration-300 lg:grid-cols-[1fr_0.8fr] lg:p-16">
+          <div className="space-y-10 text-foreground/80">
+            <div className="card-elevated theme-card space-y-4 rounded-3xl border p-8 transition-colors duration-300">
+              <h2 className="text-2xl font-semibold text-foreground">{copy.philosophyTitle}</h2>
+              <p className="text-lg font-medium text-foreground">“{copy.philosophyStatement}”</p>
             </div>
-            <div className="space-y-6 rounded-3xl border border-slate-200 bg-white p-8 shadow-inner">
-              <h3 className="text-xl font-semibold text-slate-900">{copy.serviceTitle}</h3>
+            <div className="card-elevated theme-card space-y-6 rounded-3xl border p-8 shadow-inner transition-colors duration-300">
+              <h3 className="text-xl font-semibold text-foreground">{copy.serviceTitle}</h3>
               <ul className="space-y-3 text-base leading-7">
                 {copy.serviceItems.map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-slate-400" aria-hidden="true" />
+                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-foreground/40" aria-hidden="true" />
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="space-y-6 rounded-3xl border border-slate-200 bg-white p-8 shadow-inner">
-              <h3 className="text-xl font-semibold text-slate-900">{copy.environmentTitle}</h3>
+            <div className="card-elevated theme-card space-y-6 rounded-3xl border p-8 shadow-inner transition-colors duration-300">
+              <h3 className="text-xl font-semibold text-foreground">{copy.environmentTitle}</h3>
               <div className="space-y-4 text-base leading-7">
                 {copy.environmentParagraphs.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
               </div>
             </div>
-            <div className="space-y-6 rounded-3xl border border-slate-200 bg-white p-8 shadow-inner">
-              <h3 className="text-xl font-semibold text-slate-900">{copy.safetyTitle}</h3>
+            <div className="card-elevated theme-card space-y-6 rounded-3xl border p-8 shadow-inner transition-colors duration-300">
+              <h3 className="text-xl font-semibold text-foreground">{copy.safetyTitle}</h3>
               <div className="space-y-4 text-base leading-7">
                 {copy.safetyParagraphs.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
@@ -167,11 +171,11 @@ export default function AboutView() {
               </div>
             </div>
           </div>
-          <aside className="space-y-10 text-slate-700">
-            <div className="space-y-6 rounded-3xl border border-slate-200 bg-slate-50/70 p-8">
+          <aside className="space-y-10 text-foreground/80">
+            <div className="card-elevated theme-card space-y-6 rounded-3xl border p-8 transition-colors duration-300">
               <div>
-                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">{copy.learningTitle}</p>
-                <p className="mt-4 text-2xl font-semibold text-slate-900">“{copy.learningQuote}”</p>
+                <p className="text-sm font-semibold uppercase tracking-[0.3em] text-foreground/70">{copy.learningTitle}</p>
+                <p className="mt-4 text-2xl font-semibold text-foreground">“{copy.learningQuote}”</p>
               </div>
               <div className="space-y-4 text-base leading-7">
                 {copy.learningParagraphs.map((paragraph) => (
@@ -179,14 +183,14 @@ export default function AboutView() {
                 ))}
               </div>
             </div>
-            <div className="space-y-6 rounded-3xl border border-slate-200 bg-white p-8 shadow-inner">
-              <h3 className="text-xl font-semibold text-slate-900">{copy.exhibitionsTitle}</h3>
+            <div className="card-elevated theme-card space-y-6 rounded-3xl border p-8 shadow-inner transition-colors duration-300">
+              <h3 className="text-xl font-semibold text-foreground">{copy.exhibitionsTitle}</h3>
               <ul className="space-y-6 text-base leading-7">
                 {copy.exhibitions.map((item) => (
                   <li key={item.name} className="space-y-2">
-                    <p className="font-semibold text-slate-900">{item.name}</p>
+                    <p className="font-semibold text-foreground">{item.name}</p>
                     <p>{item.dateRange}</p>
-                    <p className="text-slate-600">{item.location}</p>
+                    <p className="text-foreground/80">{item.location}</p>
                   </li>
                 ))}
               </ul>

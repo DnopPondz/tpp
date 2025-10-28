@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLanguage } from "@/components/LanguageProvider";
+import { useTheme } from "@/components/ThemeProvider";
 
 export const menuItems = [
   { key: "home", href: "/" },
@@ -29,10 +30,57 @@ function LanguageToggleButton({ language, onToggle }) {
     <button
       type="button"
       onClick={onToggle}
-      className="rounded-full border border-slate-200 bg-white px-4 py-1.5 text-sm font-semibold uppercase tracking-wide text-slate-600 shadow-sm transition-colors hover:border-amber-300 hover:text-amber-600"
+      className="rounded-full border border-transparent bg-gradient-to-r from-white/90 via-white/70 to-white/60 px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.3em] text-blue-700 shadow-md transition transform hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 dark:from-slate-900/80 dark:via-slate-900/70 dark:to-slate-900/50 dark:text-blue-200"
       aria-label={`Switch language to ${nextLanguageLabel}`}
     >
       {isThai ? "TH" : "EN"}
+    </button>
+  );
+}
+
+function ThemeToggleButton({ theme, onToggle }) {
+  const isDark = theme === "dark";
+  const nextThemeLabel = isDark ? "Switch to light theme" : "Switch to dark theme";
+
+  return (
+    <button
+      type="button"
+      onClick={onToggle}
+      className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-transparent bg-gradient-to-br from-white/90 via-white/70 to-white/50 text-blue-600 shadow-md transition transform hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 dark:from-slate-900/80 dark:via-slate-900/70 dark:to-slate-900/50 dark:text-blue-200"
+      aria-pressed={isDark}
+      aria-label={nextThemeLabel}
+    >
+      {isDark ? (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          className="h-5 w-5"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"
+          />
+        </svg>
+      ) : (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          className="h-5 w-5"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M12 3v2m6.364.636-1.414 1.414M21 12h-2m-.636 6.364-1.414-1.414M12 21v-2m-6.364.636 1.414-1.414M5 12H3m3.636-6.364 1.414 1.414M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"
+          />
+        </svg>
+      )}
     </button>
   );
 }
@@ -41,6 +89,7 @@ export default function Navbar() {
   const { language, translations, toggleLanguage } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+  const { theme, toggleTheme } = useTheme();
 
   const activeKey = useMemo(() => {
     const matched = menuItems.find((item) => {
@@ -65,16 +114,16 @@ export default function Navbar() {
   const languageLabel = language === "th" ? "เลือกภาษา" : "Language";
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/95 backdrop-blur">
-      <div className="hidden border-b border-slate-200 bg-slate-50/80 text-xs text-slate-500 md:block">
+    <header className="sticky top-0 z-50 w-full border-b border-border-subtle/60 bg-background/80 backdrop-blur-xl shadow-sm transition-colors duration-300">
+      <div className="hidden border-b border-border-subtle/60 bg-gradient-to-r from-white/70 via-white/30 to-white/10 text-xs text-foreground/80 backdrop-blur-xl transition-colors duration-300 dark:from-slate-900/70 dark:via-slate-900/40 dark:to-slate-900/20 md:block">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-2 lg:px-8">
-          <span className="font-medium text-slate-600">
+          <span className="font-medium text-foreground">
             {translations.brand.slogan}
           </span>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-1">
             {contactNumbers.map((contact) => (
               <span key={contact} className="flex items-center gap-2">
-                <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-amber-500" />
+                <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-blue-500 shadow" />
                 {contact}
               </span>
             ))}
@@ -84,19 +133,19 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-6 py-4 lg:px-8">
         <div className="flex items-center justify-between gap-6">
           <Link href="/" className="flex items-center gap-3" aria-label="ThaiPaipan Textile Printing home">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full border border-amber-500 bg-amber-50 text-lg font-bold text-amber-600 shadow-inner">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-500 text-lg font-bold text-white shadow-lg ring-1 ring-white/40 dark:ring-blue-500/40">
               TP
             </div>
             <div className="flex flex-col text-left">
-              <span className="text-xl font-semibold tracking-wide text-slate-900">
+              <span className="text-xl font-semibold tracking-wide text-foreground">
                 {translations.brand.name}
               </span>
-              <span className="text-sm text-slate-500">
+              <span className="text-sm text-foreground/70">
                 {translations.brand.tagline}
               </span>
             </div>
           </Link>
-          <nav className="hidden items-center gap-1 text-sm font-medium text-slate-700 lg:flex">
+          <nav className="hidden items-center gap-1 text-sm font-medium text-foreground/80 lg:flex">
             {menuItems.map((item) => {
               const isActive = activeKey === item.key;
               return (
@@ -104,10 +153,10 @@ export default function Navbar() {
                   key={item.key}
                   href={item.href}
                   aria-current={isActive ? "page" : undefined}
-                  className={`rounded-full px-4 py-2 transition-all ${
+                  className={`rounded-full px-4 py-2 transition-all duration-200 ${
                     isActive
-                      ? "bg-amber-50 text-amber-600 shadow"
-                      : "hover:bg-slate-100 hover:text-amber-600"
+                      ? "bg-gradient-to-r from-blue-600 to-indigo-500 text-white shadow-lg"
+                      : "hover:bg-white/70 hover:text-blue-700 dark:hover:bg-slate-900/60"
                   }`}
                 >
                   {translations.nav[item.key]}
@@ -116,6 +165,7 @@ export default function Navbar() {
             })}
           </nav>
           <div className="flex items-center gap-2">
+            <ThemeToggleButton theme={theme} onToggle={toggleTheme} />
             <div className="hidden items-center lg:flex">
               <LanguageToggleButton
                 language={language}
@@ -125,7 +175,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setIsMenuOpen((prev) => !prev)}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 text-slate-600 transition-colors hover:border-amber-300 hover:text-amber-600 lg:hidden"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-transparent bg-gradient-to-br from-white/90 via-white/70 to-white/50 text-blue-600 shadow-md transition transform hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 dark:from-slate-900/80 dark:via-slate-900/70 dark:to-slate-900/50 dark:text-blue-200 lg:hidden"
               aria-expanded={isMenuOpen}
               aria-controls="mobile-menu"
               aria-label="Toggle menu"
@@ -150,7 +200,7 @@ export default function Navbar() {
         <div className="lg:hidden">
           <div
             id="mobile-menu"
-            className={`grid origin-top gap-2 rounded-2xl border border-slate-200 bg-white/90 text-sm font-medium text-slate-700 shadow-lg transition-all ${
+            className={`grid origin-top gap-2 rounded-2xl border border-border-subtle/70 bg-background/90 text-sm font-medium text-foreground/80 shadow-2xl backdrop-blur-xl transition-all ${
               isMenuOpen
                 ? "mt-2 max-h-[80vh] scale-y-100 opacity-100 p-4"
                 : "mt-0 pointer-events-none max-h-0 scale-y-95 overflow-hidden p-0 opacity-0"
@@ -164,18 +214,18 @@ export default function Navbar() {
                   key={item.key}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`rounded-xl px-3 py-2 transition-colors ${
+                  className={`rounded-xl px-3 py-2 transition-all duration-200 ${
                     isActive
-                      ? "bg-amber-50 text-amber-600 shadow"
-                      : "hover:bg-slate-100 hover:text-amber-600"
+                      ? "bg-gradient-to-r from-blue-600 to-indigo-500 text-white shadow-lg"
+                      : "hover:bg-white/70 hover:text-blue-700 dark:hover:bg-slate-900/60"
                   }`}
                 >
                   {translations.nav[item.key]}
                 </Link>
               );
             })}
-            <div className="mt-2 flex items-center justify-between rounded-xl bg-slate-50 px-3 py-2">
-              <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+            <div className="mt-2 flex items-center justify-between rounded-xl bg-white/70 px-3 py-2 shadow-sm dark:bg-slate-900/60">
+              <span className="text-xs font-semibold uppercase tracking-wide text-foreground/70">
                 {languageLabel}
               </span>
               <LanguageToggleButton
@@ -183,8 +233,12 @@ export default function Navbar() {
                 onToggle={toggleLanguage}
               />
             </div>
-            <div className="flex flex-col gap-1 rounded-xl bg-slate-50 px-3 py-2 text-xs text-slate-500">
-              <span className="font-semibold uppercase tracking-wide text-slate-600">
+            <div className="flex items-center justify-between rounded-xl bg-white/70 px-3 py-2 text-xs font-semibold uppercase tracking-wide text-foreground/70 shadow-sm dark:bg-slate-900/60">
+              <span>Theme</span>
+              <ThemeToggleButton theme={theme} onToggle={toggleTheme} />
+            </div>
+            <div className="flex flex-col gap-1 rounded-xl bg-white/70 px-3 py-2 text-xs text-foreground/70 shadow-sm dark:bg-slate-900/60">
+              <span className="font-semibold uppercase tracking-wide text-foreground/80">
                 {translations.footer?.contactTitle}
               </span>
               {contactNumbers.map((contact) => (

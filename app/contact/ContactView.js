@@ -100,41 +100,45 @@ export default function ContactView() {
   const copy = pageCopy[language];
 
   return (
-    <div className="bg-gradient-to-b from-amber-50 via-white to-slate-100">
-      <div className="mx-auto max-w-6xl space-y-16 px-6 pb-24 pt-20 lg:px-8">
-        <header className="space-y-4 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600">{sections.contact.title}</p>
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">{copy.heroHeading}</h1>
-          <p className="mx-auto max-w-3xl text-lg leading-8 text-slate-600">{sections.contact.description}</p>
+    <div className="theme-surface relative">
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute -left-16 top-16 h-[18rem] w-[18rem] rounded-full bg-blue-400/18 blur-3xl dark:bg-blue-600/25" />
+        <div className="absolute right-[-18rem] top-[24rem] h-[20rem] w-[20rem] rounded-full bg-indigo-400/15 blur-3xl dark:bg-indigo-600/25" />
+      </div>
+      <div className="relative mx-auto max-w-6xl space-y-16 px-6 pb-24 pt-20 lg:px-8">
+        <header className="theme-panel panel-aura space-y-4 rounded-[3rem] border border-border-subtle p-10 text-center shadow-xl transition-colors duration-300">
+          <span className="floating-badge">{sections.contact.title}</span>
+          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">{copy.heroHeading}</h1>
+          <p className="mx-auto max-w-3xl text-lg leading-8 text-foreground/80">{sections.contact.description}</p>
         </header>
 
-        <section className="grid gap-6 rounded-[3rem] border border-slate-200 bg-white/95 p-12 shadow-xl lg:grid-cols-[1.2fr_1fr]">
+        <section className="theme-panel panel-aura grid gap-6 rounded-[3rem] border border-border-subtle p-12 shadow-2xl transition-colors duration-300 lg:grid-cols-[1.2fr_1fr]">
           <div className="space-y-6">
-            <h2 className="text-2xl font-semibold text-slate-900">{copy.contactSectionTitle}</h2>
+            <h2 className="text-2xl font-semibold text-foreground">{copy.contactSectionTitle}</h2>
             <div className="grid gap-4 md:grid-cols-2">
               {copy.contactChannels.map((channel) => (
-                <div key={channel.label} className="rounded-3xl border border-amber-100 bg-amber-50/70 p-6 text-sm text-amber-900">
-                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">{channel.label}</p>
+                <div key={channel.label} className="card-elevated theme-card rounded-3xl border border-border-subtle/70 p-6 text-sm text-foreground transition duration-300 hover:-translate-y-1">
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-600">{channel.label}</p>
                   <ul className="mt-3 space-y-2">
                     {channel.phones.map((phone) => (
                       <li key={phone}>{phone}</li>
                     ))}
                   </ul>
-                  <p className="mt-3 font-medium">{channel.email}</p>
+                  <p className="mt-3 font-medium text-foreground">{channel.email}</p>
                 </div>
               ))}
             </div>
-            <div className="rounded-3xl border border-dashed border-amber-300 p-6 text-sm text-slate-600">
-              <p className="font-semibold text-amber-700">{copy.projectPrepTitle}</p>
+            <div className="card-elevated theme-card rounded-3xl border border-dashed border-blue-200/80 p-6 text-sm text-foreground/80 transition-colors duration-300">
+              <p className="font-semibold text-blue-700">{copy.projectPrepTitle}</p>
               <p className="mt-2">{copy.projectPrepDescription}</p>
             </div>
           </div>
-          <div className="space-y-5 rounded-3xl border border-slate-200 bg-slate-50/80 p-8 text-sm text-slate-700">
-            <h2 className="text-lg font-semibold text-slate-900">ข้อมูลการเยี่ยมชมโรงงาน</h2>
+          <div className="card-elevated theme-card space-y-5 rounded-3xl border border-border-subtle/70 p-8 text-sm text-foreground/80 transition-colors duration-300">
+            <h2 className="text-lg font-semibold text-foreground">ข้อมูลการเยี่ยมชมโรงงาน</h2>
             <ul className="space-y-4">
               {copy.visitInfo.map((item) => (
                 <li key={item.title} className="space-y-1">
-                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-slate-500">{item.title}</p>
+                  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-foreground/70">{item.title}</p>
                   <p>{item.detail}</p>
                 </li>
               ))}
@@ -143,7 +147,7 @@ export default function ContactView() {
               href="https://maps.app.goo.gl/"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-4 py-2 text-sm font-semibold text-white shadow transition hover:bg-amber-600"
+              className="cta-primary inline-flex items-center gap-2 px-4 py-2 text-sm"
             >
               {copy.mapCta}
               <span aria-hidden>↗</span>
@@ -151,34 +155,34 @@ export default function ContactView() {
           </div>
         </section>
 
-        <section className="grid gap-6 rounded-[3rem] border border-amber-100 bg-amber-50/60 p-12 shadow-inner lg:grid-cols-2">
+        <section className="theme-panel panel-aura grid gap-6 rounded-[3rem] border border-border-subtle p-12 shadow-xl transition-colors duration-300 lg:grid-cols-2">
           <div className="space-y-4">
-            <h2 className="text-2xl font-semibold text-amber-900">{copy.resourcesTitle}</h2>
-            <p className="text-base text-amber-900/80">{copy.resourcesDescription}</p>
+            <h2 className="text-2xl font-semibold text-foreground">{copy.resourcesTitle}</h2>
+            <p className="text-base text-foreground/80">{copy.resourcesDescription}</p>
             <Link
               href="/blog/color-management-workflow"
-              className="inline-flex items-center gap-2 rounded-full bg-white px-5 py-2 text-sm font-semibold text-amber-700 shadow transition hover:text-amber-900"
+              className="cta-secondary inline-flex items-center gap-2 px-5 py-2 text-sm"
             >
               {copy.resourcesLink}
               <span aria-hidden>→</span>
             </Link>
           </div>
-          <div className="rounded-3xl border border-white/60 bg-white/90 p-8">
-            <h3 className="text-lg font-semibold text-slate-900">{copy.formTitle}</h3>
-            <p className="mt-3 text-sm text-slate-600">{copy.formDescription}</p>
+          <div className="card-elevated theme-card rounded-3xl border border-border-subtle/70 p-8 transition-colors duration-300">
+            <h3 className="text-lg font-semibold text-foreground">{copy.formTitle}</h3>
+            <p className="mt-3 text-sm text-foreground/80">{copy.formDescription}</p>
             <form className="mt-6 space-y-3">
-              <label className="block text-sm font-medium text-slate-700" htmlFor="contact-email">
+              <label className="block text-sm font-medium text-foreground/80" htmlFor="contact-email">
                 {copy.emailLabel}
               </label>
               <input
                 id="contact-email"
                 type="email"
                 placeholder={copy.emailPlaceholder}
-                className="w-full rounded-full border border-amber-200 px-4 py-3 text-sm shadow-sm outline-none transition focus:border-amber-400"
+                className="w-full rounded-full border border-transparent bg-white/80 px-4 py-3 text-sm text-foreground shadow-sm outline-none transition focus:border-blue-400 focus:bg-white dark:bg-slate-900/70"
               />
               <button
                 type="button"
-                className="w-full rounded-full bg-amber-500 px-4 py-3 text-sm font-semibold text-white shadow transition hover:bg-amber-600"
+                className="cta-primary w-full justify-center px-4 py-3 text-sm"
               >
                 {copy.submitLabel}
               </button>

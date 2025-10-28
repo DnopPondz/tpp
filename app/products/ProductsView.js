@@ -270,7 +270,7 @@ function ProductModal({ product, onClose, labels }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       <div
-        className="absolute inset-0 bg-slate-900/60 backdrop-blur"
+        className="absolute inset-0 bg-background/70 backdrop-blur-lg"
         onClick={onClose}
         aria-hidden
       />
@@ -278,35 +278,35 @@ function ProductModal({ product, onClose, labels }) {
         role="dialog"
         aria-modal="true"
         aria-labelledby="product-title"
-        className="relative z-10 w-full max-w-3xl overflow-hidden rounded-4xl border border-white/40 bg-white/95 shadow-2xl"
+        className="card-elevated theme-card relative z-10 w-full max-w-3xl overflow-hidden rounded-4xl border border-border-subtle/60 bg-background/95 shadow-2xl transition-colors duration-300"
       >
         <button
           type="button"
           onClick={onClose}
-          className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 shadow-sm transition hover:text-slate-700"
+          className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-transparent bg-gradient-to-br from-white/90 via-white/70 to-white/50 text-foreground/70 shadow-md transition hover:text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 dark:from-slate-900/80 dark:via-slate-900/70 dark:to-slate-900/50"
           aria-label={labels.closeAria}
         >
           ×
         </button>
         <div className="grid gap-8 p-10 lg:grid-cols-[1.1fr_1fr]">
           <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-500">
               {product.target}
             </p>
-            <h3 id="product-title" className="text-3xl font-semibold text-slate-900">
+            <h3 id="product-title" className="text-3xl font-semibold text-foreground">
               {product.name}
             </h3>
-            <p className="text-base text-slate-600">{product.details.description}</p>
+            <p className="text-base text-foreground/80">{product.details.description}</p>
           </div>
           <div className="space-y-6">
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-900/80">
+              <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-foreground/80">
                 {labels.highlightsTitle}
               </h4>
-              <ul className="mt-3 space-y-2 text-sm text-slate-600">
+              <ul className="mt-3 space-y-2 text-sm text-foreground/80">
                 {product.details.highlights.map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <span className="mt-1 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-amber-100 text-[10px] font-bold text-amber-600">
+                    <span className="mt-1 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-blue-500/15 text-[10px] font-bold text-blue-600">
                       ✓
                     </span>
                     <span>{item}</span>
@@ -315,14 +315,14 @@ function ProductModal({ product, onClose, labels }) {
               </ul>
             </div>
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-slate-900/80">
+              <h4 className="text-sm font-semibold uppercase tracking-[0.2em] text-foreground/80">
                 {labels.applicationsTitle}
               </h4>
-              <ul className="mt-3 flex flex-wrap gap-2 text-xs font-semibold text-amber-600">
+              <ul className="mt-3 flex flex-wrap gap-2 text-xs font-semibold text-blue-600">
                 {product.details.applications.map((useCase) => (
                   <li
                     key={useCase}
-                    className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1"
+                    className="rounded-full border border-blue-200/70 bg-white/70 px-3 py-1 text-blue-600 shadow-sm transition dark:border-blue-500/40 dark:bg-slate-900/60"
                   >
                     {useCase}
                   </li>
@@ -347,16 +347,20 @@ export default function ProductsView() {
   }, [language]);
 
   return (
-    <div className="bg-gradient-to-b from-white via-slate-50 to-amber-50/40">
-      <div className="mx-auto max-w-6xl space-y-20 px-6 pb-24 pt-20 lg:px-8">
-        <header className="space-y-5 text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-amber-600">
+    <div className="theme-surface relative">
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute -left-24 top-24 h-[22rem] w-[22rem] rounded-full bg-blue-400/20 blur-3xl dark:bg-blue-600/25" />
+        <div className="absolute right-[-18rem] top-[28rem] h-[24rem] w-[24rem] rounded-full bg-indigo-400/18 blur-3xl dark:bg-indigo-600/25" />
+      </div>
+      <div className="relative mx-auto max-w-6xl space-y-20 px-6 pb-24 pt-20 lg:px-8">
+        <header className="theme-panel panel-aura space-y-5 rounded-[3rem] border border-border-subtle p-10 text-center shadow-2xl transition-colors duration-300">
+          <span className="floating-badge">
             {sections.products.title}
-          </p>
-          <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+          </span>
+          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
             {copy.heroHeading}
           </h1>
-          <p className="mx-auto max-w-3xl text-lg leading-8 text-slate-600">
+          <p className="mx-auto max-w-3xl text-lg leading-8 text-foreground/80">
             {sections.products.description}
           </p>
         </header>
@@ -365,26 +369,26 @@ export default function ProductsView() {
           {copy.catalog.map((product) => (
             <article
               key={product.id}
-              className="group relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-4xl border border-white/20 bg-slate-900/70 p-10 text-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+              className="card-elevated theme-card group relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-4xl border border-border-subtle/70 p-10 text-foreground/80 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
               style={{
-                backgroundImage: `linear-gradient(140deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.35)), url(${productBackgrounds[product.id] ?? ""})`,
+                backgroundImage: `linear-gradient(140deg, rgba(226, 232, 240, 0.85), rgba(191, 219, 254, 0.35)), url(${productBackgrounds[product.id] ?? ""})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
             >
               <div className="space-y-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber-300">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-700">
                   {product.target}
                 </p>
-                <h2 className="text-2xl font-semibold text-white">{product.name}</h2>
-                <p className="text-sm leading-6 text-slate-100/90">{product.summary}</p>
+                <h2 className="text-2xl font-semibold text-foreground">{product.name}</h2>
+                <p className="text-sm leading-6 text-foreground/80">{product.summary}</p>
               </div>
               <div className="flex flex-wrap items-center justify-between gap-4">
-                <span className="text-sm font-semibold text-amber-200">{hero.primaryCta}</span>
+                <span className="text-sm font-semibold text-blue-700">{hero.primaryCta}</span>
                 <button
                   type="button"
                   onClick={() => setSelectedProduct(product)}
-                  className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-5 py-2 text-sm font-semibold text-slate-900 shadow transition hover:bg-amber-300"
+                  className="cta-primary px-5 py-2 text-sm"
                 >
                   {copy.detailCta}
                   <span aria-hidden>→</span>
@@ -394,41 +398,41 @@ export default function ProductsView() {
           ))}
         </section>
 
-        <section className="grid gap-8 rounded-[3rem] border border-amber-100 bg-amber-50/70 p-12 shadow-inner lg:grid-cols-[1fr_1.2fr]">
+        <section className="theme-panel panel-aura grid gap-8 rounded-[3rem] border border-border-subtle p-12 shadow-xl transition-colors duration-300 lg:grid-cols-[1fr_1.2fr]">
           <div className="space-y-4">
-            <h2 className="text-3xl font-semibold text-amber-900">{copy.serviceIntro.title}</h2>
-            <p className="text-base text-amber-900/80">{copy.serviceIntro.description}</p>
+            <h2 className="text-3xl font-semibold text-foreground">{copy.serviceIntro.title}</h2>
+            <p className="text-base text-foreground/80">{copy.serviceIntro.description}</p>
           </div>
           <div className="grid gap-4 sm:grid-cols-3">
             {copy.serviceAddOns.map((service) => (
-              <div key={service.title} className="rounded-3xl border border-white/60 bg-white/90 p-6 text-sm text-slate-700">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-amber-500">{service.title}</p>
+              <div key={service.title} className="card-elevated theme-card rounded-3xl border border-border-subtle/70 p-6 text-sm text-foreground/80 transition duration-300 hover:-translate-y-1">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-blue-600">{service.title}</p>
                 <p className="mt-2">{service.description}</p>
               </div>
             ))}
           </div>
         </section>
 
-        <section className="rounded-[3rem] border border-slate-200 bg-white/90 p-12 shadow-xl">
+        <section className="theme-panel panel-aura rounded-[3rem] border border-border-subtle p-12 shadow-xl transition-colors duration-300">
           <div className="grid gap-6 md:grid-cols-2">
             {sections.products.categories.map((category) => (
-              <div key={category.title} className="space-y-3 rounded-3xl border border-slate-200 bg-slate-50/70 p-6">
-                <h3 className="text-xl font-semibold text-slate-900">{category.title}</h3>
-                <p className="text-sm text-slate-600">{category.detail}</p>
+              <div key={category.title} className="card-elevated theme-card space-y-3 rounded-3xl border border-border-subtle/70 p-6 transition duration-300 hover:-translate-y-1">
+                <h3 className="text-xl font-semibold text-foreground">{category.title}</h3>
+                <p className="text-sm text-foreground/80">{category.detail}</p>
               </div>
             ))}
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-amber-500 px-6 py-3 text-sm font-semibold text-white shadow transition hover:bg-amber-600"
+              className="cta-primary px-6 py-3 text-sm"
             >
               {copy.contactCta}
               <span aria-hidden>→</span>
             </Link>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 rounded-full border border-amber-400 px-6 py-3 text-sm font-semibold text-amber-600 transition hover:border-amber-500 hover:text-amber-700"
+              className="cta-secondary px-6 py-3 text-sm"
             >
               {copy.insightsCta}
               <span aria-hidden>↗</span>

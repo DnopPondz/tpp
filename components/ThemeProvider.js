@@ -25,12 +25,23 @@ function getPreferredTheme() {
 }
 
 export function ThemeProvider({ children }) {
-  const [theme, setTheme] = useState(() => getPreferredTheme());
+  const [theme, setThemeState] = useState("light");
+  const [hasHydrated, setHasHydrated] = useState(false);
 
   useEffect(() => {
+    const preferredTheme = getPreferredTheme();
+    setThemeState(preferredTheme);
+    setHasHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !hasHydrated) {
+      return;
+    }
+
     const handleMediaChange = (event) => {
       if (!window.localStorage.getItem(THEME_STORAGE_KEY)) {
-        setTheme(event.matches ? "dark" : "light");
+        setThemeState(event.matches ? "dark" : "light");
       }
     };
 
@@ -38,28 +49,33 @@ export function ThemeProvider({ children }) {
     mediaQuery?.addEventListener?.("change", handleMediaChange);
 
     return () => mediaQuery?.removeEventListener?.("change", handleMediaChange);
-  }, []);
+  }, [hasHydrated]);
 
   useEffect(() => {
-    if (typeof window === "undefined") {
+    if (typeof window === "undefined" || !hasHydrated) {
       return;
     }
 
+    const resolvedTheme = theme === "dark" ? "dark" : "light";
     const root = document.documentElement;
     const body = document.body;
-    const isDark = theme === "dark";
+    const isDark = resolvedTheme === "dark";
 
     root.classList.toggle("dark", isDark);
-    root.dataset.theme = theme;
+    root.dataset.theme = resolvedTheme;
     body.classList.toggle("dark", isDark);
-    body.dataset.theme = theme;
+    body.dataset.theme = resolvedTheme;
     body.style.colorScheme = isDark ? "dark" : "light";
 
-    window.localStorage.setItem(THEME_STORAGE_KEY, theme);
-  }, [theme]);
+    window.localStorage.setItem(THEME_STORAGE_KEY, resolvedTheme);
+  }, [theme, hasHydrated]);
+
+  const setTheme = useCallback((nextTheme) => {
+    setThemeState(nextTheme === "dark" ? "dark" : "light");
+  }, []);
 
   const toggleTheme = useCallback(() => {
-    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+    setThemeState((prev) => (prev === "dark" ? "light" : "dark"));
   }, []);
 
   const value = useMemo(
@@ -68,7 +84,7 @@ export function ThemeProvider({ children }) {
       toggleTheme,
       setTheme,
     }),
-    [theme, toggleTheme]
+    [theme, toggleTheme, setTheme]
   );
 
   return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;

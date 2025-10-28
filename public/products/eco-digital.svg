@@ -1,0 +1,22 @@
+<svg width="1600" height="1200" viewBox="0 0 1600 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ecoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="40%" stop-color="#1d4ed8" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <radialGradient id="ecoGlow" cx="0.2" cy="0.2" r="1">
+      <stop offset="0" stop-color="#7dd3fc" stop-opacity="0.8" />
+      <stop offset="1" stop-color="#0f172a" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="ecoDots" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(20)">
+      <circle cx="2" cy="2" r="2" fill="#ffffff" opacity="0.16" />
+    </pattern>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#ecoGradient)" />
+  <rect width="1600" height="1200" fill="url(#ecoDots)" />
+  <circle cx="300" cy="280" r="420" fill="url(#ecoGlow)" />
+  <circle cx="1320" cy="900" r="360" fill="url(#ecoGlow)" opacity="0.7" />
+  <path d="M0 900 C400 720 800 1040 1200 820 C1400 720 1600 760 1600 760 L1600 1200 L0 1200 Z" fill="#0ea5e9" opacity="0.16" />
+  <path d="M0 680 C420 520 860 780 1260 620 C1400 560 1600 600 1600 600 L1600 1200 L0 1200 Z" fill="#1d4ed8" opacity="0.12" />
+</svg>

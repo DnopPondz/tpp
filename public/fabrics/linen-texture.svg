@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Teal linen blend with woven texture">
+  <defs>
+    <linearGradient id="linenBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#d0f0ef" />
+      <stop offset="100%" stop-color="#5fb7b2" />
+    </linearGradient>
+    <pattern id="woven" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="none" stroke="#3f8f8a" stroke-width="1.2" opacity="0.35" />
+      <path d="M0 10 H20" stroke="#82c9c3" stroke-width="4" opacity="0.4" />
+      <path d="M10 0 V20" stroke="#82c9c3" stroke-width="4" opacity="0.4" />
+    </pattern>
+    <radialGradient id="linenHighlight" cx="0.8" cy="0.2" r="0.7">
+      <stop offset="0%" stop-color="#e8fffb" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#5fb7b2" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#linenBg)" />
+  <rect width="800" height="600" fill="url(#woven)" />
+  <rect width="800" height="600" fill="url(#linenHighlight)" />
+  <g fill="none" stroke="#e0fffa" stroke-width="6" stroke-opacity="0.4">
+    <path d="M60 520 C180 420, 260 520, 380 430 C500 340, 620 470, 740 360" />
+  </g>
+</svg>
